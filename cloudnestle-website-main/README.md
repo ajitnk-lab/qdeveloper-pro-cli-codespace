@@ -37,3 +37,10 @@ The website is automatically deployed to AWS when changes are pushed to the main
 ## License
 
 MIT License - see LICENSE file for details.
+
+## 🚀 Automated Deployment Test
+
+GitHub Actions automation is now active with AWS secrets configured.
+
+Test timestamp: Tue Sep  9 14:44:00 UTC 2025
+
