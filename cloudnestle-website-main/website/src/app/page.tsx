@@ -1,6 +1,5 @@
 import Layout from '@/components/layout/Layout';
-import Button from '@/components/ui/Button';
-import Card from '@/components/ui/Card';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -43,9 +42,9 @@ export default function Home() {
                 <p className="text-body-large mb-6">
                   Seamless migration of your infrastructure to AWS with minimal downtime and maximum efficiency.
                 </p>
-                <a href="/services/cloud-migration" className="btn-secondary">
+                <Link href="/services/cloud-migration" className="btn-secondary">
                   Learn More →
-                </a>
+                </Link>
               </div>
             </div>
             
@@ -58,9 +57,9 @@ export default function Home() {
                 <p className="text-body-large mb-6">
                   Reduce your AWS costs by up to 40% with our proven optimization strategies and best practices.
                 </p>
-                <a href="/services/cost-optimization" className="btn-secondary">
+                <Link href="/services/cost-optimization" className="btn-secondary">
                   Learn More →
-                </a>
+                </Link>
               </div>
             </div>
             
@@ -73,9 +72,9 @@ export default function Home() {
                 <p className="text-body-large mb-6">
                   Ensure your cloud infrastructure meets industry standards and regulatory requirements.
                 </p>
-                <a href="/services/security-compliance" className="btn-secondary">
+                <Link href="/services/security-compliance" className="btn-secondary">
                   Learn More →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
