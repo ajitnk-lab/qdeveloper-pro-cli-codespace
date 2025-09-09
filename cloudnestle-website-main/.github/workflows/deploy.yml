@@ -1,0 +1,54 @@
+name: Deploy Cloud Nestle Website
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: website/package-lock.json
+        
+    - name: Install dependencies
+      run: |
+        cd website
+        npm ci
+        
+    - name: Build website
+      run: |
+        cd website
+        npm run build
+        
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+        
+    - name: Deploy to S3
+      run: |
+        cd website
+        aws s3 sync out/ s3://cloudnestle-website-039920874011 --delete --cache-control max-age=31536000,public
+        
+    - name: Invalidate CloudFront cache
+      run: |
+        aws cloudfront create-invalidation --distribution-id EZDWLV4MRSI1U --paths "/*"
+        
+    - name: Verify deployment
+      run: |
+        echo "✅ Deployment completed successfully!"
+        echo "🌐 Website URL: https://d3tlqqb05xfabm.cloudfront.net"
+        echo "📊 CloudFront Distribution: EZDWLV4MRSI1U"
