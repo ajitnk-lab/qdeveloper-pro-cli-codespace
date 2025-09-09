@@ -50,3 +50,4 @@ Test timestamp: Tue Sep  9 14:44:00 UTC 2025
 Workflow should trigger now: Tue Sep  9 14:47:11 UTC 2025
 
 # CloudFront fix deployed Tue Sep  9 17:41:40 UTC 2025
+<!-- Trigger workflow: Tue Sep  9 18:49:46 UTC 2025 -->
