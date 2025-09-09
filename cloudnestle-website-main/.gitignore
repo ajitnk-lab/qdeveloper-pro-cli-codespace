@@ -92,3 +92,6 @@ jspm_packages/
 # Kiro files (keep specs but ignore temp files)
 .kiro/temp/
 .kiro/cache/
+
+# Amazon Q CLI files (exclude parent directory only)
+../.amazonq/
