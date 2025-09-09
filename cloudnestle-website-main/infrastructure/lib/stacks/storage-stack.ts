@@ -44,6 +44,11 @@ export class StorageStack extends cdk.NestedStack {
           responseHttpStatus: 200,
           responsePagePath: '/index.html',
         },
+        {
+          httpStatus: 403,
+          responseHttpStatus: 200,
+          responsePagePath: '/index.html',
+        },
       ],
     });
 
