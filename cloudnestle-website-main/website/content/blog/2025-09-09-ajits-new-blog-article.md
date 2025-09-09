@@ -1,6 +1,6 @@
 ---
 title: "🚀 Automated Deployment is Now Live!"
-date: "2025-09-09"
+publishedAt: "2025-09-09"
 category: "Announcements"
 tags: ["Automation", "GitHub Actions", "DevOps", "CI/CD"]
 excerpt: "Our website now features professional CI/CD automation with GitHub Actions, enabling instant deployments with every code push."
