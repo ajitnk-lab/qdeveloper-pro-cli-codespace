@@ -19,16 +19,16 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-        cache-dependency-path: website/package-lock.json
+        cache-dependency-path: cloudnestle-website-main/website/package-lock.json
         
     - name: Install dependencies
       run: |
-        cd website
+        cd cloudnestle-website-main/website
         npm ci
         
     - name: Build website
       run: |
-        cd website
+        cd cloudnestle-website-main/website
         npm run build
         
     - name: Configure AWS credentials
@@ -40,7 +40,7 @@ jobs:
         
     - name: Deploy to S3
       run: |
-        cd website
+        cd cloudnestle-website-main/website
         aws s3 sync out/ s3://cloudnestle-website-039920874011 --delete --cache-control max-age=31536000,public
         
     - name: Invalidate CloudFront cache
