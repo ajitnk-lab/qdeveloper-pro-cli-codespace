@@ -93,8 +93,11 @@ export function getAllServices(): Service[] {
         slug,
         title: data.title || '',
         description: data.description || '',
+        overview: data.overview || '',
         content: '',
-        features: data.features || [],
+        icon: data.icon || '',
+        color: data.color || '',
+        featured: data.featured || false,
         pricing: data.pricing || undefined,
       } as Service;
     });
@@ -110,8 +113,11 @@ export async function getService(slug: string): Promise<Service | null> {
       slug,
       title: data.title || '',
       description: data.description || '',
+      overview: data.overview || '',
       content,
-      features: data.features || [],
+      icon: data.icon || '',
+      color: data.color || '',
+      featured: data.featured || false,
       pricing: data.pricing || undefined,
     };
   } catch (error) {

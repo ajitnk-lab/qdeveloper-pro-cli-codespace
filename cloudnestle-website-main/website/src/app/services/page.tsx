@@ -1,32 +1,11 @@
 import Layout from '@/components/layout/Layout';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-
-const services = [
-  {
-    slug: 'cloud-migration',
-    title: 'Cloud Migration',
-    description: 'Seamless migration of your infrastructure to AWS with minimal downtime and maximum efficiency.',
-    features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', '24/7 Support'],
-    pricing: { basic: 5000, premium: 15000, enterprise: 'Custom' }
-  },
-  {
-    slug: 'cost-optimization',
-    title: 'Cost Optimization',
-    description: 'Reduce your AWS costs by up to 40% with our proven optimization strategies.',
-    features: ['Cost Analysis', 'Resource Right-sizing', 'Reserved Instance Planning', 'Monitoring Setup'],
-    pricing: { basic: 2000, premium: 8000, enterprise: 'Custom' }
-  },
-  {
-    slug: 'security-compliance',
-    title: 'Security & Compliance',
-    description: 'Ensure your cloud infrastructure meets industry standards and regulations.',
-    features: ['Security Audit', 'Compliance Framework', 'Identity Management', 'Monitoring & Alerts'],
-    pricing: { basic: 3000, premium: 12000, enterprise: 'Custom' }
-  }
-];
+import { getAllServices } from '@/lib/content';
 
 export default function ServicesPage() {
+  const services = getAllServices();
+
   return (
     <Layout>
       {/* Hero Banner */}
@@ -48,34 +27,27 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div key={service.slug} className="card-professional animate-slide-in-right" style={{animationDelay: `${index * 0.1}s`}}>
                 <div className="p-8">
-                  <div className={`icon-wrapper ${index === 0 ? 'blue' : index === 1 ? 'orange' : 'green'} mb-6`}>
-                    {index === 0 ? '☁' : index === 1 ? '$' : '🔒'}
+                  <div className={`icon-wrapper ${service.color} mb-6`}>
+                    {service.icon}
                   </div>
                   
                   <h3 className="text-subheading mb-4">{service.title}</h3>
                   <p className="text-body-large mb-6">{service.description}</p>
                   
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3 text-gray-800">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="font-semibold mb-3 text-gray-800">Starting from:</h4>
-                    <div className="text-2xl font-bold" style={{color: 'var(--primary-blue)'}}>
-                      ${service.pricing.basic.toLocaleString()}
+                  {service.pricing?.basic && (
+                    <div className="mb-6">
+                      <h4 className="font-semibold mb-3 text-gray-800">Starting from:</h4>
+                      <div className="text-2xl font-bold" style={{color: 'var(--primary-blue)'}}>
+                        {typeof service.pricing.basic.price === 'number' 
+                          ? `$${service.pricing.basic.price.toLocaleString()}`
+                          : service.pricing.basic.price
+                        }
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   <button className="btn-primary w-full">
-                    Learn More
+                    <a href={`/services/${service.slug}`}>Learn More</a>
                   </button>
                 </div>
               </div>

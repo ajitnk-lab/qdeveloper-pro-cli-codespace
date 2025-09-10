@@ -15,12 +15,27 @@ export interface Service {
   slug: string;
   title: string;
   description: string;
+  overview: string;
   content: string;
-  features: string[];
+  icon: string;
+  color: string;
+  featured: boolean;
   pricing?: {
-    basic: number;
-    premium: number;
-    enterprise: string;
+    basic?: {
+      price: number | string;
+      name: string;
+      features: string[];
+    };
+    premium?: {
+      price: number | string;
+      name: string;
+      features: string[];
+    };
+    enterprise?: {
+      price: number | string;
+      name: string;
+      features: string[];
+    };
   };
 }
 
