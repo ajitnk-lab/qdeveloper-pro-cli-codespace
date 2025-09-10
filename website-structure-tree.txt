@@ -1,0 +1,48 @@
+Website Structure Tree
+=====================
+
+Cloud Nestle Website
+├── Services
+│   ├── Infrastructure
+│   │   ├── Cloud
+│   │   ├── Architecture
+│   │   ├── Toolkit
+│   │   ├── Setup
+│   │   └── Monitoring
+│   ├── Hosting
+│   │   ├── Landing Zone
+│   │   ├── Backup
+│   │   ├── Disaster
+│   │   ├── Security
+│   │   └── Compliance
+│   ├── Process Improvement
+│   │   └── Delivery partner
+│   └── Training
+├── Consulting
+│   ├── Governance
+│   │   ├── Cost
+│   │   ├── Management
+│   │   ├── Discovery
+│   │   ├── Optimization
+│   │   └── Guidance
+│   ├── Strategy
+│   │   ├── Evaluate
+│   │   ├── Roadmap
+│   │   ├── Maturity
+│   │   └── Review
+│   └── Assessment
+├── Resources
+│   ├── Blogs
+│   ├── Events
+│   ├── About
+│   └── Client
+├── Company
+│   ├── Case Study
+│   ├── Testimonial
+│   └── Career
+├── Marketplace
+├── Office
+├── Sales/Registration
+├── Contact us
+│   ├── Sales
+│   └── Support
