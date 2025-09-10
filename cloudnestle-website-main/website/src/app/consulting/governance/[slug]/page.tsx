@@ -1,7 +1,6 @@
 import Layout from '@/components/layout/Layout';
-import { getAllConsultingServices, getMarkdownContent } from '@/lib/content';
+import { getAllConsultingServices, getConsultingService } from '@/lib/content';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 
 interface ConsultingPageProps {
   params: {
@@ -17,14 +16,11 @@ export async function generateStaticParams() {
 }
 
 export default async function ConsultingGovernancePage({ params }: ConsultingPageProps) {
-  const services = getAllConsultingServices('governance');
-  const service = services.find(s => s.slug === params.slug);
+  const service = await getConsultingService('governance', params.slug);
 
   if (!service) {
     notFound();
   }
-
-  const { content } = await getMarkdownContent(`consulting/governance/${params.slug}.md`);
 
   return (
     <Layout>
@@ -78,7 +74,7 @@ export default async function ConsultingGovernancePage({ params }: ConsultingPag
             <div className="card-professional p-8 mb-12">
               <div 
                 className="prose prose-lg max-w-none"
-                dangerouslySetInnerHTML={{ __html: content }}
+                dangerouslySetInnerHTML={{ __html: service.content }}
               />
             </div>
 

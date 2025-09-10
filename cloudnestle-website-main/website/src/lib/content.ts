@@ -173,17 +173,17 @@ export function getAllConsultingServices(category?: string): ConsultingService[]
 
           return {
             slug,
-            title: data.title || '',
-            description: data.description || '',
-            overview: data.overview || '',
+            title: (data.title as string) || '',
+            description: (data.description as string) || '',
+            overview: (data.overview as string) || '',
             content: '',
             category: cat as 'governance' | 'strategy' | 'assessment',
-            icon: data.icon || '',
-            color: data.color || '',
-            featured: data.featured || false,
-            image: data.image || getImagePath('consulting', slug),
-            deliverables: data.deliverables || [],
-            duration: data.duration || '',
+            icon: (data.icon as string) || '',
+            color: (data.color as string) || '',
+            featured: (data.featured as boolean) || false,
+            image: (data.image as string) || getImagePath('consulting', slug),
+            deliverables: (data.deliverables as string[]) || [],
+            duration: (data.duration as string) || '',
           } as ConsultingService;
         });
       allServices.push(...services);
@@ -191,6 +191,29 @@ export function getAllConsultingServices(category?: string): ConsultingService[]
   });
 
   return allServices;
+}
+
+export async function getConsultingService(category: string, slug: string): Promise<ConsultingService | null> {
+  try {
+    const { data, content } = await getMarkdownContent(`consulting/${category}/${slug}.md`);
+    
+    return {
+      slug,
+      title: (data.title as string) || '',
+      description: (data.description as string) || '',
+      overview: (data.overview as string) || '',
+      content,
+      category: category as 'governance' | 'strategy' | 'assessment',
+      icon: (data.icon as string) || '',
+      color: (data.color as string) || '',
+      featured: (data.featured as boolean) || false,
+      image: (data.image as string) || getImagePath('consulting', slug),
+      deliverables: (data.deliverables as string[]) || [],
+      duration: (data.duration as string) || '',
+    };
+  } catch (error) {
+    return null;
+  }
 }
 
 // Generic content functions for other types
