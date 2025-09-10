@@ -9,16 +9,24 @@ interface ConsultingPageProps {
 }
 
 export async function generateStaticParams() {
-  const services = getAllConsultingServices('governance');
+  const services = getAllConsultingServices();
   return services.map((service) => ({
     slug: service.slug,
   }));
 }
 
-export default async function ConsultingGovernancePage({ params }: ConsultingPageProps) {
-  const service = await getConsultingService('governance', params.slug);
+export default async function ConsultingServicePage({ params }: ConsultingPageProps) {
+  const services = getAllConsultingServices();
+  const service = services.find(s => s.slug === params.slug);
 
   if (!service) {
+    notFound();
+  }
+
+  // Get the full content
+  const fullService = await getConsultingService(service.category, params.slug);
+  
+  if (!fullService) {
     notFound();
   }
 
@@ -28,12 +36,12 @@ export default async function ConsultingGovernancePage({ params }: ConsultingPag
       <section className="section-hero">
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="animate-fade-in-up">
-            <div className={`icon-wrapper ${service.color} mb-6 mx-auto`}>
-              {service.icon}
+            <div className={`icon-wrapper ${fullService.color} mb-6 mx-auto`}>
+              {fullService.icon}
             </div>
-            <h1 className="text-hero mb-6">{service.title}</h1>
+            <h1 className="text-hero mb-6">{fullService.title}</h1>
             <p className="text-body-large mb-8 max-w-3xl mx-auto text-gray-200">
-              {service.description}
+              {fullService.description}
             </p>
           </div>
         </div>
@@ -46,14 +54,14 @@ export default async function ConsultingGovernancePage({ params }: ConsultingPag
             <div className="card-professional p-8 mb-12">
               <h2 className="text-heading mb-6">Overview</h2>
               <p className="text-body-large text-gray-700 leading-relaxed mb-8">
-                {service.overview}
+                {fullService.overview}
               </p>
               
-              {service.deliverables && service.deliverables.length > 0 && (
+              {fullService.deliverables && fullService.deliverables.length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-subheading mb-4">Key Deliverables</h3>
                   <ul className="space-y-2">
-                    {service.deliverables.map((deliverable, idx) => (
+                    {fullService.deliverables.map((deliverable, idx) => (
                       <li key={idx} className="flex items-center text-gray-700">
                         <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                         {deliverable}
@@ -63,10 +71,10 @@ export default async function ConsultingGovernancePage({ params }: ConsultingPag
                 </div>
               )}
 
-              {service.duration && (
+              {fullService.duration && (
                 <div className="mb-8">
                   <h3 className="text-subheading mb-4">Duration</h3>
-                  <p className="text-body-large text-gray-700">{service.duration}</p>
+                  <p className="text-body-large text-gray-700">{fullService.duration}</p>
                 </div>
               )}
             </div>
@@ -74,7 +82,7 @@ export default async function ConsultingGovernancePage({ params }: ConsultingPag
             <div className="card-professional p-8 mb-12">
               <div 
                 className="prose prose-lg max-w-none"
-                dangerouslySetInnerHTML={{ __html: service.content }}
+                dangerouslySetInnerHTML={{ __html: fullService.content }}
               />
             </div>
 
@@ -82,7 +90,7 @@ export default async function ConsultingGovernancePage({ params }: ConsultingPag
             <div className="card-professional p-12 text-center">
               <h2 className="text-heading mb-4">Ready to Get Started?</h2>
               <p className="text-body-large mb-8">
-                Contact us today to discuss how we can help with your {service.title.toLowerCase()} needs.
+                Contact us today to discuss how we can help with your {fullService.title.toLowerCase()} needs.
               </p>
               <button className="btn-accent">
                 Schedule Consultation

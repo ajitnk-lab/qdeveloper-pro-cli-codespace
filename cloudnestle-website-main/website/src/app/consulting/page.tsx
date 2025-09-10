@@ -40,7 +40,7 @@ export default function ConsultingPage() {
                 <div className="p-8">
                   <h3 className="text-subheading mb-4">{service.title}</h3>
                   <p className="text-body-large mb-6">{service.description}</p>
-                  <Link href={`/consulting/governance/${service.slug}`} className="btn-primary">
+                  <Link href={`/consulting/${service.slug}`} className="btn-primary">
                     Learn More
                   </Link>
                 </div>
@@ -64,7 +64,7 @@ export default function ConsultingPage() {
                 <div className="p-8">
                   <h3 className="text-subheading mb-4">{service.title}</h3>
                   <p className="text-body-large mb-6">{service.description}</p>
-                  <Link href={`/consulting/strategy/${service.slug}`} className="btn-primary">
+                  <Link href={`/consulting/${service.slug}`} className="btn-primary">
                     Learn More
                   </Link>
                 </div>
@@ -88,7 +88,7 @@ export default function ConsultingPage() {
                 <div className="p-8">
                   <h3 className="text-subheading mb-4">{service.title}</h3>
                   <p className="text-body-large mb-6">{service.description}</p>
-                  <Link href={`/consulting/assessment/${service.slug}`} className="btn-primary">
+                  <Link href={`/consulting/${service.slug}`} className="btn-primary">
                     Learn More
                   </Link>
                 </div>
