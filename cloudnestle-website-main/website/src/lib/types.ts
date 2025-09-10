@@ -120,6 +120,21 @@ export interface ContactInfo {
   address?: string;
 }
 
+export interface Solution {
+  slug: string;
+  title: string;
+  description: string;
+  overview: string;
+  content: string;
+  category: string;
+  icon: string;
+  color: string;
+  featured: boolean;
+  image?: string;
+  benefits?: string[];
+  technologies?: string[];
+}
+
 export interface MenuItem {
   label: string;
   href: string;

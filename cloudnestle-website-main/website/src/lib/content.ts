@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
-import { BlogPost, Service, ConsultingService, Resource, CaseStudy, Testimonial, Career, ContactInfo } from './types';
+import { BlogPost, Service, ConsultingService, Resource, CaseStudy, Testimonial, Career, ContactInfo, Solution } from './types';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
@@ -290,4 +290,45 @@ export function getAllContactInfo(): ContactInfo[] {
     phone: (data.phone as string) || '',
     address: (data.address as string) || '',
   }));
+}
+
+// Solutions
+export function getAllSolutions(): Solution[] {
+  return getContentByType('solutions', (data, slug) => ({
+    slug,
+    title: (data.title as string) || '',
+    description: (data.description as string) || '',
+    overview: (data.overview as string) || '',
+    content: '',
+    category: (data.category as string) || '',
+    icon: (data.icon as string) || '',
+    color: (data.color as string) || '',
+    featured: (data.featured as boolean) || false,
+    image: (data.image as string) || getImagePath('solutions', slug),
+    benefits: (data.benefits as string[]) || [],
+    technologies: (data.technologies as string[]) || [],
+  }));
+}
+
+export async function getSolution(slug: string): Promise<Solution | null> {
+  try {
+    const { data, content } = await getMarkdownContent(`solutions/${slug}.md`);
+    
+    return {
+      slug,
+      title: (data.title as string) || '',
+      description: (data.description as string) || '',
+      overview: (data.overview as string) || '',
+      content,
+      category: (data.category as string) || '',
+      icon: (data.icon as string) || '',
+      color: (data.color as string) || '',
+      featured: (data.featured as boolean) || false,
+      image: (data.image as string) || getImagePath('solutions', slug),
+      benefits: (data.benefits as string[]) || [],
+      technologies: (data.technologies as string[]) || [],
+    };
+  } catch (error) {
+    return null;
+  }
 }
