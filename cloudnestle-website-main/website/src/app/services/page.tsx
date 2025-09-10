@@ -2,6 +2,7 @@ import Layout from '@/components/layout/Layout';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import { getAllServices } from '@/lib/content';
+import Image from 'next/image';
 
 export default function ServicesPage() {
   const services = getAllServices();
@@ -25,7 +26,15 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={service.slug} className="card-professional animate-slide-in-right" style={{animationDelay: `${index * 0.1}s`}}>
+              <div key={service.slug} className="card-professional overflow-hidden animate-slide-in-right" style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="relative h-48 bg-gray-200">
+                  <Image
+                    src={service.image || '/images/services/default.jpg'}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div className="p-8">
                   <div className={`icon-wrapper ${service.color} mb-6`}>
                     {service.icon}

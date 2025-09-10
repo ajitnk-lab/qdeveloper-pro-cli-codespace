@@ -7,6 +7,23 @@ import { BlogPost, Service } from './types';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
+// Image mapping utility - maps content slug to image path
+export function getImagePath(type: 'blog' | 'services', slug: string, fallback?: string): string {
+  const extensions = ['jpg', 'png', 'gif'];
+  
+  for (const ext of extensions) {
+    const imagePath = `/images/${type}/${slug}.${ext}`;
+    const fullPath = path.join(process.cwd(), 'public', imagePath);
+    
+    if (fs.existsSync(fullPath)) {
+      return imagePath;
+    }
+  }
+  
+  // Return fallback or default placeholder
+  return fallback || `/images/${type}/default.jpg`;
+}
+
 export async function getMarkdownContent(filePath: string) {
   const fullPath = path.join(contentDirectory, filePath);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -47,6 +64,7 @@ export function getAllBlogPosts(): BlogPost[] {
         tags: data.tags || [],
         author: data.author || '',
         featured: data.featured || false,
+        image: data.image || getImagePath('blog', slug),
       } as BlogPost;
     });
 
@@ -67,6 +85,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
       tags: data.tags || [],
       author: data.author || '',
       featured: data.featured || false,
+      image: data.image || getImagePath('blog', slug),
     };
   } catch (error) {
     return null;
@@ -98,6 +117,7 @@ export function getAllServices(): Service[] {
         icon: data.icon || '',
         color: data.color || '',
         featured: data.featured || false,
+        image: data.image || getImagePath('services', slug),
         pricing: data.pricing || undefined,
       } as Service;
     });
@@ -118,6 +138,7 @@ export async function getService(slug: string): Promise<Service | null> {
       icon: data.icon || '',
       color: data.color || '',
       featured: data.featured || false,
+      image: data.image || getImagePath('services', slug),
       pricing: data.pricing || undefined,
     };
   } catch (error) {

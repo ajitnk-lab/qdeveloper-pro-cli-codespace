@@ -9,6 +9,7 @@ export interface BlogPost {
   tags: string[];
   author: string;
   featured: boolean;
+  image?: string;
 }
 
 export interface Service {
@@ -20,6 +21,7 @@ export interface Service {
   icon: string;
   color: string;
   featured: boolean;
+  image?: string;
   pricing?: {
     basic?: {
       price: number | string;
