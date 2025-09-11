@@ -11,8 +11,8 @@ export function CartSidebar() {
   const { items, isOpen, removeItem, clearCart, getTotalPrice, setCartOpen } = useCartStore()
 
   const handleCheckout = () => {
-    // TODO: Implement checkout functionality
-    console.log('Proceed to checkout')
+    setCartOpen(false)
+    window.location.href = '/checkout'
   }
 
   return (

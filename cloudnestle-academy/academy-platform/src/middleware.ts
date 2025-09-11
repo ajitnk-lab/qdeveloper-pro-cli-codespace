@@ -15,8 +15,11 @@ export default withAuth(
         // Protect dashboard and course access routes
         if (
           req.nextUrl.pathname.startsWith('/dashboard') ||
-          req.nextUrl.pathname.startsWith('/courses/') ||
-          req.nextUrl.pathname.startsWith('/api/user')
+          req.nextUrl.pathname.startsWith('/learn/') ||
+          req.nextUrl.pathname.startsWith('/subscription') ||
+          req.nextUrl.pathname.startsWith('/api/user') ||
+          req.nextUrl.pathname.startsWith('/api/subscriptions') ||
+          req.nextUrl.pathname.startsWith('/api/orders')
         ) {
           return !!token
         }
@@ -31,7 +34,10 @@ export const config = {
   matcher: [
     '/dashboard/:path*',
     '/admin/:path*',
-    '/courses/:path*',
+    '/learn/:path*',
+    '/subscription/:path*',
     '/api/user/:path*',
+    '/api/subscriptions/:path*',
+    '/api/orders/:path*',
   ],
 }
