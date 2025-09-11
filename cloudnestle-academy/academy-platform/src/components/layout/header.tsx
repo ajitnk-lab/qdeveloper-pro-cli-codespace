@@ -7,6 +7,7 @@ import { signIn, signOut } from 'next-auth/react'
 
 export function Header() {
   const { user, isAuthenticated } = useAuth()
+  const isAdmin = user?.email === process.env.NEXT_PUBLIC_ADMIN_EMAIL
 
   return (
     <header className="bg-white shadow-sm border-b">
@@ -21,6 +22,9 @@ export function Header() {
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="/courses" className="text-gray-600 hover:text-gray-900">
               Courses
+            </Link>
+            <Link href="/subscription" className="text-gray-600 hover:text-gray-900">
+              Subscription
             </Link>
             <Link href="/about" className="text-gray-600 hover:text-gray-900">
               About
@@ -42,6 +46,14 @@ export function Header() {
                 >
                   Dashboard
                 </Link>
+                {isAdmin && (
+                  <Link
+                    href="/admin"
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    Admin
+                  </Link>
+                )}
                 <button
                   onClick={() => signOut()}
                   className="text-gray-600 hover:text-gray-900"

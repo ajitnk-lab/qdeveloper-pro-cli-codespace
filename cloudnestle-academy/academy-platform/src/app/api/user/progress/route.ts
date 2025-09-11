@@ -21,6 +21,34 @@ export async function GET(request: NextRequest) {
 
     const { searchParams } = new URL(request.url)
     const courseId = searchParams.get('courseId')
+    const recent = searchParams.get('recent') === 'true'
+
+    if (recent) {
+      // Get recent progress for resume learning
+      const recentProgress = await prisma.userProgress.findMany({
+        where: { userId: user.id },
+        include: {
+          course: {
+            select: {
+              title: true,
+              slug: true,
+              thumbnailUrl: true,
+              category: true,
+            },
+          },
+          module: {
+            select: {
+              title: true,
+              order: true,
+            },
+          },
+        },
+        orderBy: { lastAccessedAt: 'desc' },
+        take: 5,
+      })
+
+      return NextResponse.json(recentProgress)
+    }
 
     const whereClause = courseId 
       ? { userId: user.id, courseId }

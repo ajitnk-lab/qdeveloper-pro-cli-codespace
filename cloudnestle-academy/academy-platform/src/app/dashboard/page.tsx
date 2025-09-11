@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { useAuth } from '@/hooks/use-auth'
+import { ProgressTracker } from '@/components/progress/progress-tracker'
+import { ResumeLearning } from '@/components/progress/resume-learning'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -122,22 +124,14 @@ export default function DashboardPage() {
           <p className="text-gray-600">Continue your learning journey</p>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Enrolled Courses</h3>
-            <p className="text-3xl font-bold text-blue-600">{courses.length}</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Completed Courses</h3>
-            <p className="text-3xl font-bold text-green-600">
-              {courses.filter(c => getProgressPercentage(c) === 100).length}
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Total Orders</h3>
-            <p className="text-3xl font-bold text-purple-600">{orders.length}</p>
-          </div>
+        {/* Resume Learning */}
+        <div className="mb-8">
+          <ResumeLearning />
+        </div>
+
+        {/* Progress Analytics */}
+        <div className="mb-8">
+          <ProgressTracker />
         </div>
 
         {/* My Courses */}
