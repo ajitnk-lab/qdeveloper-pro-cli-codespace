@@ -11,7 +11,7 @@ export default function BlogPage() {
     <Layout>
       {/* Hero Banner */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <h1 className="text-hero mb-6">Blog</h1>
             <p className="text-body-large mb-8 max-w-3xl mx-auto text-gray-200">
@@ -23,7 +23,7 @@ export default function BlogPage() {
 
       {/* Blog Posts */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-[10%]">
           {posts.length === 0 ? (
             <div className="text-center py-12">
               <div className="card-professional max-w-2xl mx-auto p-12">
@@ -92,7 +92,7 @@ export default function BlogPage() {
 
       {/* Newsletter CTA */}
       <section className="section-trust">
-        <div className="container mx-auto px-4 text-center">
+        <div className="w-full px-[10%] text-center">
           <div className="card-professional max-w-4xl mx-auto p-12">
             <div className="icon-wrapper orange mx-auto mb-6">
               📧

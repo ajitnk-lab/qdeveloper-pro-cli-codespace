@@ -34,7 +34,7 @@ export default async function ConsultingServicePage({ params }: ConsultingPagePr
     <Layout>
       {/* Hero Section */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <div className={`icon-wrapper ${fullService.color} mb-6 mx-auto`}>
               {fullService.icon}
@@ -49,7 +49,7 @@ export default async function ConsultingServicePage({ params }: ConsultingPagePr
 
       {/* Content Section */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-[10%]">
           <div className="max-w-4xl mx-auto">
             <div className="card-professional p-8 mb-12">
               <h2 className="text-heading mb-6">Overview</h2>

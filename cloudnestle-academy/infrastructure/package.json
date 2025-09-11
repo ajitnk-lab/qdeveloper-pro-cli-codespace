@@ -1,0 +1,36 @@
+{
+  "name": "cloudnestle-academy-infrastructure",
+  "version": "1.0.0",
+  "description": "AWS CDK infrastructure for CloudNestle Academy Platform",
+  "main": "lib/academy-platform-stack.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "bootstrap": "cdk bootstrap",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "diff": "cdk diff",
+    "destroy": "cdk destroy"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.100.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.2"
+  },
+  "keywords": [
+    "aws",
+    "cdk",
+    "infrastructure",
+    "cloudnestle",
+    "academy"
+  ],
+  "author": "CloudNestle",
+  "license": "MIT"
+}

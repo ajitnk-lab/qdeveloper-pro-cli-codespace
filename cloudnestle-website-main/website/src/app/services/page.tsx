@@ -11,7 +11,7 @@ export default function ServicesPage() {
     <Layout>
       {/* Hero Banner */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <h1 className="text-hero mb-6">Our Services</h1>
             <p className="text-body-large mb-8 max-w-3xl mx-auto text-gray-200">
@@ -23,7 +23,7 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-[10%]">
           <div className="grid lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={service.slug} className="card-professional overflow-hidden animate-slide-in-right" style={{animationDelay: `${index * 0.1}s`}}>
@@ -67,7 +67,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="section-trust">
-        <div className="container mx-auto px-4 text-center">
+        <div className="w-full px-[10%] text-center">
           <div className="card-professional max-w-4xl mx-auto p-12">
             <h2 className="text-heading mb-4">Ready to Get Started?</h2>
             <p className="text-body-large mb-8">

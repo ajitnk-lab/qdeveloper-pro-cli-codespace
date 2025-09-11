@@ -12,7 +12,7 @@ export default function ResourcesPage() {
     <Layout>
       {/* Hero Banner */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <h1 className="text-hero mb-6">Resources</h1>
             <p className="text-body-large mb-8 max-w-3xl mx-auto text-gray-200">
@@ -25,7 +25,7 @@ export default function ResourcesPage() {
       {/* Events Section */}
       {events.length > 0 && (
         <section className="section-services">
-          <div className="container mx-auto px-4">
+          <div className="w-full px-[10%]">
             <h2 className="text-heading mb-8 text-center">Upcoming Events</h2>
             <div className="grid lg:grid-cols-2 gap-8 mb-16">
               {events.map((event) => (
@@ -63,7 +63,7 @@ export default function ResourcesPage() {
       {/* About Section */}
       {aboutPages.length > 0 && (
         <section className="section-services">
-          <div className="container mx-auto px-4">
+          <div className="w-full px-[10%]">
             <h2 className="text-heading mb-8 text-center">About Us</h2>
             <div className="grid lg:grid-cols-3 gap-8 mb-16">
               {aboutPages.map((page) => (
@@ -85,7 +85,7 @@ export default function ResourcesPage() {
       {/* Client Resources */}
       {clientResources.length > 0 && (
         <section className="section-services">
-          <div className="container mx-auto px-4">
+          <div className="w-full px-[10%]">
             <h2 className="text-heading mb-8 text-center">Client Resources</h2>
             <div className="grid lg:grid-cols-3 gap-8">
               {clientResources.map((resource) => (

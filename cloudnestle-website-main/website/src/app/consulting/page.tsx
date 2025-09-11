@@ -12,7 +12,7 @@ export default function ConsultingPage() {
     <Layout>
       {/* Hero Banner */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <h1 className="text-hero mb-6">Consulting Services</h1>
             <p className="text-body-large mb-8 max-w-3xl mx-auto text-gray-200">
@@ -24,7 +24,7 @@ export default function ConsultingPage() {
 
       {/* Governance Section */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-[10%]">
           <h2 className="text-heading mb-8 text-center">Governance</h2>
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {governanceServices.map((service, index) => (

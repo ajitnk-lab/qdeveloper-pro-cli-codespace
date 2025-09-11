@@ -1,0 +1,1853 @@
+{
+ "Resources": {
+  "AcademyVPCA1F5517B": {
+   "Type": "AWS::EC2::VPC",
+   "Properties": {
+    "CidrBlock": "10.0.0.0/16",
+    "EnableDnsHostnames": true,
+    "EnableDnsSupport": true,
+    "InstanceTenancy": "default",
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/Resource"
+   }
+  },
+  "AcademyVPCPublicSubnet1Subnet69D642E7": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "us-east-1a",
+    "CidrBlock": "10.0.0.0/18",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1/Subnet"
+   }
+  },
+  "AcademyVPCPublicSubnet1RouteTable906071EA": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1/RouteTable"
+   }
+  },
+  "AcademyVPCPublicSubnet1RouteTableAssociation6373FBCA": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "AcademyVPCPublicSubnet1RouteTable906071EA"
+    },
+    "SubnetId": {
+     "Ref": "AcademyVPCPublicSubnet1Subnet69D642E7"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1/RouteTableAssociation"
+   }
+  },
+  "AcademyVPCPublicSubnet1DefaultRouteBF016A0F": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "AcademyVPCIGW8855BD77"
+    },
+    "RouteTableId": {
+     "Ref": "AcademyVPCPublicSubnet1RouteTable906071EA"
+    }
+   },
+   "DependsOn": [
+    "AcademyVPCVPCGW428693BF"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1/DefaultRoute"
+   }
+  },
+  "AcademyVPCPublicSubnet1EIP2135D191": {
+   "Type": "AWS::EC2::EIP",
+   "Properties": {
+    "Domain": "vpc",
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1/EIP"
+   }
+  },
+  "AcademyVPCPublicSubnet1NATGatewayF0962B9B": {
+   "Type": "AWS::EC2::NatGateway",
+   "Properties": {
+    "AllocationId": {
+     "Fn::GetAtt": [
+      "AcademyVPCPublicSubnet1EIP2135D191",
+      "AllocationId"
+     ]
+    },
+    "SubnetId": {
+     "Ref": "AcademyVPCPublicSubnet1Subnet69D642E7"
+    },
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "DependsOn": [
+    "AcademyVPCPublicSubnet1DefaultRouteBF016A0F",
+    "AcademyVPCPublicSubnet1RouteTableAssociation6373FBCA"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet1/NATGateway"
+   }
+  },
+  "AcademyVPCPublicSubnet2SubnetD2E5CD2E": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "us-east-1b",
+    "CidrBlock": "10.0.64.0/18",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet2"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet2/Subnet"
+   }
+  },
+  "AcademyVPCPublicSubnet2RouteTable4B0C7BAF": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet2"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet2/RouteTable"
+   }
+  },
+  "AcademyVPCPublicSubnet2RouteTableAssociation9C2D6252": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "AcademyVPCPublicSubnet2RouteTable4B0C7BAF"
+    },
+    "SubnetId": {
+     "Ref": "AcademyVPCPublicSubnet2SubnetD2E5CD2E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet2/RouteTableAssociation"
+   }
+  },
+  "AcademyVPCPublicSubnet2DefaultRoute72964721": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "AcademyVPCIGW8855BD77"
+    },
+    "RouteTableId": {
+     "Ref": "AcademyVPCPublicSubnet2RouteTable4B0C7BAF"
+    }
+   },
+   "DependsOn": [
+    "AcademyVPCVPCGW428693BF"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PublicSubnet2/DefaultRoute"
+   }
+  },
+  "AcademyVPCPrivateSubnet1SubnetFEBBB58E": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "us-east-1a",
+    "CidrBlock": "10.0.128.0/18",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet1"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet1/Subnet"
+   }
+  },
+  "AcademyVPCPrivateSubnet1RouteTable4D5582AE": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet1"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet1/RouteTable"
+   }
+  },
+  "AcademyVPCPrivateSubnet1RouteTableAssociationD8168BBF": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "AcademyVPCPrivateSubnet1RouteTable4D5582AE"
+    },
+    "SubnetId": {
+     "Ref": "AcademyVPCPrivateSubnet1SubnetFEBBB58E"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet1/RouteTableAssociation"
+   }
+  },
+  "AcademyVPCPrivateSubnet1DefaultRouteE8FD1658": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "AcademyVPCPublicSubnet1NATGatewayF0962B9B"
+    },
+    "RouteTableId": {
+     "Ref": "AcademyVPCPrivateSubnet1RouteTable4D5582AE"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet1/DefaultRoute"
+   }
+  },
+  "AcademyVPCPrivateSubnet2Subnet7B86D7A2": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "us-east-1b",
+    "CidrBlock": "10.0.192.0/18",
+    "MapPublicIpOnLaunch": false,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Private"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Private"
+     },
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet2"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet2/Subnet"
+   }
+  },
+  "AcademyVPCPrivateSubnet2RouteTableBD4493CE": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet2"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet2/RouteTable"
+   }
+  },
+  "AcademyVPCPrivateSubnet2RouteTableAssociation10050355": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "AcademyVPCPrivateSubnet2RouteTableBD4493CE"
+    },
+    "SubnetId": {
+     "Ref": "AcademyVPCPrivateSubnet2Subnet7B86D7A2"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet2/RouteTableAssociation"
+   }
+  },
+  "AcademyVPCPrivateSubnet2DefaultRouteECD3E9E8": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "NatGatewayId": {
+     "Ref": "AcademyVPCPublicSubnet1NATGatewayF0962B9B"
+    },
+    "RouteTableId": {
+     "Ref": "AcademyVPCPrivateSubnet2RouteTableBD4493CE"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/PrivateSubnet2/DefaultRoute"
+   }
+  },
+  "AcademyVPCIGW8855BD77": {
+   "Type": "AWS::EC2::InternetGateway",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Name",
+      "Value": "CloudNestleAcademyStack/AcademyVPC"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/IGW"
+   }
+  },
+  "AcademyVPCVPCGW428693BF": {
+   "Type": "AWS::EC2::VPCGatewayAttachment",
+   "Properties": {
+    "InternetGatewayId": {
+     "Ref": "AcademyVPCIGW8855BD77"
+    },
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/VPCGW"
+   }
+  },
+  "AcademyVPCRestrictDefaultSecurityGroupCustomResource4992F776": {
+   "Type": "Custom::VpcRestrictDefaultSG",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E",
+      "Arn"
+     ]
+    },
+    "DefaultSecurityGroupId": {
+     "Fn::GetAtt": [
+      "AcademyVPCA1F5517B",
+      "DefaultSecurityGroup"
+     ]
+    },
+    "Account": "039920874011"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyVPC/RestrictDefaultSecurityGroupCustomResource/Default"
+   }
+  },
+  "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Version": "2012-10-17",
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ]
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+     }
+    ],
+    "Policies": [
+     {
+      "PolicyName": "Inline",
+      "PolicyDocument": {
+       "Version": "2012-10-17",
+       "Statement": [
+        {
+         "Effect": "Allow",
+         "Action": [
+          "ec2:AuthorizeSecurityGroupIngress",
+          "ec2:AuthorizeSecurityGroupEgress",
+          "ec2:RevokeSecurityGroupIngress",
+          "ec2:RevokeSecurityGroupEgress"
+         ],
+         "Resource": [
+          {
+           "Fn::Join": [
+            "",
+            [
+             "arn:aws:ec2:us-east-1:039920874011:security-group/",
+             {
+              "Fn::GetAtt": [
+               "AcademyVPCA1F5517B",
+               "DefaultSecurityGroup"
+              ]
+             }
+            ]
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role"
+   }
+  },
+  "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-039920874011-us-east-1",
+     "S3Key": "7fa1e366ee8a9ded01fc355f704cff92bfd179574e6f9cfee800a3541df1b200.zip"
+    },
+    "Timeout": 900,
+    "MemorySize": 128,
+    "Handler": "__entrypoint__.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs22.x",
+    "Description": "Lambda function for removing all inbound/outbound rules from the VPC default security group"
+   },
+   "DependsOn": [
+    "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler",
+    "aws:asset:path": "asset.7fa1e366ee8a9ded01fc355f704cff92bfd179574e6f9cfee800a3541df1b200",
+    "aws:asset:property": "Code"
+   }
+  },
+  "AcademyContentBucket9B9B0A2A": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "CorsConfiguration": {
+     "CorsRules": [
+      {
+       "AllowedHeaders": [
+        "*"
+       ],
+       "AllowedMethods": [
+        "GET",
+        "POST"
+       ],
+       "AllowedOrigins": [
+        "*"
+       ]
+      }
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VersioningConfiguration": {
+     "Status": "Enabled"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyContentBucket/Resource"
+   }
+  },
+  "AcademyContentBucketPolicy81E3F09D": {
+   "Type": "AWS::S3::BucketPolicy",
+   "Properties": {
+    "Bucket": {
+     "Ref": "AcademyContentBucket9B9B0A2A"
+    },
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Principal": {
+        "CanonicalUser": {
+         "Fn::GetAtt": [
+          "AcademyDistributionOrigin2S3OriginA78DFB1F",
+          "S3CanonicalUserId"
+         ]
+        }
+       },
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "AcademyContentBucket9B9B0A2A",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyContentBucket/Policy/Resource"
+   }
+  },
+  "AcademyDatabaseSubnetGroupE21A76D9": {
+   "Type": "AWS::RDS::DBSubnetGroup",
+   "Properties": {
+    "DBSubnetGroupDescription": "Subnet group for AcademyDatabase database",
+    "SubnetIds": [
+     {
+      "Ref": "AcademyVPCPrivateSubnet1SubnetFEBBB58E"
+     },
+     {
+      "Ref": "AcademyVPCPrivateSubnet2Subnet7B86D7A2"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyDatabase/SubnetGroup/Default"
+   }
+  },
+  "AcademyDatabaseSecurityGroup10F39497": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Security group for AcademyDatabase database",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyDatabase/SecurityGroup/Resource"
+   }
+  },
+  "AcademyDatabaseSecurityGroupfromCloudNestleAcademyStackAcademyServiceSecurityGroup306DB5CB543291FEA4C0": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "Description": "from CloudNestleAcademyStackAcademyServiceSecurityGroup306DB5CB:5432",
+    "FromPort": 5432,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "AcademyDatabaseSecurityGroup10F39497",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "AcademyServiceSecurityGroup4BC1B6AE",
+      "GroupId"
+     ]
+    },
+    "ToPort": 5432
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyDatabase/SecurityGroup/from CloudNestleAcademyStackAcademyServiceSecurityGroup306DB5CB:5432"
+   }
+  },
+  "CloudNestleAcademyStackAcademyDatabaseSecret038FE29F3fdaad7efa858a3daf9490cf0a702aeb": {
+   "Type": "AWS::SecretsManager::Secret",
+   "Properties": {
+    "Description": {
+     "Fn::Join": [
+      "",
+      [
+       "Generated by the CDK for stack: ",
+       {
+        "Ref": "AWS::StackName"
+       }
+      ]
+     ]
+    },
+    "GenerateSecretString": {
+     "ExcludeCharacters": " %+~`#$&*()|[]{}:;<>?!'/@\"\\",
+     "GenerateStringKey": "password",
+     "PasswordLength": 30,
+     "SecretStringTemplate": "{\"username\":\"academy_admin\"}"
+    },
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyDatabase/Secret/Resource"
+   }
+  },
+  "AcademyDatabaseSecretAttachment1B561889": {
+   "Type": "AWS::SecretsManager::SecretTargetAttachment",
+   "Properties": {
+    "SecretId": {
+     "Ref": "CloudNestleAcademyStackAcademyDatabaseSecret038FE29F3fdaad7efa858a3daf9490cf0a702aeb"
+    },
+    "TargetId": {
+     "Ref": "AcademyDatabaseD943C326"
+    },
+    "TargetType": "AWS::RDS::DBInstance"
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyDatabase/Secret/Attachment/Resource"
+   }
+  },
+  "AcademyDatabaseD943C326": {
+   "Type": "AWS::RDS::DBInstance",
+   "Properties": {
+    "AllocatedStorage": "20",
+    "BackupRetentionPeriod": 7,
+    "CopyTagsToSnapshot": true,
+    "DBInstanceClass": "db.t3.micro",
+    "DBName": "academy_platform",
+    "DBSubnetGroupName": {
+     "Ref": "AcademyDatabaseSubnetGroupE21A76D9"
+    },
+    "DeletionProtection": false,
+    "Engine": "postgres",
+    "EngineVersion": "15",
+    "MasterUserPassword": {
+     "Fn::Join": [
+      "",
+      [
+       "{{resolve:secretsmanager:",
+       {
+        "Ref": "CloudNestleAcademyStackAcademyDatabaseSecret038FE29F3fdaad7efa858a3daf9490cf0a702aeb"
+       },
+       ":SecretString:password::}}"
+      ]
+     ]
+    },
+    "MasterUsername": "academy_admin",
+    "StorageEncrypted": true,
+    "StorageType": "gp2",
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VPCSecurityGroups": [
+     {
+      "Fn::GetAtt": [
+       "AcademyDatabaseSecurityGroup10F39497",
+       "GroupId"
+      ]
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Snapshot",
+   "DeletionPolicy": "Snapshot",
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyDatabase/Resource"
+   }
+  },
+  "RedisSubnetGroup": {
+   "Type": "AWS::ElastiCache::SubnetGroup",
+   "Properties": {
+    "Description": "Subnet group for Redis",
+    "SubnetIds": [
+     {
+      "Ref": "AcademyVPCPrivateSubnet1SubnetFEBBB58E"
+     },
+     {
+      "Ref": "AcademyVPCPrivateSubnet2Subnet7B86D7A2"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/RedisSubnetGroup"
+   }
+  },
+  "AcademyRedis": {
+   "Type": "AWS::ElastiCache::CacheCluster",
+   "Properties": {
+    "CacheNodeType": "cache.t3.micro",
+    "CacheSubnetGroupName": {
+     "Ref": "RedisSubnetGroup"
+    },
+    "Engine": "redis",
+    "NumCacheNodes": 1,
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcSecurityGroupIds": [
+     {
+      "Fn::GetAtt": [
+       "AcademyDatabaseSecurityGroup10F39497",
+       "GroupId"
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyRedis"
+   }
+  },
+  "AcademyClusterF0F59B32": {
+   "Type": "AWS::ECS::Cluster",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyCluster/Resource"
+   }
+  },
+  "AcademyServiceLBA81366C2": {
+   "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "Properties": {
+    "LoadBalancerAttributes": [
+     {
+      "Key": "deletion_protection.enabled",
+      "Value": "false"
+     }
+    ],
+    "Scheme": "internet-facing",
+    "SecurityGroups": [
+     {
+      "Fn::GetAtt": [
+       "AcademyServiceLBSecurityGroup9465F128",
+       "GroupId"
+      ]
+     }
+    ],
+    "Subnets": [
+     {
+      "Ref": "AcademyVPCPublicSubnet1Subnet69D642E7"
+     },
+     {
+      "Ref": "AcademyVPCPublicSubnet2SubnetD2E5CD2E"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "Type": "application"
+   },
+   "DependsOn": [
+    "AcademyVPCPublicSubnet1DefaultRouteBF016A0F",
+    "AcademyVPCPublicSubnet1RouteTableAssociation6373FBCA",
+    "AcademyVPCPublicSubnet2DefaultRoute72964721",
+    "AcademyVPCPublicSubnet2RouteTableAssociation9C2D6252"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/LB/Resource"
+   }
+  },
+  "AcademyServiceLBSecurityGroup9465F128": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Automatically created Security Group for ELB CloudNestleAcademyStackAcademyServiceLB39A20F99",
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow from anyone on port 80",
+      "FromPort": 80,
+      "IpProtocol": "tcp",
+      "ToPort": 80
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/LB/SecurityGroup/Resource"
+   }
+  },
+  "AcademyServiceLBSecurityGrouptoCloudNestleAcademyStackAcademyServiceSecurityGroup306DB5CB300088536C39": {
+   "Type": "AWS::EC2::SecurityGroupEgress",
+   "Properties": {
+    "Description": "Load balancer to target",
+    "DestinationSecurityGroupId": {
+     "Fn::GetAtt": [
+      "AcademyServiceSecurityGroup4BC1B6AE",
+      "GroupId"
+     ]
+    },
+    "FromPort": 3000,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "AcademyServiceLBSecurityGroup9465F128",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "ToPort": 3000
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/LB/SecurityGroup/to CloudNestleAcademyStackAcademyServiceSecurityGroup306DB5CB:3000"
+   }
+  },
+  "AcademyServiceLBPublicListenerE92A4DEC": {
+   "Type": "AWS::ElasticLoadBalancingV2::Listener",
+   "Properties": {
+    "DefaultActions": [
+     {
+      "TargetGroupArn": {
+       "Ref": "AcademyServiceLBPublicListenerECSGroup27E2082B"
+      },
+      "Type": "forward"
+     }
+    ],
+    "LoadBalancerArn": {
+     "Ref": "AcademyServiceLBA81366C2"
+    },
+    "Port": 80,
+    "Protocol": "HTTP"
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/LB/PublicListener/Resource"
+   }
+  },
+  "AcademyServiceLBPublicListenerECSGroup27E2082B": {
+   "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "Properties": {
+    "Port": 80,
+    "Protocol": "HTTP",
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "TargetGroupAttributes": [
+     {
+      "Key": "stickiness.enabled",
+      "Value": "false"
+     }
+    ],
+    "TargetType": "ip",
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/LB/PublicListener/ECSGroup/Resource"
+   }
+  },
+  "AcademyServiceTaskDefTaskRole779F03CB": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/TaskDef/TaskRole/Resource"
+   }
+  },
+  "AcademyServiceTaskDefTaskRoleDefaultPolicy9668DF85": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "AcademyContentBucket9B9B0A2A",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "AcademyContentBucket9B9B0A2A",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "AcademyServiceTaskDefTaskRoleDefaultPolicy9668DF85",
+    "Roles": [
+     {
+      "Ref": "AcademyServiceTaskDefTaskRole779F03CB"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/TaskDef/TaskRole/DefaultPolicy/Resource"
+   }
+  },
+  "AcademyServiceTaskDefA2AEAC12": {
+   "Type": "AWS::ECS::TaskDefinition",
+   "Properties": {
+    "ContainerDefinitions": [
+     {
+      "Environment": [
+       {
+        "Name": "NODE_ENV",
+        "Value": "production"
+       },
+       {
+        "Name": "AWS_S3_BUCKET",
+        "Value": {
+         "Ref": "AcademyContentBucket9B9B0A2A"
+        }
+       },
+       {
+        "Name": "AWS_REGION",
+        "Value": "us-east-1"
+       },
+       {
+        "Name": "DATABASE_URL",
+        "Value": {
+         "Fn::Join": [
+          "",
+          [
+           "postgresql://{{resolve:secretsmanager:",
+           {
+            "Ref": "AcademyDatabaseSecretAttachment1B561889"
+           },
+           ":SecretString:username::}}:{{resolve:secretsmanager:",
+           {
+            "Ref": "AcademyDatabaseSecretAttachment1B561889"
+           },
+           ":SecretString:password::}}@",
+           {
+            "Fn::GetAtt": [
+             "AcademyDatabaseD943C326",
+             "Endpoint.Address"
+            ]
+           },
+           ":5432/{{resolve:secretsmanager:",
+           {
+            "Ref": "AcademyDatabaseSecretAttachment1B561889"
+           },
+           ":SecretString:dbname::}}"
+          ]
+         ]
+        }
+       },
+       {
+        "Name": "NEXTAUTH_SECRET",
+        "Value": "cloudnestle-academy-secret-2025"
+       },
+       {
+        "Name": "NEXTAUTH_URL",
+        "Value": "https://d22xjflyfu64hu.cloudfront.net"
+       },
+       {
+        "Name": "NEXT_PUBLIC_ADMIN_EMAIL",
+        "Value": "admin@cloudnestle.com"
+       },
+       {
+        "Name": "ADMIN_EMAIL",
+        "Value": "admin@cloudnestle.com"
+       },
+       {
+        "Name": "GOOGLE_CLIENT_ID",
+        "Value": "demo-client-id"
+       },
+       {
+        "Name": "GOOGLE_CLIENT_SECRET",
+        "Value": "demo-client-secret"
+       }
+      ],
+      "Essential": true,
+      "Image": {
+       "Fn::Sub": "039920874011.dkr.ecr.us-east-1.${AWS::URLSuffix}/cdk-hnb659fds-container-assets-039920874011-us-east-1:4be3ef07c10e532a2db039c348b57485421870eee2b456c409b513398d135d40"
+      },
+      "LogConfiguration": {
+       "LogDriver": "awslogs",
+       "Options": {
+        "awslogs-group": {
+         "Ref": "AcademyServiceTaskDefwebLogGroup3C011332"
+        },
+        "awslogs-stream-prefix": "AcademyService",
+        "awslogs-region": "us-east-1"
+       }
+      },
+      "Name": "web",
+      "PortMappings": [
+       {
+        "ContainerPort": 3000,
+        "Protocol": "tcp"
+       }
+      ]
+     }
+    ],
+    "Cpu": "256",
+    "ExecutionRoleArn": {
+     "Fn::GetAtt": [
+      "AcademyServiceTaskDefExecutionRole0E90C85C",
+      "Arn"
+     ]
+    },
+    "Family": "CloudNestleAcademyStackAcademyServiceTaskDef53CBBA50",
+    "Memory": "512",
+    "NetworkMode": "awsvpc",
+    "RequiresCompatibilities": [
+     "FARGATE"
+    ],
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "TaskRoleArn": {
+     "Fn::GetAtt": [
+      "AcademyServiceTaskDefTaskRole779F03CB",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/TaskDef/Resource"
+   }
+  },
+  "AcademyServiceTaskDefwebLogGroup3C011332": {
+   "Type": "AWS::Logs::LogGroup",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/TaskDef/web/LogGroup/Resource"
+   }
+  },
+  "AcademyServiceTaskDefExecutionRole0E90C85C": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/TaskDef/ExecutionRole/Resource"
+   }
+  },
+  "AcademyServiceTaskDefExecutionRoleDefaultPolicy509A7324": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:GetDownloadUrlForLayer"
+       ],
+       "Effect": "Allow",
+       "Resource": "arn:aws:ecr:us-east-1:039920874011:repository/cdk-hnb659fds-container-assets-039920874011-us-east-1"
+      },
+      {
+       "Action": "ecr:GetAuthorizationToken",
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "AcademyServiceTaskDefwebLogGroup3C011332",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "AcademyServiceTaskDefExecutionRoleDefaultPolicy509A7324",
+    "Roles": [
+     {
+      "Ref": "AcademyServiceTaskDefExecutionRole0E90C85C"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/TaskDef/ExecutionRole/DefaultPolicy/Resource"
+   }
+  },
+  "AcademyServiceB0DD9EEE": {
+   "Type": "AWS::ECS::Service",
+   "Properties": {
+    "Cluster": {
+     "Ref": "AcademyClusterF0F59B32"
+    },
+    "DeploymentConfiguration": {
+     "Alarms": {
+      "AlarmNames": [],
+      "Enable": false,
+      "Rollback": false
+     },
+     "MaximumPercent": 200,
+     "MinimumHealthyPercent": 50
+    },
+    "DesiredCount": 1,
+    "EnableECSManagedTags": false,
+    "HealthCheckGracePeriodSeconds": 60,
+    "LaunchType": "FARGATE",
+    "LoadBalancers": [
+     {
+      "ContainerName": "web",
+      "ContainerPort": 3000,
+      "TargetGroupArn": {
+       "Ref": "AcademyServiceLBPublicListenerECSGroup27E2082B"
+      }
+     }
+    ],
+    "NetworkConfiguration": {
+     "AwsvpcConfiguration": {
+      "AssignPublicIp": "DISABLED",
+      "SecurityGroups": [
+       {
+        "Fn::GetAtt": [
+         "AcademyServiceSecurityGroup4BC1B6AE",
+         "GroupId"
+        ]
+       }
+      ],
+      "Subnets": [
+       {
+        "Ref": "AcademyVPCPrivateSubnet1SubnetFEBBB58E"
+       },
+       {
+        "Ref": "AcademyVPCPrivateSubnet2Subnet7B86D7A2"
+       }
+      ]
+     }
+    },
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "TaskDefinition": {
+     "Ref": "AcademyServiceTaskDefA2AEAC12"
+    }
+   },
+   "DependsOn": [
+    "AcademyServiceLBPublicListenerECSGroup27E2082B",
+    "AcademyServiceLBPublicListenerE92A4DEC",
+    "AcademyServiceTaskDefTaskRoleDefaultPolicy9668DF85",
+    "AcademyServiceTaskDefTaskRole779F03CB"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/Service/Service"
+   }
+  },
+  "AcademyServiceSecurityGroup4BC1B6AE": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "CloudNestleAcademyStack/AcademyService/Service/SecurityGroup",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ],
+    "VpcId": {
+     "Ref": "AcademyVPCA1F5517B"
+    }
+   },
+   "DependsOn": [
+    "AcademyServiceTaskDefTaskRoleDefaultPolicy9668DF85",
+    "AcademyServiceTaskDefTaskRole779F03CB"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/Service/SecurityGroup/Resource"
+   }
+  },
+  "AcademyServiceSecurityGroupfromCloudNestleAcademyStackAcademyServiceLBSecurityGroup063BF36C3000E2A28900": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "Description": "Load balancer to target",
+    "FromPort": 3000,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "AcademyServiceSecurityGroup4BC1B6AE",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "AcademyServiceLBSecurityGroup9465F128",
+      "GroupId"
+     ]
+    },
+    "ToPort": 3000
+   },
+   "DependsOn": [
+    "AcademyServiceTaskDefTaskRoleDefaultPolicy9668DF85",
+    "AcademyServiceTaskDefTaskRole779F03CB"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyService/Service/SecurityGroup/from CloudNestleAcademyStackAcademyServiceLBSecurityGroup063BF36C:3000"
+   }
+  },
+  "AcademyDistributionOrigin2S3OriginA78DFB1F": {
+   "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
+   "Properties": {
+    "CloudFrontOriginAccessIdentityConfig": {
+     "Comment": "Identity for CloudNestleAcademyStackAcademyDistributionOrigin25FD5BC83"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyDistribution/Origin2/S3Origin/Resource"
+   }
+  },
+  "AcademyDistribution88DCF4D9": {
+   "Type": "AWS::CloudFront::Distribution",
+   "Properties": {
+    "DistributionConfig": {
+     "CacheBehaviors": [
+      {
+       "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+       "Compress": true,
+       "PathPattern": "/static/*",
+       "TargetOriginId": "CloudNestleAcademyStackAcademyDistributionOrigin25FD5BC83",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      }
+     ],
+     "DefaultCacheBehavior": {
+      "CachePolicyId": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+      "Compress": true,
+      "TargetOriginId": "CloudNestleAcademyStackAcademyDistributionOrigin1D61F716B",
+      "ViewerProtocolPolicy": "redirect-to-https"
+     },
+     "Enabled": true,
+     "HttpVersion": "http2",
+     "IPV6Enabled": true,
+     "Origins": [
+      {
+       "CustomOriginConfig": {
+        "OriginProtocolPolicy": "http-only",
+        "OriginSSLProtocols": [
+         "TLSv1.2"
+        ]
+       },
+       "DomainName": {
+        "Fn::GetAtt": [
+         "AcademyServiceLBA81366C2",
+         "DNSName"
+        ]
+       },
+       "Id": "CloudNestleAcademyStackAcademyDistributionOrigin1D61F716B"
+      },
+      {
+       "DomainName": {
+        "Fn::GetAtt": [
+         "AcademyContentBucket9B9B0A2A",
+         "RegionalDomainName"
+        ]
+       },
+       "Id": "CloudNestleAcademyStackAcademyDistributionOrigin25FD5BC83",
+       "S3OriginConfig": {
+        "OriginAccessIdentity": {
+         "Fn::Join": [
+          "",
+          [
+           "origin-access-identity/cloudfront/",
+           {
+            "Ref": "AcademyDistributionOrigin2S3OriginA78DFB1F"
+           }
+          ]
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "Environment",
+      "Value": "production"
+     },
+     {
+      "Key": "Owner",
+      "Value": "CloudNestle"
+     },
+     {
+      "Key": "Project",
+      "Value": "cloudnestleacademy"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/AcademyDistribution/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/31T227bMAz9lr4rWpsN2HMubWGgWIOk6GtAy4zLxpEMkUoQGP73QZYTu+26J5KHhxRvmurp3S99ewMnnphiP6ko181GwOwVnHjboJnq5rU2arGzr6uFWoW8IrMJuUWJ2KCtXRB8gbzCAR+wGbMzBELOXslRuc9WUfwBeQTBE5zVytMRBIfEmRX0Fq+EVElvzUTAvB3QitqgCZ7k/OhdqLsa/gtktvTI/AW/7+BW8U/dzIPZpyJ6LYmVq8icBzjZrfIF62YJAjkwZpYFrEGVOrkWsZyPgQt7g8anl5bzS2SruEP5ABZK9LpJtUZiEi/gS5TRDK6Ez55WYQUsZMC8YUr0saxFdCyqwIK+VWhYN73VeXv1AXwJcaW8X+KOLF0W+hlxVoAs+hHWx27QH8mkI0lq99y2Bol7Zj2r64pMdypPDoo5VHEYxafwvp3KQZF3DLLlcaqbf0d3TXywxzxiQdtzLvrIn2Z5ndTIbBXBQTdrl46+k8NxXM4Cjd8CMwrrpTN79NkByvgjUKJPr7F2TOL8eQ6MqnIl6+bJldcXL3qrTOVCsfPOim6WxOIpD91wnz2VZGfGIHNWoBWSc1qcC8VDDPiOMU7TtmqN7IKP+wks7jCYO/uNa+XdkQr0XfFdVxuBkmwZY56D1EFaZV2B+p1/HKdTffdb3968M9HEByt0QL1O8i9SRExWjQQAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "CloudNestleAcademyStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "AcademyServiceLoadBalancerDNS7331F9C5": {
+   "Value": {
+    "Fn::GetAtt": [
+     "AcademyServiceLBA81366C2",
+     "DNSName"
+    ]
+   }
+  },
+  "AcademyServiceServiceURLC4834530": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "http://",
+      {
+       "Fn::GetAtt": [
+        "AcademyServiceLBA81366C2",
+        "DNSName"
+       ]
+      }
+     ]
+    ]
+   }
+  },
+  "LoadBalancerDNS": {
+   "Value": {
+    "Fn::GetAtt": [
+     "AcademyServiceLBA81366C2",
+     "DNSName"
+    ]
+   }
+  },
+  "CloudFrontURL": {
+   "Value": {
+    "Fn::GetAtt": [
+     "AcademyDistribution88DCF4D9",
+     "DomainName"
+    ]
+   }
+  },
+  "DatabaseEndpoint": {
+   "Value": {
+    "Fn::GetAtt": [
+     "AcademyDatabaseD943C326",
+     "Endpoint.Address"
+    ]
+   }
+  },
+  "S3BucketName": {
+   "Value": {
+    "Ref": "AcademyContentBucket9B9B0A2A"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

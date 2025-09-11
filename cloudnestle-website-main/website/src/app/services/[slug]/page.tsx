@@ -28,13 +28,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
     <Layout>
       {/* Hero Section */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <div className={`icon-wrapper ${service.color} mb-6 mx-auto`}>
               {service.icon}
             </div>
             <h1 className="text-hero mb-6">{service.title}</h1>
-            <p className="text-body-large mb-8 max-w-3xl mx-auto text-gray-200">
+            <p className="text-body-large mb-8 w-full text-gray-200">
               {service.description}
             </p>
           </div>
@@ -43,8 +43,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
       {/* Overview Section */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+        <div className="w-full px-[10%]">
+          <div className="w-full">
             <div className="card-professional p-8 mb-12">
               <h2 className="text-heading mb-6">Overview</h2>
               <p className="text-body-large text-gray-700 leading-relaxed">

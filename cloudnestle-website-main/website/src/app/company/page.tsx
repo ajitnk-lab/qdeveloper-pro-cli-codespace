@@ -12,7 +12,7 @@ export default function CompanyPage() {
     <Layout>
       {/* Hero Banner */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <h1 className="text-hero mb-6">Our Company</h1>
             <p className="text-body-large mb-8 max-w-3xl mx-auto text-gray-200">
@@ -24,7 +24,7 @@ export default function CompanyPage() {
 
       {/* Case Studies Section */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-[10%]">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-heading">Case Studies</h2>
             <Link href="/company/case-studies" className="text-blue-600 hover:text-blue-800">

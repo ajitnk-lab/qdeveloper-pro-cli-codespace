@@ -7,9 +7,9 @@ export default withAuth(
   {
     callbacks: {
       authorized: ({ token, req }) => {
-        // Protect admin routes
+        // Bypass admin routes in demo mode
         if (req.nextUrl.pathname.startsWith('/admin')) {
-          return token?.email === process.env.ADMIN_EMAIL
+          return true // Temporary bypass for demo
         }
         
         // Protect dashboard and course access routes

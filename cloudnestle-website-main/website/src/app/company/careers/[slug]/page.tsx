@@ -29,7 +29,7 @@ export default async function CareerPage({ params }: CareerPageProps) {
     <Layout>
       {/* Hero Section */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <div className="flex justify-center items-center gap-4 mb-4">
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -47,7 +47,7 @@ export default async function CareerPage({ params }: CareerPageProps) {
 
       {/* Content Section */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-[10%]">
           <div className="max-w-4xl mx-auto">
             <div className="card-professional p-8 mb-12">
               <div 

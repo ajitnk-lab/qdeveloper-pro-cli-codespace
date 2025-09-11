@@ -30,7 +30,7 @@ export default async function TestimonialPage({ params }: TestimonialPageProps) 
     <Layout>
       {/* Hero Section */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <div className="flex items-center justify-center mb-6">
               {[...Array(testimonial.rating)].map((_, i) => (
@@ -47,7 +47,7 @@ export default async function TestimonialPage({ params }: TestimonialPageProps) 
 
       {/* Content Section */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-[10%]">
           <div className="max-w-4xl mx-auto">
             <div className="card-professional p-12 text-center">
               {testimonial.image && (

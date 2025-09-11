@@ -30,7 +30,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
     <Layout>
       {/* Hero Section */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <div className="text-sm text-gray-300 mb-4">{caseStudy.industry}</div>
             <h1 className="text-hero mb-6">{caseStudy.title}</h1>
@@ -43,7 +43,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
 
       {/* Content Section */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-[10%]">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="card-professional p-8">

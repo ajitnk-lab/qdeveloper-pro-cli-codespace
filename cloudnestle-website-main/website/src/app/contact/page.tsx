@@ -10,7 +10,7 @@ export default function ContactPage() {
     <Layout>
       {/* Hero Banner */}
       <section className="section-hero">
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="w-full px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <h1 className="text-hero mb-6">Contact Us</h1>
             <p className="text-body-large mb-8 max-w-3xl mx-auto text-gray-200">
@@ -22,7 +22,7 @@ export default function ContactPage() {
 
       {/* Contact Options */}
       <section className="section-services">
-        <div className="container mx-auto px-4">
+        <div className="w-full px-[10%]">
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {/* Sales Contact */}
             <div className="card-professional">
