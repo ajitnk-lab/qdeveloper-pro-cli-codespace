@@ -8,7 +8,7 @@ export default function Home() {
       <section style={{
         background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
         color: 'white',
-        padding: '80px 0',
+        padding: '40px 0',
         textAlign: 'center'
       }}>
         <div className="container">
@@ -16,17 +16,17 @@ export default function Home() {
             fontSize: '48px',
             fontWeight: '800',
             lineHeight: '1.1',
-            marginBottom: '24px'
+            marginBottom: '12px'
           }}>
             Cloud Nestle Consulting & Services
           </h1>
           <p style={{
             fontSize: '20px',
-            lineHeight: '1.6',
+            lineHeight: '1.5',
             color: '#e2e8f0',
-            marginBottom: '32px',
+            marginBottom: '16px',
             maxWidth: '768px',
-            margin: '0 auto 32px'
+            margin: '0 auto 16px'
           }}>
             Professional AWS expertise for businesses of all sizes. 
             Cost-effective cloud migration and optimization services that scale with your business.

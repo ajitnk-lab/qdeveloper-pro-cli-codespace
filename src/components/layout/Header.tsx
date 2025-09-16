@@ -24,7 +24,7 @@ export default function Header() {
       position: 'sticky',
       top: 0,
       zIndex: 50,
-      padding: '20px 0'
+      padding: '8px 0'
     }}>
       <nav className="container">
         <div className="flex justify-between items-center">
@@ -56,7 +56,7 @@ export default function Header() {
             <button style={{
               background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
               color: 'white',
-              padding: '12px 24px',
+              padding: '6px 12px',
               borderRadius: '8px',
               fontWeight: '700',
               fontSize: '18px',
@@ -79,14 +79,14 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden" style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
+          <div className="md:hidden" style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 style={{ 
                   display: 'block', 
-                  padding: '12px 0', 
+                  padding: '6px 0', 
                   fontSize: '18px', 
                   fontWeight: '600', 
                   color: 'white', 
