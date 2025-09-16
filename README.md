@@ -2,6 +2,11 @@
 
 Professional website for Cloud Nestle Consulting and Services - AWS cloud consulting and migration services.
 
+## To make change and test locally
+run npm run build
+npx server out
+
+
 ## 🚀 GitHub Actions Test - Font Fix Deployed!
 
 Testing automated deployment - fonts are now properly sized at 18px without Tailwind conflicts!
