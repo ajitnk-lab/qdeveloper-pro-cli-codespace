@@ -19,17 +19,13 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-        cache-dependency-path: website/package-lock.json
+        cache-dependency-path: package-lock.json
         
     - name: Install dependencies
-      run: |
-        cd website
-        npm ci
+      run: npm ci
         
     - name: Build website
-      run: |
-        cd website
-        npm run build
+      run: npm run build
         
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
@@ -39,13 +35,10 @@ jobs:
         aws-region: us-east-1
         
     - name: Deploy to S3
-      run: |
-        cd website
-        aws s3 sync out/ s3://cloudnestle-website-039920874011 --delete --cache-control max-age=31536000,public
+      run: aws s3 sync out/ s3://cloudnestle-website-039920874011 --delete --cache-control max-age=31536000,public
         
     - name: Invalidate CloudFront cache
-      run: |
-        aws cloudfront create-invalidation --distribution-id EZDWLV4MRSI1U --paths "/*"
+      run: aws cloudfront create-invalidation --distribution-id EZDWLV4MRSI1U --paths "/*"
         
     - name: Verify deployment
       run: |
