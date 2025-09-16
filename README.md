@@ -38,3 +38,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The website automatically deploys to AWS when changes are pushed to the main branch.
 
 **CloudFront URL**: https://d3tlqqb05xfabm.cloudfront.net
+Deployment test - Tue Sep 16 09:27:02 UTC 2025
