@@ -24,16 +24,41 @@ export default function Header() {
       position: 'sticky',
       top: 0,
       zIndex: 50,
-      padding: '8px 0'
+      padding: '4px 0'
     }}>
       <nav className="container">
         <div className="flex justify-between items-center">
-          <Link href="/" style={{ fontSize: '24px', fontWeight: 'bold', color: 'white', textDecoration: 'none' }}>
-            Cloud Nestle
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+            <img 
+              src="/cloudnestle-logo.jpg" 
+              alt="Cloud Nestle Logo" 
+              style={{ 
+                height: '32px', 
+                width: 'auto',
+                borderRadius: '4px'
+              }}
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+                const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                if (nextElement) {
+                  nextElement.style.display = 'block';
+                }
+              }}
+            />
+            <span 
+              style={{ 
+                fontSize: '24px', 
+                fontWeight: 'bold', 
+                color: 'white',
+                display: 'none'
+              }}
+            >
+              Cloud Nestle
+            </span>
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-12">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -53,18 +78,20 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button style={{
-              background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
-              color: 'white',
-              padding: '6px 12px',
-              borderRadius: '8px',
-              fontWeight: '700',
-              fontSize: '18px',
-              border: 'none',
-              cursor: 'pointer'
-            }}>
-              Get Started
-            </button>
+            <Link href="/contact">
+              <button style={{
+                background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+                color: 'white',
+                padding: '3px 8px',
+                borderRadius: '8px',
+                fontWeight: '700',
+                fontSize: '18px',
+                border: 'none',
+                cursor: 'pointer'
+              }}>
+                Get Started
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,14 +106,14 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden" style={{ marginTop: '8px', paddingTop: '8px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
+          <div className="md:hidden" style={{ marginTop: '4px', paddingTop: '4px', borderTop: '1px solid rgba(255,255,255,0.2)' }}>
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 style={{ 
                   display: 'block', 
-                  padding: '6px 0', 
+                  padding: '3px 0', 
                   fontSize: '18px', 
                   fontWeight: '600', 
                   color: 'white', 

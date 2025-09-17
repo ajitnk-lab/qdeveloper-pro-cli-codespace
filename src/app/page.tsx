@@ -8,7 +8,7 @@ export default function Home() {
       <section style={{
         background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
         color: 'white',
-        padding: '40px 0',
+        padding: '20px 0',
         textAlign: 'center'
       }}>
         <div className="container">
@@ -18,8 +18,27 @@ export default function Home() {
             lineHeight: '1.1',
             marginBottom: '12px'
           }}>
-            Cloud Nestle Consulting & Services
+            Cloud Nestle
           </h1>
+          <p style={{
+            fontSize: '24px',
+            lineHeight: '1.3',
+            color: '#f1f5f9',
+            marginBottom: '8px',
+            fontWeight: '600',
+            background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+            padding: '8px 16px',
+            borderRadius: '8px',
+            border: '2px solid rgba(245, 158, 11, 0.3)',
+            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+            display: 'inline-block'
+          }}>
+            &ldquo;Where Your Business Finds Its Cloud Home&rdquo;
+          </p>
           <p style={{
             fontSize: '20px',
             lineHeight: '1.5',
@@ -28,21 +47,33 @@ export default function Home() {
             maxWidth: '768px',
             margin: '0 auto 16px'
           }}>
+            Just as birds carefully choose the perfect branch to build their nest, your business deserves the ideal cloud environment to thrive. We help companies nestle into secure, scalable cloud solutions that feel just right.
+          </p>
+          <p style={{
+            fontSize: '18px',
+            lineHeight: '1.5',
+            color: '#cbd5e1',
+            marginBottom: '24px',
+            maxWidth: '600px',
+            margin: '0 auto 24px'
+          }}>
             Professional AWS expertise for businesses of all sizes. 
             Cost-effective cloud migration and optimization services that scale with your business.
           </p>
-          <button style={{
-            background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
-            color: 'white',
-            padding: '16px 32px',
-            borderRadius: '12px',
-            fontWeight: '600',
-            fontSize: '18px',
-            border: 'none',
-            cursor: 'pointer'
-          }}>
-            Get Free Consultation ✨
-          </button>
+          <Link href="/contact">
+            <button style={{
+              background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+              color: 'white',
+              padding: '16px 32px',
+              borderRadius: '12px',
+              fontWeight: '600',
+              fontSize: '18px',
+              border: 'none',
+              cursor: 'pointer'
+            }}>
+              Get Free Consultation ✨
+            </button>
+          </Link>
         </div>
       </section>
 
@@ -164,6 +195,162 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Cloud Nestle - Expertise & Credibility */}
+      <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+            <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
+              Why Choose Cloud Nestle?
+            </h2>
+            <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
+              Proven expertise and credentials you can trust for your cloud transformation journey
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* AWS Certified */}
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              padding: '32px',
+              textAlign: 'center',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #f59e0b'
+            }}>
+              <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
+                AWS Certified Expert
+              </h3>
+              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
+                Certified AWS professional with validated expertise across multiple domains and specializations
+              </p>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
+                <img 
+                  src="/solution architect associate.png" 
+                  alt="AWS Solutions Architect Associate" 
+                  style={{ width: '80px', height: 'auto', borderRadius: '6px', border: '2px solid #f59e0b' }}
+                />
+                <img 
+                  src="/aws reg partnet.png" 
+                  alt="AWS Registered Partner" 
+                  style={{ width: '80px', height: 'auto', borderRadius: '6px', border: '2px solid #f59e0b' }}
+                />
+                <img 
+                  src="/cloud economics.png" 
+                  alt="AWS Cloud Economics" 
+                  style={{ width: '80px', height: 'auto', borderRadius: '6px', border: '2px solid #f59e0b' }}
+                />
+                <img 
+                  src="/well archited prof.png" 
+                  alt="AWS Well-Architected Proficient" 
+                  style={{ width: '80px', height: 'auto', borderRadius: '6px', border: '2px solid #f59e0b' }}
+                />
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                <span style={{ background: '#fef3c7', color: '#92400e', padding: '4px 8px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' }}>
+                  Solution Architecture
+                </span>
+                <span style={{ background: '#dbeafe', color: '#1e40af', padding: '4px 8px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' }}>
+                  Cloud Economics
+                </span>
+                <span style={{ background: '#d1fae5', color: '#065f46', padding: '4px 8px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' }}>
+                  Well-Architected Frameworks
+                </span>
+              </div>
+            </div>
+
+            {/* 20+ Years Experience */}
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              padding: '32px',
+              textAlign: 'center',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #2563eb'
+            }}>
+              <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
+                20+ Years Experience
+              </h3>
+              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
+                Two decades of enterprise IT experience across industries, from startups to Fortune 500 companies
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap' }}>
+                <img 
+                  src="/questglobal.jfif" 
+                  alt="Quest Global" 
+                  style={{ height: '40px', width: 'auto', border: '2px solid #2563eb', borderRadius: '6px', padding: '4px' }}
+                />
+                <img 
+                  src="/oracle.png" 
+                  alt="Oracle" 
+                  style={{ height: '40px', width: 'auto', border: '2px solid #2563eb', borderRadius: '6px', padding: '4px' }}
+                />
+                <img 
+                  src="/sap.jfif" 
+                  alt="SAP" 
+                  style={{ height: '40px', width: 'auto', border: '2px solid #2563eb', borderRadius: '6px', padding: '4px' }}
+                />
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                <span style={{ background: '#dbeafe', color: '#1e40af', padding: '4px 8px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' }}>
+                  Enterprise IT
+                </span>
+                <span style={{ background: '#dbeafe', color: '#1e40af', padding: '4px 8px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' }}>
+                  IT Modernization
+                </span>
+                <span style={{ background: '#dbeafe', color: '#1e40af', padding: '4px 8px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' }}>
+                  DevSecOps
+                </span>
+              </div>
+            </div>
+
+            {/* Proven Results */}
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              padding: '32px',
+              textAlign: 'center',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #10b981'
+            }}>
+              <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
+                Proven Methodology
+              </h3>
+              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
+                Battle-tested frameworks for secure, cost-effective cloud transformations with minimal downtime
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap' }}>
+                <img 
+                  src="/wellarchitecedframework.jfif" 
+                  alt="AWS Well-Architected Framework" 
+                  style={{ height: '50px', width: 'auto', borderRadius: '8px', border: '2px solid #10b981' }}
+                />
+                <img 
+                  src="/cloudadoptionframework.png" 
+                  alt="Cloud Adoption Framework" 
+                  style={{ height: '50px', width: 'auto', borderRadius: '8px', border: '2px solid #10b981' }}
+                />
+                <img 
+                  src="/secuitymodel.jfif" 
+                  alt="Security Maturity Model" 
+                  style={{ height: '50px', width: 'auto', borderRadius: '8px', border: '2px solid #10b981' }}
+                />
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                <span style={{ background: '#fef3c7', color: '#92400e', padding: '4px 8px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' }}>
+                  Well-Architected Framework
+                </span>
+                <span style={{ background: '#dbeafe', color: '#1e40af', padding: '4px 8px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' }}>
+                  Cloud Adoption Framework
+                </span>
+                <span style={{ background: '#d1fae5', color: '#065f46', padding: '4px 8px', borderRadius: '12px', fontSize: '12px', fontWeight: '600' }}>
+                  Security Maturity Model Framework
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Indicators */}
       <section style={{ padding: '60px 0', backgroundColor: '#ffffff' }}>
         <div className="container" style={{ textAlign: 'center' }}>
@@ -177,7 +364,7 @@ export default function Home() {
               borderRadius: '20px',
               padding: '16px 24px'
             }}>
-              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '16px' }}>🏆 AWS Partner</span>
+              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '16px' }}>🏆 AWS Registered Partner</span>
             </div>
             <div style={{
               background: 'rgba(255, 255, 255, 0.9)',
@@ -185,7 +372,7 @@ export default function Home() {
               borderRadius: '20px',
               padding: '16px 24px'
             }}>
-              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '16px' }}>🛡️ ISO 27001 Certified</span>
+              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '16px' }}>📊 20+ Years Enterprise Experience</span>
             </div>
             <div style={{
               background: 'rgba(255, 255, 255, 0.9)',
@@ -193,22 +380,24 @@ export default function Home() {
               borderRadius: '20px',
               padding: '16px 24px'
             }}>
-              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '16px' }}>✅ SOC 2 Compliant</span>
+              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '16px' }}>🎯 100% Client Success Rate</span>
             </div>
           </div>
-          <button style={{
-            background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
-            color: 'white',
-            padding: '16px 32px',
-            borderRadius: '12px',
-            fontWeight: '600',
-            fontSize: '18px',
-            border: 'none',
-            cursor: 'pointer',
-            boxShadow: '0 10px 25px rgba(37, 99, 235, 0.25)'
-          }}>
-            Schedule Free Consultation 🚀
-          </button>
+          <Link href="/contact">
+            <button style={{
+              background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
+              color: 'white',
+              padding: '16px 32px',
+              borderRadius: '12px',
+              fontWeight: '600',
+              fontSize: '18px',
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 10px 25px rgba(37, 99, 235, 0.25)'
+            }}>
+              Schedule Free Consultation 🚀
+            </button>
+          </Link>
         </div>
       </section>
     </Layout>

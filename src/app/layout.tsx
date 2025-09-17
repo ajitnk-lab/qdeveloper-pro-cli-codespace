@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FontFix from "@/components/FontFix";
+import CookieBanner from "@/components/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cloud Nestle - AWS Cloud Consulting",
-  description: "Professional AWS cloud consulting and migration services",
+  title: "Cloud Nestle - Where Your Business Finds Its Cloud Home",
+  description: "Expert AWS cloud consulting to help your business nestle into secure, scalable cloud solutions. Migration, optimization, and support services.",
 };
 
 export const viewport: Viewport = {
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <FontFix />
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
