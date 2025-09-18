@@ -70,7 +70,9 @@ export default function ResourcesPage() {
                 boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
                 transition: 'all 0.3s ease',
                 cursor: 'pointer',
-                height: '100%'
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column'
               }}>
                 <div style={{
                   width: '56px',
@@ -101,7 +103,7 @@ export default function ResourcesPage() {
                 <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#1e293b', marginBottom: '12px' }}>
                   {resource.title}
                 </h3>
-                <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
+                <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px', flexGrow: 1 }}>
                   {resource.description}
                 </p>
                 <button style={{
@@ -112,7 +114,8 @@ export default function ResourcesPage() {
                   border: 'none',
                   fontSize: '14px',
                   fontWeight: '600',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  marginTop: 'auto'
                 }}>
                   Download
                 </button>

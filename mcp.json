@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mcp-server-fetch": {
+      "command": "uvx",
+      "args": [
+        "fetch-mcp-server"
+      ]
+    }
+  }
+}

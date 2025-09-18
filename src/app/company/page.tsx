@@ -7,24 +7,6 @@ const sections = [
     description: 'Learn about our mission, values, and commitment to helping businesses succeed in the cloud.',
     href: '/company/about',
     icon: '🏢'
-  },
-  {
-    title: 'Case Studies',
-    description: 'Real-world examples of how we\'ve helped businesses transform with AWS cloud solutions.',
-    href: '/company/case-studies/fintech-migration',
-    icon: '📈'
-  },
-  {
-    title: 'Testimonials',
-    description: 'Hear what our clients say about their experience working with Cloud Nestle.',
-    href: '/company/testimonials/sarah-johnson',
-    icon: '💬'
-  },
-  {
-    title: 'Careers',
-    description: 'Join our team of cloud experts and help shape the future of cloud computing.',
-    href: '/company/careers/senior-cloud-architect',
-    icon: '👥'
   }
 ];
 
@@ -42,7 +24,7 @@ export default function CompanyPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
             {sections.map((section) => (
               <Link key={section.href} href={section.href} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div style={{
@@ -53,7 +35,7 @@ export default function CompanyPage() {
                   boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
                   transition: 'all 0.3s ease',
                   cursor: 'pointer',
-                  height: '100%'
+                  textAlign: 'center'
                 }}>
                   <div style={{
                     width: '56px',
@@ -65,7 +47,8 @@ export default function CompanyPage() {
                     fontSize: '28px',
                     marginBottom: '20px',
                     background: 'rgba(37, 99, 235, 0.1)',
-                    color: '#2563eb'
+                    color: '#2563eb',
+                    margin: '0 auto 20px'
                   }}>
                     {section.icon}
                   </div>

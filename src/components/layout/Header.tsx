@@ -24,16 +24,16 @@ export default function Header() {
       position: 'sticky',
       top: 0,
       zIndex: 50,
-      padding: '4px 0'
+      padding: '2px 0'
     }}>
-      <nav className="container">
+      <nav style={{ paddingLeft: '0', paddingRight: '16px', maxWidth: '100%', margin: '0' }}>
         <div className="flex justify-between items-center">
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none' }}>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none', marginLeft: '0' }}>
             <img 
               src="/cloudnestle-logo.jpg" 
               alt="Cloud Nestle Logo" 
               style={{ 
-                height: '32px', 
+                height: '64px', 
                 width: 'auto',
                 borderRadius: '4px'
               }}

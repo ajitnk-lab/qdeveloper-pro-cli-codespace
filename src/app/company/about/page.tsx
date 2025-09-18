@@ -7,12 +7,12 @@ export default function AboutPage() {
       <section style={{
         background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
         color: 'white',
-        padding: '60px 0',
+        padding: '30px 0',
         textAlign: 'center'
       }}>
         <div className="container">
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '32px',
             fontWeight: '800',
             lineHeight: '1.1',
             marginBottom: '16px'
@@ -20,7 +20,7 @@ export default function AboutPage() {
             About Cloud Nestle
           </h1>
           <p style={{
-            fontSize: '24px',
+            fontSize: '18px',
             lineHeight: '1.3',
             color: '#f1f5f9',
             marginBottom: '8px',
@@ -31,309 +31,190 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
-      <section style={{ padding: '80px 0', backgroundColor: '#ffffff' }}>
+      {/* Meet the Founder */}
+      <section style={{ padding: '40px 0', backgroundColor: '#ffffff' }}>
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '32px' }}>
-              Our Story
+              Meet the Founder
             </h2>
-            <p style={{ fontSize: '18px', color: '#64748b', lineHeight: '1.8', marginBottom: '24px' }}>
-              Just as birds carefully choose the perfect branch to build their nest, we believe every business deserves the ideal cloud environment to thrive. The name &ldquo;Cloud Nestle&rdquo; reflects our core philosophy - helping companies settle comfortably and securely into the cloud.
-            </p>
-            <p style={{ fontSize: '18px', color: '#64748b', lineHeight: '1.8' }}>
-              We don&rsquo;t just migrate systems; we create cloud homes where businesses can grow, innovate, and succeed with confidence. Our approach combines technical expertise with genuine care for your business success.
-            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
+              <img 
+                src="/ajit-prof-pic.png" 
+                alt="Ajit NK - Founder of Cloud Nestle" 
+                style={{ 
+                  width: '200px', 
+                  height: '200px',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
+                }}
+              />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                <h3 style={{ fontSize: '28px', fontWeight: '600', color: '#1e293b' }}>
+                  Ajit NK
+                </h3>
+                <a 
+                  href="https://linkedin.com/in/ajitnk" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ 
+                    color: '#0077b5', 
+                    textDecoration: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    padding: '8px 16px',
+                    borderRadius: '8px',
+                    border: '2px solid #0077b5',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                  Connect on LinkedIn
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Mission, Vision, Values */}
+      {/* The Cloud Nestle Story */}
       <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
         <div className="container">
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Mission */}
-            <div style={{
-              background: '#ffffff',
-              borderRadius: '16px',
-              padding: '40px',
-              textAlign: 'center',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)'
-            }}>
-              <div style={{
-                width: '80px',
-                height: '80px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #2563eb 0%, #1e40af 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '36px',
-                margin: '0 auto 24px'
-              }}>
-                🎯
-              </div>
-              <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
-                Our Mission
-              </h3>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                To help businesses nestle into the cloud with confidence, providing secure, scalable, and cost-effective AWS solutions that enable growth and innovation.
-              </p>
-            </div>
-
-            {/* Vision */}
-            <div style={{
-              background: '#ffffff',
-              borderRadius: '16px',
-              padding: '40px',
-              textAlign: 'center',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)'
-            }}>
-              <div style={{
-                width: '80px',
-                height: '80px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '36px',
-                margin: '0 auto 24px'
-              }}>
-                🌟
-              </div>
-              <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
-                Our Vision
-              </h3>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                To be the most trusted cloud consulting partner, known for creating comfortable, secure cloud homes where every business can thrive and reach its full potential.
-              </p>
-            </div>
-
-            {/* Values */}
-            <div style={{
-              background: '#ffffff',
-              borderRadius: '16px',
-              padding: '40px',
-              textAlign: 'center',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)'
-            }}>
-              <div style={{
-                width: '80px',
-                height: '80px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '36px',
-                margin: '0 auto 24px'
-              }}>
-                💎
-              </div>
-              <h3 style={{ fontSize: '28px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
-                Our Values
-              </h3>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                Trust, Excellence, Innovation, and Care. We build lasting relationships by delivering exceptional results while genuinely caring about your business success.
-              </p>
-            </div>
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '32px' }}>
+              The Cloud Nestle Story
+            </h2>
+            <p style={{ fontSize: '20px', color: '#64748b', lineHeight: '1.8', fontStyle: 'italic' }}>
+              &ldquo;After years of seeing businesses struggle with their AWS architecture, I founded Cloud Nestle to provide expert, personalized guidance that helps companies of all sizes succeed in the cloud&rdquo;
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Core Values Detail */}
+      {/* Awards and Achievements */}
       <section style={{ padding: '80px 0', backgroundColor: '#ffffff' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '64px' }}>
             <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
-              What Drives Us
+              Awards and Achievements
             </h2>
-            <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
-              Our core values shape every interaction and guide our approach to cloud consulting
+            <p style={{ fontSize: '18px', color: '#64748b' }}>
+              AWS Certified Expert with proven expertise across multiple domains
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div style={{ padding: '32px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                <div style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '12px',
-                  background: 'rgba(37, 99, 235, 0.1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '24px',
-                  marginRight: '16px'
-                }}>
-                  🤝
-                </div>
-                <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b' }}>Trust & Transparency</h3>
-              </div>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                We build relationships on honesty and open communication. No hidden costs, no surprises - just clear, transparent guidance every step of the way.
-              </p>
+          <div className="grid md:grid-cols-3 gap-8" style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              padding: '32px',
+              textAlign: 'center',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #f1f5f9'
+            }}>
+              <img 
+                src="/solution architect associate.png" 
+                alt="AWS Solution Architect Associate" 
+                style={{ 
+                  height: '120px', 
+                  width: 'auto',
+                  margin: '0 auto 16px'
+                }}
+              />
+              <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1e293b' }}>
+                AWS Solutions Architect Associate
+              </h3>
             </div>
 
-            <div style={{ padding: '32px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                <div style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '12px',
-                  background: 'rgba(245, 158, 11, 0.1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '24px',
-                  marginRight: '16px'
-                }}>
-                  🏆
-                </div>
-                <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b' }}>Excellence in Delivery</h3>
-              </div>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                We&rsquo;re committed to delivering exceptional results. Every project is an opportunity to exceed expectations and create lasting value for your business.
-              </p>
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              padding: '32px',
+              textAlign: 'center',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #f1f5f9'
+            }}>
+              <img 
+                src="/well archited prof.png" 
+                alt="AWS Well-Architected Professional" 
+                style={{ 
+                  height: '120px', 
+                  width: 'auto',
+                  margin: '0 auto 16px'
+                }}
+              />
+              <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1e293b' }}>
+                AWS Well-Architected Professional
+              </h3>
             </div>
 
-            <div style={{ padding: '32px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                <div style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '12px',
-                  background: 'rgba(16, 185, 129, 0.1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '24px',
-                  marginRight: '16px'
-                }}>
-                  🚀
-                </div>
-                <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b' }}>Innovation & Growth</h3>
-              </div>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                We stay ahead of cloud trends and technologies, ensuring your business benefits from the latest innovations and best practices in cloud computing.
-              </p>
-            </div>
-
-            <div style={{ padding: '32px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                <div style={{
-                  width: '48px',
-                  height: '48px',
-                  borderRadius: '12px',
-                  background: 'rgba(139, 92, 246, 0.1)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '24px',
-                  marginRight: '16px'
-                }}>
-                  ❤️
-                </div>
-                <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b' }}>Genuine Care</h3>
-              </div>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                Your success is our success. We genuinely care about your business outcomes and work as an extension of your team to achieve your goals.
-              </p>
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              padding: '32px',
+              textAlign: 'center',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #f1f5f9'
+            }}>
+              <img 
+                src="/cloud economics.png" 
+                alt="AWS Cloud Economics" 
+                style={{ 
+                  height: '120px', 
+                  width: 'auto',
+                  margin: '0 auto 16px'
+                }}
+              />
+              <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1e293b' }}>
+                AWS Cloud Economics
+              </h3>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Professional Endorsements */}
       <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '64px' }}>
             <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
-              Why Businesses Choose Cloud Nestle
+              Professional Endorsements
             </h2>
-            <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
-              We&rsquo;re more than consultants - we&rsquo;re your partners in cloud success
+            <p style={{ fontSize: '18px', color: '#64748b' }}>
+              What industry professionals say about our expertise
             </p>
           </div>
 
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gap: '24px' }}>
-              <div style={{
-                background: '#ffffff',
-                borderRadius: '12px',
-                padding: '24px',
-                display: 'flex',
-                alignItems: 'center',
-                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
-              }}>
-                <div style={{ fontSize: '32px', marginRight: '20px' }}>🏠</div>
-                <div>
-                  <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>
-                    We Help You Find Your Cloud Home
-                  </h4>
-                  <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                    Not just migration - we create the perfect cloud environment where your business feels secure and can thrive.
-                  </p>
-                </div>
-              </div>
-
-              <div style={{
-                background: '#ffffff',
-                borderRadius: '12px',
-                padding: '24px',
-                display: 'flex',
-                alignItems: 'center',
-                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
-              }}>
-                <div style={{ fontSize: '32px', marginRight: '20px' }}>🛡️</div>
-                <div>
-                  <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>
-                    Security & Compliance First
-                  </h4>
-                  <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                    Your data and applications are protected with enterprise-grade security and compliance standards.
-                  </p>
-                </div>
-              </div>
-
-              <div style={{
-                background: '#ffffff',
-                borderRadius: '12px',
-                padding: '24px',
-                display: 'flex',
-                alignItems: 'center',
-                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
-              }}>
-                <div style={{ fontSize: '32px', marginRight: '20px' }}>💰</div>
-                <div>
-                  <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>
-                    Cost-Effective Solutions
-                  </h4>
-                  <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                    We optimize your cloud spend while maximizing performance, typically reducing costs by 30-40%.
-                  </p>
-                </div>
-              </div>
-
-              <div style={{
-                background: '#ffffff',
-                borderRadius: '12px',
-                padding: '24px',
-                display: 'flex',
-                alignItems: 'center',
-                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)'
-              }}>
-                <div style={{ fontSize: '32px', marginRight: '20px' }}>🎯</div>
-                <div>
-                  <h4 style={{ fontSize: '20px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>
-                    Tailored to Your Business
-                  </h4>
-                  <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
-                    Every solution is customized to your specific needs, industry requirements, and growth objectives.
-                  </p>
-                </div>
+          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '16px',
+              padding: '40px',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #f1f5f9'
+            }}>
+              <img 
+                src="/linkedrecommendatins.jpg" 
+                alt="LinkedIn Professional Recommendations" 
+                style={{ 
+                  width: '100%',
+                  maxWidth: '600px',
+                  height: 'auto',
+                  borderRadius: '12px',
+                  marginBottom: '24px'
+                }}
+              />
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#0077b5">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <p style={{ fontSize: '16px', color: '#64748b', margin: '0' }}>
+                  Source: LinkedIn Professional Recommendations
+                </p>
               </div>
             </div>
           </div>

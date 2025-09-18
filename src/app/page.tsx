@@ -1,5 +1,6 @@
 import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
+import StickerTape from '@/components/StickerTape';
 
 export default function Home() {
   return (
@@ -8,12 +9,12 @@ export default function Home() {
       <section style={{
         background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
         color: 'white',
-        padding: '20px 0',
+        padding: '30px 0',
         textAlign: 'center'
       }}>
         <div className="container">
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '32px',
             fontWeight: '800',
             lineHeight: '1.1',
             marginBottom: '12px'
@@ -21,7 +22,7 @@ export default function Home() {
             Cloud Nestle
           </h1>
           <p style={{
-            fontSize: '24px',
+            fontSize: '18px',
             lineHeight: '1.3',
             color: '#f1f5f9',
             marginBottom: '8px',
@@ -39,35 +40,15 @@ export default function Home() {
           }}>
             &ldquo;Where Your Business Finds Its Cloud Home&rdquo;
           </p>
-          <p style={{
-            fontSize: '20px',
-            lineHeight: '1.5',
-            color: '#e2e8f0',
-            marginBottom: '16px',
-            maxWidth: '768px',
-            margin: '0 auto 16px'
-          }}>
-            Just as birds carefully choose the perfect branch to build their nest, your business deserves the ideal cloud environment to thrive. We help companies nestle into secure, scalable cloud solutions that feel just right.
-          </p>
-          <p style={{
-            fontSize: '18px',
-            lineHeight: '1.5',
-            color: '#cbd5e1',
-            marginBottom: '24px',
-            maxWidth: '600px',
-            margin: '0 auto 24px'
-          }}>
-            Professional AWS expertise for businesses of all sizes. 
-            Cost-effective cloud migration and optimization services that scale with your business.
-          </p>
+          <StickerTape />
           <Link href="/contact">
             <button style={{
               background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
               color: 'white',
-              padding: '16px 32px',
+              padding: '12px 24px',
               borderRadius: '12px',
               fontWeight: '600',
-              fontSize: '18px',
+              fontSize: '16px',
               border: 'none',
               cursor: 'pointer'
             }}>
@@ -81,10 +62,10 @@ export default function Home() {
       <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-            <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
+            <h2 style={{ fontSize: '24px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
               Our Services
             </h2>
-            <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '512px', margin: '0 auto' }}>
+            <p style={{ fontSize: '16px', color: '#64748b', maxWidth: '512px', margin: '0 auto' }}>
               Comprehensive AWS solutions designed to accelerate your digital transformation
             </p>
           </div>

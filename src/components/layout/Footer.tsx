@@ -5,8 +5,8 @@ export default function Footer() {
     <footer style={{
       background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
       color: 'white',
-      padding: '10px 0',
-      marginTop: '10px',
+      padding: '8px 0',
+      marginTop: '8px',
       borderTop: '3px solid #f59e0b'
     }}>
       <div className="container">
@@ -17,7 +17,7 @@ export default function Footer() {
                 src="/cloudnestle-logo.jpg" 
                 alt="Cloud Nestle Logo" 
                 style={{ 
-                  height: '40px', 
+                  height: '64px', 
                   width: 'auto',
                   borderRadius: '4px'
                 }}
