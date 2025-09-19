@@ -31,7 +31,7 @@ export default function CookieBanner() {
       borderTop: '1px solid #374151'
     }}>
       <div className="container flex items-center justify-between">
-        <p style={{ fontSize: '16px', margin: 0 }}>
+        <p style={{ fontSize: '14px', margin: 0 }}>
           We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
         </p>
         <button

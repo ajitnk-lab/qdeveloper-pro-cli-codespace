@@ -13,9 +13,9 @@ const sections = [
 export default function CompanyPage() {
   return (
     <Layout>
-      <div style={{ padding: '80px 0' }}>
+      <div style={{ padding: '40px 0' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <h1 style={{ fontSize: '48px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
               Company
             </h1>
@@ -31,7 +31,7 @@ export default function CompanyPage() {
                   background: '#ffffff',
                   border: '1px solid #e2e8f0',
                   borderRadius: '16px',
-                  padding: '32px',
+                  padding: '20px',
                   boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
                   transition: 'all 0.3s ease',
                   cursor: 'pointer',
@@ -52,13 +52,13 @@ export default function CompanyPage() {
                   }}>
                     {section.icon}
                   </div>
-                  <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>
+                  <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>
                     {section.title}
                   </h3>
-                  <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
+                  <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
                     {section.description}
                   </p>
-                  <div style={{ color: '#2563eb', fontWeight: '600', fontSize: '16px' }}>
+                  <div style={{ color: '#2563eb', fontWeight: '600', fontSize: '14px' }}>
                     Learn More →
                   </div>
                 </div>

@@ -13,7 +13,15 @@ export default function Header() {
     { name: 'Resources', href: '/resources' },
     { name: 'Company', href: '/company' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+    { 
+      name: 'Contact', 
+      href: '/contact',
+      submenu: [
+        { name: 'Request Consultation', href: '/contact' },
+        { name: 'General Inquiry', href: '/general-inquiry' },
+        { name: 'Partner with Us', href: '/partner' }
+      ]
+    }
   ];
 
   return (
@@ -47,7 +55,7 @@ export default function Header() {
             />
             <span 
               style={{ 
-                fontSize: '24px', 
+                fontSize: '14px', 
                 fontWeight: 'bold', 
                 color: 'white',
                 display: 'none'
@@ -64,11 +72,24 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 style={{ 
-                  fontSize: '18px', 
+                  fontSize: '14px', 
                   fontWeight: '600', 
                   color: 'white', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s'
+                  transition: 'all 0.3s ease-in-out',
+                  padding: '8px 12px',
+                  borderRadius: '8px',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.color = '#fbbf24';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.color = 'white';
                 }}
               >
                 {item.name}
@@ -79,16 +100,30 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link href="/contact">
-              <button style={{
-                background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
-                color: 'white',
-                padding: '3px 8px',
-                borderRadius: '8px',
-                fontWeight: '700',
-                fontSize: '18px',
-                border: 'none',
-                cursor: 'pointer'
-              }}>
+              <button 
+                style={{
+                  background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+                  color: 'white',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  fontWeight: '700',
+                  fontSize: '14px',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease-in-out',
+                  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
+                  e.currentTarget.style.background = 'linear-gradient(135deg, #fbbf24 0%, #f87171 100%)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.1)';
+                  e.currentTarget.style.background = 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)';
+                }}
+              >
                 Get Started
               </button>
             </Link>
@@ -97,7 +132,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             className="md:hidden"
-            style={{ color: 'white', background: 'none', border: 'none', fontSize: '24px' }}
+            style={{ color: 'white', background: 'none', border: 'none', fontSize: '14px' }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             ☰
@@ -113,11 +148,24 @@ export default function Header() {
                 href={item.href}
                 style={{ 
                   display: 'block', 
-                  padding: '3px 0', 
-                  fontSize: '18px', 
+                  padding: '8px 12px', 
+                  fontSize: '14px', 
                   fontWeight: '600', 
                   color: 'white', 
-                  textDecoration: 'none' 
+                  textDecoration: 'none',
+                  transition: 'all 0.3s ease-in-out',
+                  borderRadius: '8px',
+                  margin: '2px 0'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                  e.currentTarget.style.color = '#fbbf24';
+                  e.currentTarget.style.paddingLeft = '16px';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = 'white';
+                  e.currentTarget.style.paddingLeft = '12px';
                 }}
                 onClick={() => setIsMenuOpen(false)}
               >

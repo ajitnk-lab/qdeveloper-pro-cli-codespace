@@ -3,18 +3,18 @@ import Layout from '@/components/layout/Layout';
 export default function PrivacyPolicyPage() {
   return (
     <Layout>
-      <div style={{ padding: '80px 0', backgroundColor: '#ffffff' }}>
+      <div style={{ padding: '40px 0', backgroundColor: '#ffffff' }}>
         <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h1 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '32px', textAlign: 'center' }}>
             Privacy Policy
           </h1>
           
-          <div style={{ fontSize: '16px', lineHeight: '1.6', color: '#64748b' }}>
+          <div style={{ fontSize: '14px', lineHeight: '1.6', color: '#64748b' }}>
             <p style={{ marginBottom: '24px' }}>
               <strong>Last updated:</strong> {new Date().toLocaleDateString()}
             </p>
 
-            <h2 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
+            <h2 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
               Information We Collect
             </h2>
             <p style={{ marginBottom: '16px' }}>
@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
               subscribe to our newsletter, or fill out a form on our website.
             </p>
 
-            <h2 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
+            <h2 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
               How We Use Your Information
             </h2>
             <p style={{ marginBottom: '16px' }}>
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
               communicate with you, and comply with legal obligations.
             </p>
 
-            <h2 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
+            <h2 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
               Information Sharing
             </h2>
             <p style={{ marginBottom: '16px' }}>
@@ -38,7 +38,7 @@ export default function PrivacyPolicyPage() {
               except as described in this privacy policy.
             </p>
 
-            <h2 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
+            <h2 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
               Data Security
             </h2>
             <p style={{ marginBottom: '16px' }}>
@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
               alteration, disclosure, or destruction.
             </p>
 
-            <h2 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
+            <h2 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px', marginTop: '32px' }}>
               Contact Us
             </h2>
             <p style={{ marginBottom: '16px' }}>

@@ -1,3 +1,5 @@
+"use client";
+
 import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
 
@@ -49,9 +51,9 @@ const resources = [
 export default function ResourcesPage() {
   return (
     <Layout>
-      <div style={{ padding: '80px 0' }}>
+      <div style={{ padding: '40px 0' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <h1 style={{ fontSize: '48px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
               Resources
             </h1>
@@ -62,18 +64,29 @@ export default function ResourcesPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {resources.map((resource, index) => (
-              <div key={index} style={{
-                background: '#ffffff',
-                border: '1px solid #e2e8f0',
-                borderRadius: '16px',
-                padding: '32px',
-                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-                transition: 'all 0.3s ease',
-                cursor: 'pointer',
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column'
-              }}>
+              <div 
+                key={index} 
+                style={{
+                  background: '#ffffff',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '16px',
+                  padding: '20px',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.3s ease-in-out',
+                  cursor: 'pointer',
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+                  e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+                }}
+              >
                 <div style={{
                   width: '56px',
                   height: '56px',
@@ -103,7 +116,7 @@ export default function ResourcesPage() {
                 <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#1e293b', marginBottom: '12px' }}>
                   {resource.title}
                 </h3>
-                <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px', flexGrow: 1 }}>
+                <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px', flexGrow: 1 }}>
                   {resource.description}
                 </p>
                 <button style={{

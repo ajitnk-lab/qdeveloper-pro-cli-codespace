@@ -1,3 +1,5 @@
+"use client";
+
 import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
 import StickerTape from '@/components/StickerTape';
@@ -14,7 +16,7 @@ export default function Home() {
       }}>
         <div className="container">
           <h1 style={{
-            fontSize: '32px',
+            fontSize: '14px',
             fontWeight: '800',
             lineHeight: '1.1',
             marginBottom: '12px'
@@ -22,7 +24,7 @@ export default function Home() {
             Cloud Nestle
           </h1>
           <p style={{
-            fontSize: '18px',
+            fontSize: '14px',
             lineHeight: '1.3',
             color: '#f1f5f9',
             marginBottom: '8px',
@@ -48,7 +50,7 @@ export default function Home() {
               padding: '12px 24px',
               borderRadius: '12px',
               fontWeight: '600',
-              fontSize: '16px',
+              fontSize: '14px',
               border: 'none',
               cursor: 'pointer'
             }}>
@@ -59,29 +61,39 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
+      <section style={{ padding: '40px 0', backgroundColor: '#f8fafc' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-            <h2 style={{ fontSize: '24px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+            <h2 style={{ fontSize: '14px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
               Our Services
             </h2>
-            <p style={{ fontSize: '16px', color: '#64748b', maxWidth: '512px', margin: '0 auto' }}>
+            <p style={{ fontSize: '14px', color: '#64748b', maxWidth: '512px', margin: '0 auto' }}>
               Comprehensive AWS solutions designed to accelerate your digital transformation
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <Link href="/services/cloud-migration" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={{
-                background: '#ffffff',
-                border: '1px solid #e2e8f0',
-                borderRadius: '16px',
-                padding: '32px',
-                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-                transition: 'all 0.3s ease',
-                cursor: 'pointer',
-                height: '100%'
-              }}>
+              <div 
+                style={{
+                  background: '#ffffff',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '16px',
+                  padding: '12px',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.3s ease-in-out',
+                  cursor: 'pointer',
+                  height: '100%'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+                  e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+                }}
+              >
                 <div style={{
                   width: '56px',
                   height: '56px',
@@ -96,26 +108,36 @@ export default function Home() {
                 }}>
                   ☁️
                 </div>
-                <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>
+                <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>
                   Cloud Migration
                 </h3>
-                <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
+                <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6' }}>
                   Seamless migration of your infrastructure to AWS with minimal downtime and maximum efficiency.
                 </p>
               </div>
             </Link>
             
             <Link href="/services/cost-optimization" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={{
-                background: '#ffffff',
-                border: '1px solid #e2e8f0',
-                borderRadius: '16px',
-                padding: '32px',
-                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-                transition: 'all 0.3s ease',
-                cursor: 'pointer',
-                height: '100%'
-              }}>
+              <div 
+                style={{
+                  background: '#ffffff',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '16px',
+                  padding: '12px',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.3s ease-in-out',
+                  cursor: 'pointer',
+                  height: '100%'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+                  e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+                }}
+              >
                 <div style={{
                   width: '56px',
                   height: '56px',
@@ -130,26 +152,36 @@ export default function Home() {
                 }}>
                   💰
                 </div>
-                <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>
+                <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>
                   Cost Optimization
                 </h3>
-                <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
+                <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6' }}>
                   Reduce your AWS costs by up to 40% with our proven optimization strategies and best practices.
                 </p>
               </div>
             </Link>
             
             <Link href="/services/security-compliance" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={{
-                background: '#ffffff',
-                border: '1px solid #e2e8f0',
-                borderRadius: '16px',
-                padding: '32px',
-                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-                transition: 'all 0.3s ease',
-                cursor: 'pointer',
-                height: '100%'
-              }}>
+              <div 
+                style={{
+                  background: '#ffffff',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '16px',
+                  padding: '12px',
+                  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.3s ease-in-out',
+                  cursor: 'pointer',
+                  height: '100%'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+                  e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                  e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+                }}
+              >
                 <div style={{
                   width: '56px',
                   height: '56px',
@@ -164,10 +196,10 @@ export default function Home() {
                 }}>
                   🔒
                 </div>
-                <h3 style={{ fontSize: '24px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>
+                <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '16px' }}>
                   Security & Compliance
                 </h3>
-                <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6' }}>
+                <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6' }}>
                   Ensure your cloud infrastructure meets industry standards and regulatory requirements.
                 </p>
               </div>
@@ -177,31 +209,43 @@ export default function Home() {
       </section>
 
       {/* Why Cloud Nestle - Expertise & Credibility */}
-      <section style={{ padding: '80px 0', backgroundColor: '#f8fafc' }}>
+      <section style={{ padding: '40px 0', backgroundColor: '#f8fafc' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
               Why Choose Cloud Nestle?
             </h2>
-            <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
+            <p style={{ fontSize: '14px', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
               Proven expertise and credentials you can trust for your cloud transformation journey
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* AWS Certified */}
-            <div style={{
-              background: '#ffffff',
-              borderRadius: '16px',
-              padding: '32px',
-              textAlign: 'center',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
-              border: '2px solid #f59e0b'
-            }}>
-              <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
+            <div 
+              style={{
+                background: '#ffffff',
+                borderRadius: '16px',
+                padding: '12px',
+                textAlign: 'center',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+                border: '2px solid #f59e0b',
+                transition: 'all 0.3s ease-in-out',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+                e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
+              }}
+            >
+              <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
                 AWS Certified Expert
               </h3>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
+              <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
                 Certified AWS professional with validated expertise across multiple domains and specializations
               </p>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '16px' }}>
@@ -240,18 +284,30 @@ export default function Home() {
             </div>
 
             {/* 20+ Years Experience */}
-            <div style={{
-              background: '#ffffff',
-              borderRadius: '16px',
-              padding: '32px',
-              textAlign: 'center',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
-              border: '2px solid #2563eb'
-            }}>
-              <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
+            <div 
+              style={{
+                background: '#ffffff',
+                borderRadius: '16px',
+                padding: '12px',
+                textAlign: 'center',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+                border: '2px solid #2563eb',
+                transition: 'all 0.3s ease-in-out',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+                e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
+              }}
+            >
+              <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
                 20+ Years Experience
               </h3>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
+              <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
                 Two decades of enterprise IT experience across industries, from startups to Fortune 500 companies
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap' }}>
@@ -285,18 +341,30 @@ export default function Home() {
             </div>
 
             {/* Proven Results */}
-            <div style={{
-              background: '#ffffff',
-              borderRadius: '16px',
-              padding: '32px',
-              textAlign: 'center',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
-              border: '2px solid #10b981'
-            }}>
-              <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
+            <div 
+              style={{
+                background: '#ffffff',
+                borderRadius: '16px',
+                padding: '12px',
+                textAlign: 'center',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+                border: '2px solid #10b981',
+                transition: 'all 0.3s ease-in-out',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
+                e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.05)';
+              }}
+            >
+              <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
                 Proven Methodology
               </h3>
-              <p style={{ fontSize: '16px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
+              <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
                 Battle-tested frameworks for secure, cost-effective cloud transformations with minimal downtime
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap' }}>
@@ -333,7 +401,7 @@ export default function Home() {
       </section>
 
       {/* Trust Indicators */}
-      <section style={{ padding: '60px 0', backgroundColor: '#ffffff' }}>
+      <section style={{ padding: '30px 0', backgroundColor: '#ffffff' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '32px' }}>
             Trusted by Businesses Worldwide
@@ -345,7 +413,7 @@ export default function Home() {
               borderRadius: '20px',
               padding: '16px 24px'
             }}>
-              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '16px' }}>🏆 AWS Registered Partner</span>
+              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '14px' }}>🏆 AWS Registered Partner</span>
             </div>
             <div style={{
               background: 'rgba(255, 255, 255, 0.9)',
@@ -353,7 +421,7 @@ export default function Home() {
               borderRadius: '20px',
               padding: '16px 24px'
             }}>
-              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '16px' }}>📊 20+ Years Enterprise Experience</span>
+              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '14px' }}>📊 20+ Years Enterprise Experience</span>
             </div>
             <div style={{
               background: 'rgba(255, 255, 255, 0.9)',
@@ -361,7 +429,7 @@ export default function Home() {
               borderRadius: '20px',
               padding: '16px 24px'
             }}>
-              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '16px' }}>🎯 100% Client Success Rate</span>
+              <span style={{ fontWeight: '600', color: '#1e293b', fontSize: '14px' }}>🎯 100% Client Success Rate</span>
             </div>
           </div>
           <Link href="/contact">
@@ -371,7 +439,7 @@ export default function Home() {
               padding: '16px 32px',
               borderRadius: '12px',
               fontWeight: '600',
-              fontSize: '18px',
+              fontSize: '14px',
               border: 'none',
               cursor: 'pointer',
               boxShadow: '0 10px 25px rgba(37, 99, 235, 0.25)'

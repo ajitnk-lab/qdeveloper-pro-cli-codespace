@@ -1,6 +1,55 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
+import { validateName, validateEmail } from '@/lib/validation';
 
 export default function Footer() {
+  const [newsletterData, setNewsletterData] = useState({ name: '', email: '' });
+  const [newsletterErrors, setNewsletterErrors] = useState<Record<string, string>>({});
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleNewsletterChange = (field: string, value: string) => {
+    setNewsletterData(prev => ({ ...prev, [field]: value }));
+    if (newsletterErrors[field]) {
+      setNewsletterErrors(prev => ({ ...prev, [field]: '' }));
+    }
+  };
+
+  const handleNewsletterSubmit = async () => {
+    const newErrors: Record<string, string> = {};
+    
+    const nameValidation = validateName(newsletterData.name);
+    if (!nameValidation.isValid) newErrors.name = nameValidation.error!;
+    
+    const emailValidation = validateEmail(newsletterData.email);
+    if (!emailValidation.isValid) newErrors.email = emailValidation.error!;
+    
+    setNewsletterErrors(newErrors);
+    
+    if (Object.keys(newErrors).length === 0) {
+      try {
+        const response = await fetch('https://formspree.io/f/xeolbraj', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: newsletterData.name,
+            email: newsletterData.email,
+            _subject: 'Newsletter Subscription',
+            formType: 'Newsletter Subscription'
+          }),
+        });
+
+        if (response.ok) {
+          setIsSubscribed(true);
+          setNewsletterData({ name: '', email: '' });
+        }
+      } catch (error) {
+        console.error('Newsletter subscription error:', error);
+      }
+    }
+  };
+
   return (
     <footer style={{
       background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
@@ -10,27 +59,27 @@ export default function Footer() {
       borderTop: '3px solid #f59e0b'
     }}>
       <div className="container">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-6">
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
               <img 
                 src="/cloudnestle-logo.jpg" 
                 alt="Cloud Nestle Logo" 
                 style={{ 
-                  height: '64px', 
+                  height: '48px', 
                   width: 'auto',
                   borderRadius: '4px'
                 }}
               />
-              <h3 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '4px' }}>Cloud Nestle</h3>
+              <h3 style={{ fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>Cloud Nestle</h3>
             </div>
-            <p style={{ fontSize: '16px', color: '#9ca3af', marginBottom: '16px' }}>
-              Professional AWS cloud consulting and migration services for businesses of all sizes.
+            <p style={{ fontSize: '12px', color: '#9ca3af', marginBottom: '12px' }}>
+              Professional AWS cloud consulting and migration services.
             </p>
             
             {/* Social Media Links */}
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-              <span style={{ fontSize: '14px', color: '#e2e8f0' }}>Follow us:</span>
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              <span style={{ fontSize: '20px', fontWeight: 'bold', color: '#e2e8f0' }}>Follow:</span>
               <a href="https://facebook.com/cloudnestle" target="_blank" rel="noopener noreferrer" 
                  style={{ color: '#1877f2', textDecoration: 'none', transition: 'color 0.2s' }}
                  title="Facebook">
@@ -70,21 +119,99 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '4px' }}>Services</h4>
+            <h4 style={{ fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>Contact Forms</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <Link href="/services/cloud-migration" style={{ color: '#9ca3af', fontSize: '16px' }}>Cloud Migration</Link>
-              <Link href="/services/cost-optimization" style={{ color: '#9ca3af', fontSize: '16px' }}>Cost Optimization</Link>
-              <Link href="/services/security-compliance" style={{ color: '#9ca3af', fontSize: '16px' }}>Security & Compliance</Link>
+              <Link href="/contact" style={{ color: '#9ca3af', fontSize: '14px' }}>Request Consultation</Link>
+              <Link href="/general-inquiry" style={{ color: '#9ca3af', fontSize: '14px' }}>General Inquiry</Link>
+              <Link href="/partner" style={{ color: '#9ca3af', fontSize: '14px' }}>Partner with Us</Link>
+              <Link href="/affiliate" style={{ color: '#9ca3af', fontSize: '14px' }}>Affiliate Program</Link>
             </div>
           </div>
-          
+
           <div>
-            <h4 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '4px' }}>Company</h4>
+            <h4 style={{ fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>Quick Links</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-              <Link href="/company" style={{ color: '#9ca3af', fontSize: '16px' }}>About Us</Link>
-              <Link href="/blog" style={{ color: '#9ca3af', fontSize: '16px' }}>Blog</Link>
-              <Link href="/contact" style={{ color: '#9ca3af', fontSize: '16px' }}>Contact</Link>
+              <Link href="/company/about" style={{ color: '#9ca3af', fontSize: '14px' }}>About Us</Link>
+              <Link href="/blog" style={{ color: '#9ca3af', fontSize: '14px' }}>Blog</Link>
+              <Link href="/services" style={{ color: '#9ca3af', fontSize: '14px' }}>Services</Link>
+              <Link href="/solutions" style={{ color: '#9ca3af', fontSize: '14px' }}>Solutions</Link>
             </div>
+          </div>
+
+          <div>
+            <h4 style={{ fontSize: '14px', fontWeight: '600', marginBottom: '8px' }}>Newsletter</h4>
+            {isSubscribed ? (
+              <div style={{
+                background: 'rgba(16, 185, 129, 0.1)',
+                border: '1px solid #10b981',
+                borderRadius: '6px',
+                padding: '12px',
+                textAlign: 'center'
+              }}>
+                <div style={{ fontSize: '14px', marginBottom: '4px' }}>✅</div>
+                <p style={{ fontSize: '11px', color: '#10b981', margin: '0', fontWeight: '600', lineHeight: '1.3' }}>
+                  Thank You for Subscribing!
+                </p>
+                <p style={{ fontSize: '9px', color: '#059669', margin: '2px 0 0 0', lineHeight: '1.2' }}>
+                  You&apos;ll now receive our monthly digest with the latest AWS tips and expert insights
+                </p>
+              </div>
+            ) : (
+              <div>
+                <p style={{ fontSize: '10px', color: '#9ca3af', marginBottom: '6px' }}>
+                  Stay updated with Cloud Nestle insights.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    value={newsletterData.name}
+                    onChange={(e) => handleNewsletterChange('name', e.target.value)}
+                    style={{
+                      padding: '4px 6px',
+                      borderRadius: '3px',
+                      border: `1px solid ${newsletterErrors.name ? '#ef4444' : '#374151'}`,
+                      fontSize: '10px',
+                      background: '#374151',
+                      color: 'white'
+                    }}
+                  />
+                  {newsletterErrors.name && <p style={{ color: '#ef4444', fontSize: '8px', margin: '0' }}>{newsletterErrors.name}</p>}
+                  
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    value={newsletterData.email}
+                    onChange={(e) => handleNewsletterChange('email', e.target.value)}
+                    style={{
+                      padding: '4px 6px',
+                      borderRadius: '3px',
+                      border: `1px solid ${newsletterErrors.email ? '#ef4444' : '#374151'}`,
+                      fontSize: '10px',
+                      background: '#374151',
+                      color: 'white'
+                    }}
+                  />
+                  {newsletterErrors.email && <p style={{ color: '#ef4444', fontSize: '8px', margin: '0' }}>{newsletterErrors.email}</p>}
+                  
+                  <button
+                    onClick={handleNewsletterSubmit}
+                    style={{
+                      background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+                      color: 'white',
+                      padding: '4px 8px',
+                      borderRadius: '3px',
+                      border: 'none',
+                      fontSize: '10px',
+                      fontWeight: '600',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
         
@@ -94,7 +221,7 @@ export default function Footer() {
           paddingTop: '6px', 
           textAlign: 'center' 
         }}>
-          <p style={{ fontSize: '16px', color: '#9ca3af', marginBottom: '0' }}>
+          <p style={{ fontSize: '14px', color: '#9ca3af', marginBottom: '0' }}>
             © 2025 Cloud Nestle. All rights reserved. | 
             <Link href="/privacy-policy" style={{ color: '#9ca3af', textDecoration: 'none', marginLeft: '8px', marginRight: '8px' }}>
               Privacy Policy
