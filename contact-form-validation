@@ -1,7 +1,0 @@
-Add following standard validations to contact form
-name should be atleast 3 characters
-email should be standard email format with @ and a .
-phone number should have country code and phone number and proper number validation
-Company Name should be atleast 3 characters
-Do you have Existing Cloud Center of Excellence (CCOE)? - should be able to selct any one value
-Message should be atleast 3 characters
