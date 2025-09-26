@@ -1,33 +1,19 @@
-"use client";
-
 import Layout from '@/components/layout/Layout';
 import Link from 'next/link';
+import { getAllSolutions } from '@/lib/content';
 
-const solutions = [
-  {
-    slug: 'serverless-architecture',
-    title: 'Serverless Architecture',
-    description: 'Build scalable applications with AWS Lambda, API Gateway, and other serverless technologies.',
-    icon: '⚡',
-    color: '#8b5cf6'
-  },
-  {
-    slug: 'data-analytics-platform',
-    title: 'Data Analytics Platform',
-    description: 'Transform your data into actionable insights with AWS analytics and machine learning services.',
-    icon: '📊',
-    color: '#06b6d4'
-  },
-  {
-    slug: 'multi-cloud-management',
-    title: 'Multi-Cloud Management',
-    description: 'Manage and optimize workloads across multiple cloud providers with unified governance.',
-    icon: '🌐',
-    color: '#f59e0b'
-  }
-];
+const colorMap: Record<string, string> = {
+  orange: '#f59e0b',
+  green: '#10b981',
+  blue: '#06b6d4',
+  purple: '#8b5cf6',
+  red: '#ef4444',
+  yellow: '#f59e0b'
+};
 
-export default function SolutionsPage() {
+export default async function SolutionsPage() {
+  const solutions = getAllSolutions();
+
   return (
     <Layout>
       <div style={{ padding: '40px 0' }}>
@@ -42,7 +28,9 @@ export default function SolutionsPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {solutions.map((solution) => (
+            {solutions.map((solution) => {
+              const hexColor = colorMap[solution.color] || solution.color;
+              return (
               <Link key={solution.slug} href={`/solutions/${solution.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div 
                   style={{
@@ -55,14 +43,7 @@ export default function SolutionsPage() {
                     cursor: 'pointer',
                     height: '100%'
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
-                    e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                    e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
-                  }}
+                  className="hover:transform hover:scale-105 hover:shadow-xl"
                 >
                   <div style={{
                     width: '64px',
@@ -73,8 +54,8 @@ export default function SolutionsPage() {
                     justifyContent: 'center',
                     fontSize: '14px',
                     marginBottom: '24px',
-                    background: `${solution.color}15`,
-                    color: solution.color
+                    background: `${hexColor}15`,
+                    color: hexColor
                   }}>
                     {solution.icon}
                   </div>
@@ -84,12 +65,12 @@ export default function SolutionsPage() {
                   <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
                     {solution.description}
                   </p>
-                  <div style={{ color: solution.color, fontWeight: '600', fontSize: '14px' }}>
+                  <div style={{ color: hexColor, fontWeight: '600', fontSize: '14px' }}>
                     Learn More →
                   </div>
                 </div>
               </Link>
-            ))}
+            )})}
           </div>
         </div>
       </div>
