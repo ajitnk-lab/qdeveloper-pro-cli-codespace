@@ -14,9 +14,10 @@ export class NetworkingStack extends cdk.NestedStack {
   constructor(scope: Construct, id: string, props: NetworkingStackProps) {
     super(scope, id, props);
 
-    // Create hosted zone for domain
-    this.hostedZone = new route53.HostedZone(this, 'HostedZone', {
-      zoneName: props.domainName,
+    // Use existing hosted zone for domain
+    this.hostedZone = route53.HostedZone.fromHostedZoneAttributes(this, 'HostedZone', {
+      hostedZoneId: 'Z08034342M6HNTR3SBCZC',
+      zoneName: props.domainName
     });
 
     // Create SSL certificate
@@ -26,10 +27,12 @@ export class NetworkingStack extends cdk.NestedStack {
       validation: acm.CertificateValidation.fromDns(this.hostedZone),
     });
 
-    // Output nameservers
-    new cdk.CfnOutput(this, 'NameServers', {
-      value: cdk.Fn.join(',', this.hostedZone.hostedZoneNameServers || []),
-      description: 'Route53 Name Servers for domain configuration'
-    });
+    // Output nameservers - only if available
+    if (this.hostedZone.hostedZoneNameServers && this.hostedZone.hostedZoneNameServers.length > 0) {
+      new cdk.CfnOutput(this, 'NameServers', {
+        value: cdk.Fn.join(',', this.hostedZone.hostedZoneNameServers),
+        description: 'Route53 Name Servers for domain configuration'
+      });
+    }
   }
 }

@@ -18,12 +18,21 @@ export default function AboutPage() {
             lineHeight: '1.1',
             marginBottom: '16px'
           }}>
-            About Cloud Nestle
+            About CloudNestle Consulting & Services
           </h1>
           <p style={{
             fontSize: '14px',
             lineHeight: '1.3',
-            color: '#f1f5f9',
+            background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+            padding: '8px 16px',
+            borderRadius: '8px',
+            border: '2px solid rgba(245, 158, 11, 0.3)',
+            backgroundColor: 'rgba(245, 158, 11, 0.1)',
+            display: 'inline-block',
             marginBottom: '8px',
             fontWeight: '600'
           }}>
@@ -90,7 +99,7 @@ export default function AboutPage() {
               The Cloud Nestle Story
             </h2>
             <p style={{ fontSize: '20px', color: '#64748b', lineHeight: '1.8', fontStyle: 'italic' }}>
-              &ldquo;After years of seeing businesses struggle with their AWS architecture, I founded Cloud Nestle to provide expert, personalized guidance that helps companies of all sizes succeed in the cloud&rdquo;
+              &ldquo;After years of seeing businesses struggle with their AWS architecture, I founded Cloud Nestle Conslting & Services to provide expert, personalized guidance that helps companies of all sizes succeed in the cloud&rdquo;
             </p>
           </div>
         </div>
@@ -301,7 +310,7 @@ export default function AboutPage() {
             Ready to Find Your Cloud Home?
           </h2>
           <p style={{ fontSize: '14px', color: '#cbd5e1', marginBottom: '32px', maxWidth: '600px', margin: '0 auto 32px' }}>
-            Let&rsquo;s discuss how Cloud Nestle can help your business settle into the perfect cloud environment.
+            Let&rsquo;s discuss how CloudNestle Consulting & Services can help your business settle into the perfect cloud environment.
           </p>
           <button style={{
             background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',

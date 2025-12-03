@@ -22,7 +22,7 @@ export class StorageStack extends cdk.NestedStack {
 
     // S3 bucket for static website hosting
     this.bucket = new s3.Bucket(this, 'WebsiteBucket', {
-      bucketName: `cloudnestle-website-${cdk.Aws.ACCOUNT_ID}`,
+      bucketName: `cloudnestle-website-637423202175`,
       websiteIndexDocument: 'index.html',
       websiteErrorDocument: 'index.html',
       publicReadAccess: true,

@@ -9,8 +9,12 @@ YELLOW='\033[1;33m'
 NC='\033[0m'
 
 # Configuration
-S3_BUCKET="cloudnestle-website-039920874011"
-CLOUDFRONT_ID="E2C5OBMIICRQD4"
+#S3_BUCKET="cloudnestle-website-039920874011"
+#CLOUDFRONT_ID="E2C5OBMIICRQD4"
+
+S3_BUCKET="cloudnestle-website-637423202175"
+CLOUDFRONT_ID="E20QYBDEFLYU3H"
+
 REGION="us-east-1"
 
 print_status() {

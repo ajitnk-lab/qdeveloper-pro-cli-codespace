@@ -222,7 +222,7 @@ export default function Footer() {
           textAlign: 'center' 
         }}>
           <p style={{ fontSize: '14px', color: '#9ca3af', marginBottom: '0' }}>
-            © 2025 Cloud Nestle. All rights reserved. | 
+            © 2025 CloudNestle Consulting & Services. All rights reserved. | 
             <Link href="/privacy-policy" style={{ color: '#9ca3af', textDecoration: 'none', marginLeft: '8px', marginRight: '8px' }}>
               Privacy Policy
             </Link>
