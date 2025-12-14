@@ -603,6 +603,47 @@ export default function AffiliatePage() {
                         </p>
                       </div>
                     </div>
+
+                    {/* Office Address */}
+                    <div style={{ marginTop: '24px' }}>
+                      <div style={{
+                        background: '#f8fafc',
+                        border: '1px solid #e2e8f0',
+                        borderRadius: '8px',
+                        padding: '16px',
+                        display: 'flex',
+                        gap: '12px'
+                      }}>
+                        <div style={{
+                          width: '32px',
+                          height: '32px',
+                          background: '#dbeafe',
+                          borderRadius: '8px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          fontSize: '14px',
+                          color: '#2563eb',
+                          flexShrink: 0
+                        }}>
+                          📍
+                        </div>
+                        <div>
+                          <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '4px' }}>
+                            Registered Office
+                          </h3>
+                          <p style={{ fontSize: '12px', color: '#64748b', lineHeight: '1.4', margin: 0 }}>
+                            Ground floor, #85, 2nd Cross Road,<br />
+                            Central Excise Layout, Vijay Nagar,<br />
+                            Bangalore 560040, India
+                          </p>
+                          <p style={{ fontSize: '12px', color: '#64748b', marginTop: '8px', margin: 0 }}>
+                            <strong>Sales:</strong> <a href="mailto:sales@cloudnestle.com" style={{ color: '#2563eb', textDecoration: 'none' }}>sales@cloudnestle.com</a><br />
+                            <strong>Support:</strong> <a href="mailto:support@cloudnestle.com" style={{ color: '#2563eb', textDecoration: 'none' }}>support@cloudnestle.com</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </>
               )}

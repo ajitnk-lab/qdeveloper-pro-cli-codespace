@@ -3,7 +3,7 @@
 export default function StickerTape() {
   const tapeItems = [
     { type: 'text', content: '🏠 Just as birds carefully choose the perfect branch to build their nest' },
-    { type: 'image', content: '/cloudnestle-logo.jpg' },
+    { type: 'image', content: '/cloudnestle-logo.png' },
     { type: 'text', content: 'your business deserves the ideal cloud environment to thrive' },
     { type: 'icon', content: '🚀' },
     { type: 'text', content: 'We help companies nestle into secure, scalable cloud solutions' },

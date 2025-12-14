@@ -367,7 +367,7 @@ export default function ConsultationPage() {
                     Get in touch
                   </h2>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                       <div style={{
                         width: '40px',
                         height: '40px',
@@ -377,40 +377,22 @@ export default function ConsultationPage() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         fontSize: '14px',
-                        color: '#2563eb'
-                      }}>
-                        📧
-                      </div>
-                      <div>
-                        <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '2px' }}>
-                          Email
-                        </h3>
-                        <p style={{ fontSize: '14px', color: '#64748b' }}>
-                          contact@cloudnestle.com
-                        </p>
-                      </div>
-                    </div>
-
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                      <div style={{
-                        width: '40px',
-                        height: '40px',
-                        borderRadius: '10px',
-                        background: 'rgba(37, 99, 235, 0.1)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '14px',
-                        color: '#2563eb'
+                        color: '#2563eb',
+                        flexShrink: 0
                       }}>
                         📍
                       </div>
                       <div>
-                        <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '2px' }}>
-                          Office
-                        </h3>
-                        <p style={{ fontSize: '14px', color: '#64748b' }}>
-                          Bengaluru, India
+                        <p style={{ fontSize: '12px', color: '#64748b', lineHeight: '1.6', margin: 0 }}>
+                          <strong style={{ fontWeight: '800' }}>📍 Registered Office:</strong><br />
+                          Ground floor, #85, 2nd Cross Road,<br />
+                          Central Excise Layout, Vijay Nagar,<br />
+                          Bangalore 560040, India
+                        </p>
+                        <p style={{ fontSize: '12px', color: '#64748b', lineHeight: '1.6', marginTop: '12px', marginBottom: 0 }}>
+                          <strong style={{ fontWeight: '800' }}>📧 Contact:</strong><br />
+                          <strong>Sales:</strong> <a href="mailto:sales@cloudnestle.com" style={{ color: '#2563eb', textDecoration: 'none' }}>sales@cloudnestle.com</a><br />
+                          <strong>Support:</strong> <a href="mailto:support@cloudnestle.com" style={{ color: '#2563eb', textDecoration: 'none' }}>support@cloudnestle.com</a>
                         </p>
                       </div>
                     </div>

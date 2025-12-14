@@ -38,7 +38,7 @@ export default function Header() {
         <div className="flex justify-between items-center">
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none', marginLeft: '0' }}>
             <img 
-              src="/cloudnestle-logo.jpg" 
+              src="/cloudnestle-logo.png" 
               alt="Cloud Nestle Logo" 
               style={{ 
                 height: '64px', 
