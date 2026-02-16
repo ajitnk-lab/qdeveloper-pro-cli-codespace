@@ -7,6 +7,16 @@ const posts = [
   {
     slug: 'cli-agent-orchestrator',
     title: 'CLI Agent Orchestrator:',
+    excerpt: 'CLI Agent Orchestrator: Transforming Developer CLI Tools into a Multi-Agent Powerhouse',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
+    slug: 'cli-agent-orchestrator',
+    title: 'CLI Agent Orchestrator:',
     excerpt: 'markdown
 Introducing CLI Agent Orchestrator: Transforming Developer CLI Tools into a Multi-Agent Powerhouse',
     publishedAt: '2026-02-16',
