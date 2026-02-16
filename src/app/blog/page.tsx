@@ -5,6 +5,16 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'your-own-jupyterlab-application',
+    title: 'Your own JupyterLab application',
+    excerpt: 'Your Own JupyterLab Application: Deploying with Real-Time Collaboration in Minutes',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'cli-agent-orchestrator',
     title: 'CLI Agent Orchestrator:',
     excerpt: 'CLI Agent Orchestrator: Transforming Developer CLI Tools into a Multi-Agent Powerhouse',
