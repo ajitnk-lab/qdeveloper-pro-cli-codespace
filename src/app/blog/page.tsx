@@ -15,6 +15,16 @@ const posts = [
     featured: false,
   },
   {
+    slug: 'testing-blog-automation-system',
+    title: 'Testing Blog Automation System',
+    excerpt: 'Testing Blog Automation System',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: ["Testing", "Automation"],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'test-automation-blog',
     title: 'Test: Automated Blog Publishing System',
     excerpt: 'Testing automated blog generation and publishing workflow from social media automation system.',
