@@ -35,7 +35,7 @@ jobs:
         aws-region: us-east-1
         
     - name: Deploy to S3
-      run: aws s3 sync out/ s3://cloudnestle-website-039920874011 --delete --cache-control max-age=31536000,public
+      run: aws s3 sync out/ s3://cloudnestle-website-637423202175 --delete --cache-control max-age=31536000,public
         
     - name: Invalidate CloudFront cache
       run: aws cloudfront create-invalidation --distribution-id E2C5OBMIICRQD4 --paths "/*"
@@ -46,4 +46,5 @@ jobs:
         echo "🌐 CloudFront URL: https://d3up3odpfbi214.cloudfront.net"
         echo "🌐 Custom Domain: https://cloudnestle.com"
         echo "📊 CloudFront Distribution: E2C5OBMIICRQD4"
-        echo "🪣 S3 Bucket: cloudnestle-website-039920874011"
+        echo "🪣 S3 Bucket: cloudnestle-website-637423202175"
+
