@@ -5,6 +5,16 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'kube-resource-orchestrator',
+    title: 'Kube Resource Orchestrator',
+    excerpt: 'Simplifying Kubernetes Resource Management with Kube Resource Orchestrator (kro)',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'aws-cloud-credits-for-open-source-projects',
     title: 'AWS Cloud Credits for Open Source Projects:',
     excerpt: 'AWS Cloud Credits for Open Source Projects: Affirming Our Commitment',
