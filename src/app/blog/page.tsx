@@ -5,6 +5,16 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'cedar',
+    title: 'cedar',
+    excerpt: 'Secure your Express application APIs in 5 minutes with Cedar',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'cdk-cloud-community-meetings',
     title: 'CDK Cloud Community Meetings',
     excerpt: 'CDK Cloud Community Meetings',
