@@ -92,8 +92,33 @@ deploy_frontend() {
     print_status "Building Next.js site..."
     npm run build
     
-    print_status "Syncing to S3..."
-    aws s3 sync out/ s3://$S3_BUCKET --delete --cache-control max-age=31536000,public --region $REGION
+    print_status "Syncing to S3 with optimized cache headers..."
+    
+    # Sync HTML files with short cache (5 minutes)
+    print_status "  → HTML files (5 min cache)..."
+    aws s3 sync out/ s3://$S3_BUCKET \
+        --exclude "*" \
+        --include "*.html" \
+        --cache-control "max-age=300,public" \
+        --content-type "text/html" \
+        --delete \
+        --region $REGION
+    
+    # Sync static assets with long cache (1 year) - they have hashed filenames
+    print_status "  → Static assets (1 year cache)..."
+    aws s3 sync out/_next/ s3://$S3_BUCKET/_next/ \
+        --cache-control "max-age=31536000,immutable,public" \
+        --delete \
+        --region $REGION
+    
+    # Sync other files (images, fonts, etc.) with medium cache (1 day)
+    print_status "  → Other assets (1 day cache)..."
+    aws s3 sync out/ s3://$S3_BUCKET \
+        --exclude "*.html" \
+        --exclude "_next/*" \
+        --cache-control "max-age=86400,public" \
+        --delete \
+        --region $REGION
     
     print_status "Invalidating CloudFront cache..."
     aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_ID --paths "/*" --region $REGION
