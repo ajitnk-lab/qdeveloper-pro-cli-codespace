@@ -159,20 +159,31 @@ export default function Footer() {
               Company Info
             </h4>
             <div style={{ fontSize: '10px', color: '#9ca3af', lineHeight: '1.3' }}>
-              <div style={{ marginBottom: '4px' }}>
-                <p style={{ fontWeight: '700', marginBottom: '1px', fontSize: '10px' }}>📍 Registered Office:</p>
+              <div style={{ marginBottom: '6px' }}>
+                <p style={{ fontWeight: '700', marginBottom: '2px', fontSize: '10px' }}>🇺🇸 US Sales & Support</p>
                 <p style={{ margin: 0, fontSize: '10px' }}>
-                  Ground floor, #85,<br />
-                  2nd Cross Road,<br />
-                  Central Excise Layout,<br />
-                  Vijay Nagar,<br />
-                  Bangalore 560040, India
+                  <a href="tel:+13465765655" style={{ color: '#60a5fa', textDecoration: 'none', display: 'block', fontSize: '10px' }}>
+                    +1 (346) 576-5655
+                  </a>
+                  <a href="mailto:sales@cloudnestle.com" style={{ color: '#60a5fa', textDecoration: 'none', display: 'block', fontSize: '10px' }}>
+                    sales@cloudnestle.com
+                  </a>
                 </p>
               </div>
               
-              <div style={{ marginBottom: '4px' }}>
-                <p style={{ fontWeight: '700', marginBottom: '1px', fontSize: '10px' }}>📧 Contact:</p>
+              <div style={{ marginBottom: '6px' }}>
+                <p style={{ fontWeight: '700', marginBottom: '2px', fontSize: '10px' }}>📍 Global Headquarters</p>
                 <p style={{ margin: 0, fontSize: '10px' }}>
+                  <a href="tel:+919591040061" style={{ color: '#60a5fa', textDecoration: 'none', display: 'block', fontSize: '10px' }}>
+                    🇮🇳 +91 95910 40061
+                  </a>
+                </p>
+                <p style={{ margin: 0, fontSize: '10px', marginTop: '2px' }}>
+                  Ground floor, #85, 2nd Cross Road,<br />
+                  Central Excise Layout, Vijay Nagar,<br />
+                  Bangalore 560040, India
+                </p>
+                <p style={{ margin: 0, fontSize: '10px', marginTop: '2px' }}>
                   <a href="mailto:sales@cloudnestle.com" style={{ color: '#60a5fa', textDecoration: 'none', display: 'block', fontSize: '10px' }}>
                     sales@cloudnestle.com
                   </a>

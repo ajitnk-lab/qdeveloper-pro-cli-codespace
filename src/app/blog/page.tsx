@@ -5,6 +5,12 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'test-automation-blog',
+    title: 'Test: Automated Blog Publishing System',
+    excerpt: 'Testing automated blog generation and publishing workflow from social media automation system.',
+    publishedAt: '2026-02-16'
+  },
+  {
     slug: '2025-09-09-automated-deployment-live',
     title: 'Automated Deployment Live',
     excerpt: 'Learn about automated deployment strategies for AWS.',
@@ -15,6 +21,18 @@ const posts = [
     title: 'Ajits News Article',
     excerpt: 'Latest news and updates from the cloud industry.',
     publishedAt: '2025-09-09'
+  },
+  {
+    slug: 'aws-cost-optimization-guide',
+    title: 'AWS Cost Optimization Best Practices',
+    excerpt: 'Comprehensive guide to reducing AWS costs without compromising performance.',
+    publishedAt: '2024-01-15'
+  },
+  {
+    slug: 'cloud-migration-checklist',
+    title: 'Essential Cloud Migration Checklist for 2024',
+    excerpt: 'A comprehensive checklist to ensure your cloud migration project succeeds without unexpected surprises.',
+    publishedAt: '2024-01-10'
   }
 ];
 
