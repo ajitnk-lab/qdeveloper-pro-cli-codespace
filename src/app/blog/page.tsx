@@ -5,6 +5,17 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'cli-agent-orchestrator',
+    title: 'CLI Agent Orchestrator:',
+    excerpt: 'markdown
+Introducing CLI Agent Orchestrator: Transforming Developer CLI Tools into a Multi-Agent Powerhouse',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'testing-blog-automation-system',
     title: 'Testing Blog Automation System',
     excerpt: 'Testing Blog Automation System',
