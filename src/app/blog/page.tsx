@@ -5,6 +5,16 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'cdk-cloud-community-meetings',
+    title: 'CDK Cloud Community Meetings',
+    excerpt: 'CDK Cloud Community Meetings',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'strands-agents-10',
     title: 'Strands Agents 1.0',
     excerpt: 'Introducing Strands Agents 1.0: Production-Ready Multi-Agent Orchestration Made Simple',
