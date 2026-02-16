@@ -5,6 +5,16 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'aws-cloud-credits-for-open-source-projects',
+    title: 'AWS Cloud Credits for Open Source Projects:',
+    excerpt: 'AWS Cloud Credits for Open Source Projects: Affirming Our Commitment',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'cedar',
     title: 'cedar',
     excerpt: 'Secure your Express application APIs in 5 minutes with Cedar',
