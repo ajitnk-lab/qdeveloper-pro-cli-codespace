@@ -7,6 +7,16 @@ const posts = [
   {
     slug: 'data-solutions-framework',
     title: 'Data Solutions Framework',
+    excerpt: 'Accelerating Data Solutions with AWS Data Solutions Framework',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
+    slug: 'data-solutions-framework',
+    title: 'Data Solutions Framework',
     excerpt: 'Revolutionizing Data Solutions with AWS Data Solutions Framework',
     publishedAt: '2026-02-16',
     category: 'AWS',
