@@ -5,6 +5,16 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'data-solutions-framework',
+    title: 'Data Solutions Framework',
+    excerpt: 'Revolutionizing Data Solutions with AWS Data Solutions Framework',
+    publishedAt: '2026-02-16',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'kube-resource-orchestrator',
     title: 'Kube Resource Orchestrator',
     excerpt: 'Simplifying Kubernetes Resource Management with Kube Resource Orchestrator (kro)',
