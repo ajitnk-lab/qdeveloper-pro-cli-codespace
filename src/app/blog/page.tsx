@@ -5,6 +5,16 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'amazon-nova-forge',
+    title: 'Amazon Nova Forge',
+    excerpt: 'Amazon Nova Forge: Revolutionizing Model Training for Domain-Specific Knowledge',
+    publishedAt: '2026-02-17',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'data-solutions-framework',
     title: 'Data Solutions Framework',
     excerpt: 'Introducing the Finch Container Development Tool for Windows: A Comprehensive Guide',
