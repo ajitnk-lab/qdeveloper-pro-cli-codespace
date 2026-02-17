@@ -24,6 +24,18 @@ jobs:
         
     - name: Install dependencies
       run: npm ci
+    
+    - name: Generate blog index
+      run: |
+        node scripts/generate-blog-index.js
+        echo "✅ Blog index generated"
+        ls -lh content/blog/_index.json
+    
+    - name: Generate resources index
+      run: |
+        node scripts/generate-resources-index.js
+        echo "✅ Resources index generated"
+        ls -lh content/resources/_index.json
         
     - name: Build website
       run: npm run build

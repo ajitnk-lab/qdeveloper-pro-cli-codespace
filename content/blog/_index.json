@@ -1,0 +1,191 @@
+{
+  "posts": [
+    {
+      "slug": "ai-trends-in-2026",
+      "title": "AI trends in 2026",
+      "excerpt": "The Future of AI: Key Trends and AWS Best Practices for 2026",
+      "publishedAt": "2026-02-17",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "6 min"
+    },
+    {
+      "slug": "amazon-nova-forge",
+      "title": "Amazon Nova Forge",
+      "excerpt": "Amazon Nova Forge: Revolutionizing Model Training for Domain-Specific Knowledge",
+      "publishedAt": "2026-02-17",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "6 min"
+    },
+    {
+      "slug": "aws-cloud-credits-for-open-source-projects",
+      "title": "AWS Cloud Credits for Open Source Projects:",
+      "excerpt": "AWS Cloud Credits for Open Source Projects: Affirming Our Commitment",
+      "publishedAt": "2026-02-16",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "8 min"
+    },
+    {
+      "slug": "cdk-cloud-community-meetings",
+      "title": "CDK Cloud Community Meetings",
+      "excerpt": "CDK Cloud Community Meetings",
+      "publishedAt": "2026-02-16",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "6 min"
+    },
+    {
+      "slug": "cedar",
+      "title": "cedar",
+      "excerpt": "Secure your Express application APIs in 5 minutes with Cedar",
+      "publishedAt": "2026-02-16",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "8 min"
+    },
+    {
+      "slug": "cli-agent-orchestrator",
+      "title": "CLI Agent Orchestrator:",
+      "excerpt": "CLI Agent Orchestrator: Transforming Developer CLI Tools into a Multi-Agent Powerhouse",
+      "publishedAt": "2026-02-16",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "6 min"
+    },
+    {
+      "slug": "data-solutions-framework",
+      "title": "Data Solutions Framework",
+      "excerpt": "Introducing the Finch Container Development Tool for Windows: A Comprehensive Guide",
+      "publishedAt": "2026-02-16",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "5 min"
+    },
+    {
+      "slug": "kube-resource-orchestrator",
+      "title": "Kube Resource Orchestrator",
+      "excerpt": "Simplifying Kubernetes Resource Management with Kube Resource Orchestrator (kro)",
+      "publishedAt": "2026-02-16",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "8 min"
+    },
+    {
+      "slug": "strands-agents-10",
+      "title": "Strands Agents 1.0",
+      "excerpt": "Introducing Strands Agents 1.0: Production-Ready Multi-Agent Orchestration Made Simple",
+      "publishedAt": "2026-02-16",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "8 min"
+    },
+    {
+      "slug": "test-automation-blog",
+      "title": "Test: Automated Blog Publishing System",
+      "excerpt": "Testing automated blog generation and publishing workflow from social media automation system.",
+      "publishedAt": "2026-02-16",
+      "category": "Testing",
+      "tags": [
+        "Automation",
+        "Testing",
+        "CI/CD"
+      ],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "1 min"
+    },
+    {
+      "slug": "testing-blog-automation-system",
+      "title": "Testing Blog Automation System",
+      "excerpt": "Testing Blog Automation System",
+      "publishedAt": "2026-02-16",
+      "category": "AWS",
+      "tags": [
+        "Testing",
+        "Automation"
+      ],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "5 min"
+    },
+    {
+      "slug": "your-own-jupyterlab-application",
+      "title": "Your own JupyterLab application",
+      "excerpt": "Your Own JupyterLab Application: Deploying with Real-Time Collaboration in Minutes",
+      "publishedAt": "2026-02-16",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "5 min"
+    },
+    {
+      "slug": "2025-09-09-automated-deployment-live",
+      "title": "🚀 Automated Deployment is Now Live!",
+      "excerpt": "Our website now features professional CI/CD automation with GitHub Actions, enabling instant deployments with every code push.",
+      "publishedAt": "2025-09-09",
+      "category": "Announcements",
+      "tags": [
+        "Automation",
+        "GitHub Actions",
+        "DevOps",
+        "CI/CD"
+      ],
+      "author": "CloudNestle Team",
+      "featured": true,
+      "readTime": "2 min"
+    },
+    {
+      "slug": "aws-cost-optimization-guide",
+      "title": "Complete Guide to AWS Cost Optimization in 2024",
+      "excerpt": "Learn proven strategies to reduce your AWS costs by up to 40% without compromising performance or reliability.",
+      "publishedAt": "2024-01-15",
+      "category": "Cost Optimization",
+      "tags": [
+        "AWS",
+        "Cost Optimization",
+        "Cloud Computing",
+        "FinOps"
+      ],
+      "author": "CloudNestle Team",
+      "featured": true,
+      "readTime": "2 min"
+    },
+    {
+      "slug": "cloud-migration-checklist",
+      "title": "Essential Cloud Migration Checklist for 2024",
+      "excerpt": "A comprehensive checklist to ensure your cloud migration project succeeds without unexpected surprises.",
+      "publishedAt": "2024-01-10",
+      "category": "Cloud Migration",
+      "tags": [
+        "AWS",
+        "Cloud Migration",
+        "Infrastructure",
+        "Planning"
+      ],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "2 min"
+    }
+  ]
+}

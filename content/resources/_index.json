@@ -1,28 +1,44 @@
 {
   "resources": [
     {
-      "slug": "ai-trends-in-2026",
-      "title": "AI trends in 2026",
-      "description": "Professional Guide: Harnessing AI Trends in 2026 with AWS",
-      "type": "Guide",
-      "category": "Cloud",
-      "tags": [],
-      "icon": "\ud83d\udcda",
-      "color": "#2563eb",
-      "publishedAt": "2026-02-17",
-      "pdfUrl": "/resources/pdfs/ai-trends-in-2026.pdf"
-    },
-    {
       "slug": "agentic-ai-using-agentcore-runtime-made-easy-for-beginners",
       "title": "Agentic AI using Agentcore runtime made easy for beginners.",
       "description": "Introduction to Agentic AI with Agentcore Runtime for Beginners",
       "type": "Guide",
       "category": "Cloud",
       "tags": [],
-      "icon": "\ud83d\udcda",
+      "icon": "📚",
       "color": "#2563eb",
       "publishedAt": "2026-02-17",
       "pdfUrl": "/resources/pdfs/agentic-ai-using-agentcore-runtime-made-easy-for-beginners.pdf"
+    },
+    {
+      "slug": "ai-trends-in-2026",
+      "title": "AI trends in 2026",
+      "description": "Professional Guide: Harnessing AI Trends in 2026 with AWS",
+      "type": "Guide",
+      "category": "Cloud",
+      "tags": [],
+      "icon": "📚",
+      "color": "#2563eb",
+      "publishedAt": "2026-02-17",
+      "pdfUrl": "/resources/pdfs/ai-trends-in-2026.pdf"
+    },
+    {
+      "slug": "aws-cost-optimization-guide",
+      "title": "AWS Cost Optimization Guide",
+      "description": "Complete guide to reducing AWS costs",
+      "type": "Guide",
+      "category": "Cloud",
+      "tags": [
+        "aws",
+        "cost",
+        "optimization"
+      ],
+      "icon": "📚",
+      "color": "#2563eb",
+      "publishedAt": "2026-02-17",
+      "pdfUrl": "/resources/pdfs/aws-cost-optimization-guide.pdf"
     },
     {
       "slug": "aws-cost-optimization-strategies",
@@ -36,7 +52,7 @@
         "optimization",
         "finops"
       ],
-      "icon": "\ud83d\udcda",
+      "icon": "📚",
       "color": "#2563eb",
       "publishedAt": "2026-02-17",
       "pdfUrl": "/resources/pdfs/aws-cost-optimization-strategies.pdf"
@@ -52,7 +68,7 @@
         "lambda",
         "serverless"
       ],
-      "icon": "\ud83d\udcda",
+      "icon": "📚",
       "color": "#2563eb",
       "publishedAt": "2026-02-17",
       "pdfUrl": "/resources/pdfs/aws-lambda-best-practices.pdf"
@@ -68,7 +84,7 @@
         "lambda",
         "serverless"
       ],
-      "icon": "\ud83d\udcda",
+      "icon": "📚",
       "color": "#2563eb",
       "publishedAt": "2026-02-17",
       "pdfUrl": "/resources/pdfs/aws-lambda-developer-guide-overview.pdf"
@@ -85,7 +101,7 @@
         "performance",
         "optimization"
       ],
-      "icon": "\ud83d\udcda",
+      "icon": "📚",
       "color": "#2563eb",
       "publishedAt": "2026-02-17",
       "pdfUrl": "/resources/pdfs/aws-lambda-performance-optimization.pdf"
@@ -102,7 +118,7 @@
         "automation",
         "pipeline"
       ],
-      "icon": "\ud83d\udcda",
+      "icon": "📚",
       "color": "#2563eb",
       "publishedAt": "2026-02-17",
       "pdfUrl": "/resources/pdfs/cicd-pipeline-best-practices.pdf"
@@ -110,7 +126,7 @@
     {
       "slug": "kubernetes-security-hardening-guide",
       "title": "Kubernetes Security Hardening Guide",
-      "description": "Ensuring the security of your Kubernetes clusters is paramount in today\u2019s dynamic cloud-native environment. This guide provides a comprehensive roadmap to enhance the security posture of your...",
+      "description": "Ensuring the security of your Kubernetes clusters is paramount in today’s dynamic cloud-native environment. This guide provides a comprehensive roadmap to enhance the security posture of your...",
       "type": "Guide",
       "category": "Security",
       "tags": [
@@ -119,7 +135,7 @@
         "security",
         "hardening"
       ],
-      "icon": "\ud83d\udcda",
+      "icon": "📚",
       "color": "#2563eb",
       "publishedAt": "2026-02-17",
       "pdfUrl": "/resources/pdfs/kubernetes-security-hardening-guide.pdf"
@@ -136,7 +152,7 @@
         "iac",
         "devops"
       ],
-      "icon": "\ud83d\udcda",
+      "icon": "📚",
       "color": "#2563eb",
       "publishedAt": "2026-02-17",
       "pdfUrl": "/resources/pdfs/terraform-best-practices-for-aws.pdf"
