@@ -1,6 +1,23 @@
 {
   "resources": [
     {
+      "slug": "kubernetes-security-hardening-guide",
+      "title": "Kubernetes Security Hardening Guide",
+      "description": "Ensuring the security of your Kubernetes clusters is paramount in today\u2019s dynamic cloud-native environment. This guide provides a comprehensive roadmap to enhance the security posture of your...",
+      "type": "Guide",
+      "category": "Security",
+      "tags": [
+        "kubernetes",
+        "k8s",
+        "security",
+        "hardening"
+      ],
+      "icon": "\ud83d\udcda",
+      "color": "#2563eb",
+      "publishedAt": "2026-02-17",
+      "pdfUrl": "/resources/pdfs/kubernetes-security-hardening-guide.pdf"
+    },
+    {
       "slug": "aws-lambda-best-practices",
       "title": "AWS Lambda Best Practices",
       "description": "Essential best practices for AWS Lambda",
