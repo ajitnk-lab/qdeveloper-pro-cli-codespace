@@ -40,6 +40,14 @@ jobs:
     - name: Build website
       run: npm run build
     
+    - name: Copy index files to build output
+      run: |
+        mkdir -p out/content/blog out/content/resources
+        cp content/blog/_index.json out/content/blog/
+        cp content/resources/_index.json out/content/resources/
+        echo "✅ Index files copied to build output"
+        ls -lh out/content/blog/_index.json out/content/resources/_index.json
+    
     - name: Install Pandoc
       run: |
         sudo apt-get update
