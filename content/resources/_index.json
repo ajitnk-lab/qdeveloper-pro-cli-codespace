@@ -1,6 +1,23 @@
 {
   "resources": [
     {
+      "slug": "cicd-pipeline-best-practices",
+      "title": "CI/CD Pipeline Best Practices",
+      "description": "Comprehensive Guide to Implementing Best Practices for CI/CD Pipelines",
+      "type": "Guide",
+      "category": "DevOps",
+      "tags": [
+        "cicd",
+        "devops",
+        "automation",
+        "pipeline"
+      ],
+      "icon": "\ud83d\udcda",
+      "color": "#2563eb",
+      "publishedAt": "2026-02-17",
+      "pdfUrl": "/resources/pdfs/cicd-pipeline-best-practices.pdf"
+    },
+    {
       "slug": "aws-lambda-performance-optimization",
       "title": "AWS Lambda Performance Optimization",
       "description": "Optimizing the performance of AWS Lambda functions is crucial for achieving efficient and cost-effective cloud-based applications. This guide provides a detailed, step-by-step approach to enhance the...",
