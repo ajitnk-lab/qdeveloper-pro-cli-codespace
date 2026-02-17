@@ -1,6 +1,22 @@
 {
   "resources": [
     {
+      "slug": "aws-lambda-best-practices",
+      "title": "AWS Lambda Best Practices",
+      "description": "Essential best practices for AWS Lambda",
+      "type": "Guide",
+      "category": "Serverless",
+      "tags": [
+        "aws",
+        "lambda",
+        "serverless"
+      ],
+      "icon": "\ud83d\udcda",
+      "color": "#2563eb",
+      "publishedAt": "2026-02-17",
+      "pdfUrl": "/resources/pdfs/aws-lambda-best-practices.pdf"
+    },
+    {
       "slug": "aws-cost-optimization-guide",
       "title": "AWS Cost Optimization Guide",
       "description": "Complete guide to reducing AWS costs",
