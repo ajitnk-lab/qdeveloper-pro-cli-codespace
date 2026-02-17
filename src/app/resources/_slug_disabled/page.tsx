@@ -17,6 +17,17 @@ interface Resource {
   pdf_url?: string;
 }
 
+export async function generateStaticParams() {
+  try {
+    const indexPath = path.join(process.cwd(), 'content/resources/_index.json');
+    const indexContent = await fs.readFile(indexPath, 'utf-8');
+    const data = JSON.parse(indexContent);
+    return data.resources?.map((r: Resource) => ({ slug: r.slug })) || [];
+  } catch {
+    return [];
+  }
+}
+
 async function getResource(slug: string): Promise<{ resource: Resource; content: string } | null> {
   try {
     const indexPath = path.join(process.cwd(), 'content/resources/_index.json');
