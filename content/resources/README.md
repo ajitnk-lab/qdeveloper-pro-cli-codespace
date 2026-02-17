@@ -26,3 +26,4 @@ publishedAt: "2026-02-17"
 
 Resources are automatically committed by the social media automation system.
 
+# Trigger workflow

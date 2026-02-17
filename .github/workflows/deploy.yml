@@ -1,31 +1,18 @@
-name: Deploy Cloud Nestle Website
+name: Generate Resource PDFs
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    paths:
+      - 'content/resources/**'
 
 jobs:
-  deploy:
+  generate-pdfs:
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
-        cache-dependency-path: package-lock.json
-        
-    - name: Install dependencies
-      run: npm ci
-        
-    - name: Build website
-      run: npm run build
     
     - name: Install Pandoc
       run: |
@@ -34,24 +21,23 @@ jobs:
     
     - name: Generate PDFs from resources
       run: |
-        mkdir -p out/resources/pdfs
+        mkdir -p pdfs
         for md_file in content/resources/*.md; do
           if [ -f "$md_file" ] && [ "$(basename "$md_file")" != "README.md" ]; then
             slug=$(basename "$md_file" .md)
             echo "Generating PDF for: $slug"
             pandoc "$md_file" \
-              -o "out/resources/pdfs/${slug}.pdf" \
+              -o "pdfs/${slug}.pdf" \
               --pdf-engine=pdflatex \
               -V geometry:margin=1in \
               -V fontsize=11pt \
               -V documentclass=article \
               --toc \
-              --highlight-style=tango \
-              2>/dev/null || echo "⚠️  Failed to generate PDF for $slug"
+              --highlight-style=tango || echo "⚠️  Failed: $slug"
           fi
         done
         echo "✅ PDF generation complete"
-        ls -lh out/resources/pdfs/ || echo "No PDFs generated"
+        ls -lh pdfs/
         
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
@@ -62,28 +48,14 @@ jobs:
     
     - name: Upload PDFs to S3
       run: |
-        if [ -d "out/resources/pdfs" ] && [ "$(ls -A out/resources/pdfs)" ]; then
-          aws s3 sync out/resources/pdfs/ s3://cloudnestle-website-637423202175/resources/pdfs/ \
-            --cache-control max-age=31536000,public \
-            --content-type application/pdf
-          echo "✅ PDFs uploaded to S3"
-        else
-          echo "ℹ️  No PDFs to upload"
-        fi
-        
-    - name: Deploy to S3
-      run: aws s3 sync out/ s3://cloudnestle-website-637423202175 --delete --cache-control max-age=31536000,public
+        aws s3 sync pdfs/ s3://cloudnestle-website-637423202175/resources/pdfs/ \
+          --cache-control max-age=31536000,public \
+          --content-type application/pdf
+        echo "✅ PDFs uploaded to S3"
         
     - name: Invalidate CloudFront cache
       run: |
-        aws cloudfront create-invalidation --distribution-id E2GJYMENMRGUZO --paths "/*" "/resources/*" "/resources/pdfs/*"
-        
-    - name: Verify deployment
-      run: |
-        echo "✅ Deployment completed successfully!"
-        echo "🌐 CloudFront URL: https://d2rc4n74lkrdd3.cloudfront.net"
-        echo "🌐 Custom Domain: https://cloudnestle.com"
-        echo "📊 CloudFront Distribution: E2GJYMENMRGUZO"
-        echo "🪣 S3 Bucket: cloudnestle-website-637423202175"
+        aws cloudfront create-invalidation --distribution-id E2GJYMENMRGUZO --paths "/resources/pdfs/*"
+        echo "✅ CloudFront cache invalidated"
 
 
