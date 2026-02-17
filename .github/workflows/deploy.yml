@@ -1,18 +1,32 @@
-name: Generate Resource PDFs
+name: Deploy CloudNestle Website
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'content/resources/**'
+      - 'content/**'
+      - 'src/**'
+      - 'public/**'
 
 jobs:
-  generate-pdfs:
+  deploy:
     runs-on: ubuntu-latest
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+        
+    - name: Build website
+      run: npm run build
     
     - name: Install Pandoc
       run: |
@@ -21,13 +35,13 @@ jobs:
     
     - name: Generate PDFs from resources
       run: |
-        mkdir -p pdfs
+        mkdir -p out/resources/pdfs
         for md_file in content/resources/*.md; do
           if [ -f "$md_file" ] && [ "$(basename "$md_file")" != "README.md" ]; then
             slug=$(basename "$md_file" .md)
             echo "Generating PDF for: $slug"
             pandoc "$md_file" \
-              -o "pdfs/${slug}.pdf" \
+              -o "out/resources/pdfs/${slug}.pdf" \
               --pdf-engine=pdflatex \
               -V geometry:margin=1in \
               -V fontsize=11pt \
@@ -37,7 +51,7 @@ jobs:
           fi
         done
         echo "✅ PDF generation complete"
-        ls -lh pdfs/
+        ls -lh out/resources/pdfs/
         
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
@@ -46,16 +60,14 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
     
-    - name: Upload PDFs to S3
+    - name: Deploy to S3
       run: |
-        aws s3 sync pdfs/ s3://cloudnestle-website-637423202175/resources/pdfs/ \
-          --cache-control max-age=31536000,public \
-          --content-type application/pdf
-        echo "✅ PDFs uploaded to S3"
+        aws s3 sync out/ s3://cloudnestle-website-637423202175/ --delete --cache-control max-age=31536000,public
+        echo "✅ Website deployed to S3"
         
     - name: Invalidate CloudFront cache
       run: |
-        aws cloudfront create-invalidation --distribution-id E2GJYMENMRGUZO --paths "/resources/pdfs/*"
+        aws cloudfront create-invalidation --distribution-id E2GJYMENMRGUZO --paths "/*"
         echo "✅ CloudFront cache invalidated"
 
 
