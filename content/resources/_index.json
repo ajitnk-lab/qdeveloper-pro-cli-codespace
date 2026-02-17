@@ -25,6 +25,18 @@
       "pdfUrl": "/resources/pdfs/agentic-ai-using-agentcore-runtime-made-easy-for-beginners.pdf"
     },
     {
+      "slug": "agentic-ai-using-agentcore-runtime-made-easy-for-beginners",
+      "title": "Agentic AI using Agentcore runtime made easy for beginners.",
+      "description": "Introduction to Agentic AI with Agentcore Runtime for Beginners",
+      "type": "Guide",
+      "category": "Cloud",
+      "tags": [],
+      "icon": "\ud83d\udcda",
+      "color": "#2563eb",
+      "publishedAt": "2026-02-17",
+      "pdfUrl": "/resources/pdfs/agentic-ai-using-agentcore-runtime-made-easy-for-beginners.pdf"
+    },
+    {
       "slug": "cicd-pipeline-best-practices",
       "title": "CI/CD Pipeline Best Practices",
       "description": "Comprehensive Guide to Implementing Best Practices for CI/CD Pipelines",
