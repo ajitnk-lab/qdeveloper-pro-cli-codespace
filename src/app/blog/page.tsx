@@ -5,6 +5,16 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'ai-trends-in-2026',
+    title: 'AI trends in 2026',
+    excerpt: 'The Future of AI: Key Trends and AWS Best Practices for 2026',
+    publishedAt: '2026-02-17',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'amazon-nova-forge',
     title: 'Amazon Nova Forge',
     excerpt: 'Amazon Nova Forge: Revolutionizing Model Training for Domain-Specific Knowledge',
