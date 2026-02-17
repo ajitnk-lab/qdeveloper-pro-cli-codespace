@@ -21,6 +21,7 @@ async function getResources(): Promise<Resource[]> {
     const indexPath = path.join(process.cwd(), 'content/resources/_index.json');
     const fileContent = await fs.readFile(indexPath, 'utf-8');
     const data = JSON.parse(fileContent);
+    console.log('Resources loaded:', data.resources?.length || 0);
     return data.resources || [];
   } catch (error) {
     console.error('Error loading resources:', error);
@@ -63,14 +64,6 @@ export default async function ResourcesPage() {
                     height: '100%',
                     display: 'flex',
                     flexDirection: 'column'
-                  }}
-                  onMouseEnter={(e: React.MouseEvent<HTMLDivElement>) => {
-                    e.currentTarget.style.transform = 'translateY(-4px) scale(1.02)';
-                    e.currentTarget.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-                  }}
-                  onMouseLeave={(e: React.MouseEvent<HTMLDivElement>) => {
-                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                    e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
                   }}
                 >
                   <div style={{
@@ -136,4 +129,3 @@ export default async function ResourcesPage() {
     </Layout>
   );
 }
-# Trigger
