@@ -7,13 +7,13 @@ interface Resource {
   slug: string;
   title: string;
   description: string;
-  resource_type: string;
+  type: string;  // Changed from resource_type
   icon: string;
   color: string;
   category?: string;
   tags?: string[];
   publishedAt?: string;
-  pdf_url?: string;
+  pdfUrl?: string;  // Changed from pdf_url
 }
 
 async function getResources(): Promise<Resource[]> {
@@ -97,7 +97,7 @@ export default async function ResourcesPage() {
                     fontWeight: '600',
                     marginBottom: '16px'
                   }}>
-                    {resource.resource_type}
+                    {resource.type}
                   </div>
                   <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#1e293b', marginBottom: '12px' }}>
                     {resource.title}
@@ -105,9 +105,9 @@ export default async function ResourcesPage() {
                   <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px', flexGrow: 1 }}>
                     {resource.description}
                   </p>
-                  {resource.pdf_url && (
+                  {resource.pdfUrl && (
                     <a 
-                      href={resource.pdf_url}
+                      href={resource.pdfUrl}
                       download
                       style={{
                         background: resource.color,
