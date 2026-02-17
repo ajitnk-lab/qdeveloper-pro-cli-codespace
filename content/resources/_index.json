@@ -1,6 +1,23 @@
 {
   "resources": [
     {
+      "slug": "aws-lambda-performance-optimization",
+      "title": "AWS Lambda Performance Optimization",
+      "description": "Optimizing the performance of AWS Lambda functions is crucial for achieving efficient and cost-effective cloud-based applications. This guide provides a detailed, step-by-step approach to enhance the...",
+      "type": "Guide",
+      "category": "Cloud",
+      "tags": [
+        "aws",
+        "lambda",
+        "performance",
+        "optimization"
+      ],
+      "icon": "\ud83d\udcda",
+      "color": "#2563eb",
+      "publishedAt": "2026-02-17",
+      "pdfUrl": "/resources/pdfs/aws-lambda-performance-optimization.pdf"
+    },
+    {
       "slug": "aws-cost-optimization-strategies",
       "title": "AWS Cost Optimization Strategies",
       "description": "Managing costs effectively in Amazon Web Services (AWS) is crucial for maximizing the benefits of cloud computing. This guide provides a detailed roadmap to optimize your AWS expenditures through...",
