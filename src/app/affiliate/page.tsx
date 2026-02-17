@@ -92,7 +92,7 @@ export default function AffiliatePage() {
               Join Our Affiliate Program
             </h1>
             <p style={{ fontSize: '14px', color: '#64748b', maxWidth: '800px', margin: '0 auto 32px' }}>
-              Partner with Cloud Nestle and earn recurring commissions by referring clients to our AWS consulting services.
+              Partner with CloudNestle and earn recurring commissions by referring clients to our AWS consulting services.
             </p>
             <div style={{
               background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
@@ -596,7 +596,7 @@ export default function AffiliatePage() {
                         padding: '20px'
                       }}>
                         <p style={{ fontSize: '14px', color: '#0c4a6e', fontStyle: 'italic', marginBottom: '12px' }}>
-                          &quot;Partnering with Cloud Nestle has been incredibly rewarding. Their expertise and professional service make it easy to refer clients, and the recurring commissions provide excellent passive income.&quot;
+                          &quot;Partnering with CloudNestle has been incredibly rewarding. Their expertise and professional service make it easy to refer clients, and the recurring commissions provide excellent passive income.&quot;
                         </p>
                         <p style={{ fontSize: '12px', color: '#0369a1', fontWeight: '600' }}>
                           - Sarah M., IT Consulting Partner

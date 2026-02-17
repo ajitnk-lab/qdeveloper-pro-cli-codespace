@@ -21,7 +21,7 @@ export default function Home() {
             lineHeight: '1.1',
             marginBottom: '12px'
           }}>
-            Cloud Nestle
+            CloudNestle
           </h1>
           <p style={{
             fontSize: '14px',
@@ -72,7 +72,7 @@ export default function Home() {
             <span style={{ color: '#fef3c7', fontSize: '12px', fontWeight: '700' }}>🎉 NEW LAUNCH</span>
           </div>
           <h2 style={{ fontSize: '28px', fontWeight: '800', color: 'white', marginBottom: '12px' }}>
-            Discover Cloud Nestle Marketplace
+            Discover CloudNestle Marketplace
           </h2>
           <p style={{ fontSize: '16px', color: '#e0e7ff', marginBottom: '20px', maxWidth: '700px', margin: '0 auto 20px' }}>
             Browse, compare, and deploy pre-built cloud solutions, tools, and services from verified providers
@@ -255,7 +255,7 @@ export default function Home() {
               <span style={{ color: 'white', fontSize: '12px', fontWeight: '700' }}>🛒 MARKETPLACE</span>
             </div>
             <h2 style={{ fontSize: '42px', fontWeight: '800', color: '#1e293b', marginBottom: '16px' }}>
-              Cloud Nestle Marketplace
+              CloudNestle Marketplace
             </h2>
             <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '700px', margin: '0 auto' }}>
               Your one-stop shop for cloud solutions, tools, and services. Deploy production-ready solutions in minutes.
@@ -345,7 +345,7 @@ export default function Home() {
                 💾 Storage Solutions
               </span>
             </div>
-            <a href="https://marketplace.cloudnestle.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://marketplace.cloudnestle.com/catalog" target="_blank" rel="noopener noreferrer">
               <button style={{
                 background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
                 color: 'white',
@@ -368,12 +368,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Cloud Nestle - Expertise & Credibility */}
+      {/* Why CloudNestle - Expertise & Credibility */}
       <section style={{ padding: '40px 0', backgroundColor: '#f8fafc' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
-              Why Choose Cloud Nestle?
+              Why Choose CloudNestle?
             </h2>
             <p style={{ fontSize: '14px', color: '#64748b', maxWidth: '600px', margin: '0 auto' }}>
               Proven expertise and credentials you can trust for your cloud transformation journey

@@ -51,7 +51,7 @@ export default function AboutPage() {
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
               <img 
                 src="/ajit-prof-pic.png" 
-                alt="Ajit NK - Founder of Cloud Nestle" 
+                alt="Ajit NK - Founder of CloudNestle" 
                 style={{ 
                   width: '200px', 
                   height: '200px',
@@ -91,15 +91,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The Cloud Nestle Story */}
+      {/* The CloudNestle Story */}
       <section style={{ padding: '40px 0', backgroundColor: '#f8fafc' }}>
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#1e293b', marginBottom: '32px' }}>
-              The Cloud Nestle Story
+              The CloudNestle Story
             </h2>
             <p style={{ fontSize: '20px', color: '#64748b', lineHeight: '1.8', fontStyle: 'italic' }}>
-              &ldquo;After years of seeing businesses struggle with their AWS architecture, I founded Cloud Nestle Conslting & Services to provide expert, personalized guidance that helps companies of all sizes succeed in the cloud&rdquo;
+              &ldquo;After years of seeing businesses struggle with their AWS architecture, I founded CloudNestle Conslting & Services to provide expert, personalized guidance that helps companies of all sizes succeed in the cloud&rdquo;
             </p>
           </div>
         </div>

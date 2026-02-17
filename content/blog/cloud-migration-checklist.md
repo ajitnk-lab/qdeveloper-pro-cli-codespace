@@ -4,7 +4,7 @@ excerpt: "A comprehensive checklist to ensure your cloud migration project succe
 publishedAt: "2024-01-10"
 category: "Cloud Migration"
 tags: ["AWS", "Cloud Migration", "Infrastructure", "Planning"]
-author: "Cloud Nestle Team"
+author: "CloudNestle Team"
 featured: false
 ---
 

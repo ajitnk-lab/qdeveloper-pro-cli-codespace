@@ -20,7 +20,7 @@ export default function CompanyPage() {
               Company
             </h1>
             <p style={{ fontSize: '20px', color: '#64748b', maxWidth: '768px', margin: '0 auto' }}>
-              Get to know Cloud Nestle - your trusted partner for AWS cloud transformation.
+              Get to know CloudNestle - your trusted partner for AWS cloud transformation.
             </p>
           </div>
 

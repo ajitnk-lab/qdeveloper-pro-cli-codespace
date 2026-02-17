@@ -40,7 +40,7 @@ export default function Header() {
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '12px', textDecoration: 'none', marginLeft: '0' }}>
             <img 
               src="/cloudnestle-logo.png" 
-              alt="Cloud Nestle Logo" 
+              alt="CloudNestle Logo" 
               style={{ 
                 height: '64px', 
                 width: 'auto',
@@ -62,7 +62,7 @@ export default function Header() {
                 display: 'none'
               }}
             >
-              Cloud Nestle
+              CloudNestle
             </span>
           </Link>
           

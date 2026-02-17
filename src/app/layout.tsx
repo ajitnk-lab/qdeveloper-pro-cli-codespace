@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cloud Nestle - Where Your Business Finds Its Cloud Home",
+  title: "CloudNestle - Where Your Business Finds Its Cloud Home",
   description: "Expert AWS cloud consulting to help your business nestle into secure, scalable cloud solutions. Migration, optimization, and support services.",
 };
 

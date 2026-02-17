@@ -25,7 +25,7 @@ export default function TermsOfUsePage() {
               Services
             </h2>
             <p style={{ marginBottom: '16px' }}>
-              Cloud Nestle provides AWS cloud consulting, migration, and optimization services. All services are subject 
+              CloudNestle provides AWS cloud consulting, migration, and optimization services. All services are subject 
               to separate service agreements and terms.
             </p>
 
@@ -41,7 +41,7 @@ export default function TermsOfUsePage() {
               Limitation of Liability
             </h2>
             <p style={{ marginBottom: '16px' }}>
-              Cloud Nestle shall not be liable for any direct, indirect, incidental, special, or consequential damages 
+              CloudNestle shall not be liable for any direct, indirect, incidental, special, or consequential damages 
               resulting from the use or inability to use our services.
             </p>
 

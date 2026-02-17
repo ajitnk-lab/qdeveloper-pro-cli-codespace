@@ -39,4 +39,4 @@ We're looking for a Senior Cloud Architect to join our growing team and help des
 
 ## How to Apply
 
-Send your resume and a brief cover letter explaining why you're interested in joining Cloud Nestle.
+Send your resume and a brief cover letter explaining why you're interested in joining CloudNestle.

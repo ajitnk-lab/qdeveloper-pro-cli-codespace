@@ -27,7 +27,7 @@ export default function StickerTape() {
               className={item.type === 'icon' ? 'tape-icon' : item.type === 'image' ? 'tape-image' : 'tape-text'}
             >
               {item.type === 'image' ? (
-                <img src={item.content} alt="Cloud Nestle" />
+                <img src={item.content} alt="CloudNestle" />
               ) : (
                 item.content
               )}
@@ -42,7 +42,7 @@ export default function StickerTape() {
               className={item.type === 'icon' ? 'tape-icon' : item.type === 'image' ? 'tape-image' : 'tape-text'}
             >
               {item.type === 'image' ? (
-                <img src={item.content} alt="Cloud Nestle" />
+                <img src={item.content} alt="CloudNestle" />
               ) : (
                 item.content
               )}

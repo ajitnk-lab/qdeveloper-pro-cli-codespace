@@ -208,7 +208,7 @@ export default function ConsultationPage() {
               Request a Consultation
             </h1>
             <p style={{ fontSize: '20px', color: '#64748b', maxWidth: '768px', margin: '0 auto' }}>
-              Ready to transform your business with Cloud Nestle? Get in touch with our cloud experts today.
+              Ready to transform your business with CloudNestle? Get in touch with our cloud experts today.
             </p>
           </div>
 

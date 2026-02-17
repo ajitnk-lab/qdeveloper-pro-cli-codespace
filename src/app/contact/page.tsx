@@ -28,7 +28,7 @@ export default function ContactPage() {
     {
       id: 'partner',
       title: 'Partner with Us',
-      tagline: 'Interested in becoming a business partner with Cloud Nestle?',
+      tagline: 'Interested in becoming a business partner with CloudNestle?',
       description: 'Partnership opportunities and collaboration inquiries for businesses.',
       icon: '🤝',
       features: ['Partnership types', 'Collaboration details', 'Business opportunities', 'Joint ventures'],
@@ -37,7 +37,7 @@ export default function ContactPage() {
     {
       id: 'affiliate',
       title: 'Join Our Affiliate Program',
-      tagline: 'Want to earn commissions by referring clients to Cloud Nestle?',
+      tagline: 'Want to earn commissions by referring clients to CloudNestle?',
       description: 'Earn recurring commissions by referring clients to our AWS consulting services.',
       icon: '💰',
       features: ['15-20% recurring commissions', '180-day cookie window', 'Marketing materials provided', 'Monthly payments'],
@@ -51,7 +51,7 @@ export default function ContactPage() {
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h1 style={{ fontSize: '48px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
-              Contact Cloud Nestle
+              Contact CloudNestle
             </h1>
             <p style={{ fontSize: '20px', color: '#64748b', maxWidth: '768px', margin: '0 auto' }}>
               Choose the form that best fits your needs. We&apos;re here to help with all your cloud transformation requirements.

@@ -72,6 +72,41 @@ export default async function SolutionsPage() {
               </Link>
             )})}
           </div>
+
+          {/* Marketplace CTA */}
+          <div style={{
+            marginTop: '64px',
+            background: 'linear-gradient(135deg, #7c3aed 0%, #2563eb 100%)',
+            borderRadius: '20px',
+            padding: '48px',
+            textAlign: 'center',
+            color: 'white'
+          }}>
+            <div style={{ display: 'inline-block', background: 'rgba(255, 255, 255, 0.2)', padding: '6px 16px', borderRadius: '20px', marginBottom: '16px' }}>
+              <span style={{ fontSize: '14px', fontWeight: '700' }}>🛒 MARKETPLACE</span>
+            </div>
+            <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '16px' }}>
+              Need Ready-to-Deploy Solutions?
+            </h2>
+            <p style={{ fontSize: '18px', marginBottom: '32px', maxWidth: '700px', margin: '0 auto 32px', opacity: 0.95 }}>
+              Browse our marketplace for pre-built cloud solutions, tools, and services from verified providers. Deploy in minutes, not months.
+            </p>
+            <a href="https://marketplace.cloudnestle.com/catalog" target="_blank" rel="noopener noreferrer">
+              <button style={{
+                background: 'white',
+                color: '#7c3aed',
+                padding: '16px 40px',
+                borderRadius: '12px',
+                fontWeight: '700',
+                fontSize: '18px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)'
+              }}>
+                Browse Marketplace Solutions →
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </Layout>

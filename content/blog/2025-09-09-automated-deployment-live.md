@@ -4,13 +4,13 @@ publishedAt: "2025-09-09"
 category: "Announcements"
 tags: ["Automation", "GitHub Actions", "DevOps", "CI/CD"]
 excerpt: "Our website now features professional CI/CD automation with GitHub Actions, enabling instant deployments with every code push."
-author: "Cloud Nestle Team"
+author: "CloudNestle Team"
 featured: true
 ---
 
 # 🚀 Automated Deployment is Now Live!
 
-We're excited to announce that our Cloud Nestle website now features **professional CI/CD automation** powered by GitHub Actions!
+We're excited to announce that our CloudNestle website now features **professional CI/CD automation** powered by GitHub Actions!
 
 ## What This Means for You
 

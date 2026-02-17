@@ -4,7 +4,7 @@ excerpt: "Learn proven strategies to reduce your AWS costs by up to 40% without 
 publishedAt: "2024-01-15"
 category: "Cost Optimization"
 tags: ["AWS", "Cost Optimization", "Cloud Computing", "FinOps"]
-author: "Cloud Nestle Team"
+author: "CloudNestle Team"
 featured: true
 ---
 

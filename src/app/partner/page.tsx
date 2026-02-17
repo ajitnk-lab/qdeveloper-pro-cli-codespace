@@ -92,7 +92,7 @@ export default function PartnerPage() {
               Partner with Us
             </h1>
             <p style={{ fontSize: '20px', color: '#64748b', maxWidth: '768px', margin: '0 auto' }}>
-              Interested in partnering with Cloud Nestle? Let&apos;s explore opportunities to work together.
+              Interested in partnering with CloudNestle? Let&apos;s explore opportunities to work together.
             </p>
           </div>
 
@@ -365,7 +365,7 @@ export default function PartnerPage() {
                   marginTop: '16px'
                 }}>
                   <h3 style={{ fontSize: '14px', fontWeight: '600', color: '#1e293b', marginBottom: '8px' }}>
-                    Why Partner with Cloud Nestle?
+                    Why Partner with CloudNestle?
                   </h3>
                   <ul style={{ fontSize: '12px', color: '#64748b', margin: '0', paddingLeft: '16px' }}>
                     <li>AWS certified expertise and proven track record</li>
