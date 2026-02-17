@@ -15,22 +15,6 @@
       "color": "#2563eb",
       "publishedAt": "2026-02-17",
       "pdfUrl": "/resources/pdfs/aws-lambda-best-practices.pdf"
-    },
-    {
-      "slug": "aws-cost-optimization-guide",
-      "title": "AWS Cost Optimization Guide",
-      "description": "Complete guide to reducing AWS costs",
-      "type": "Guide",
-      "category": "Cloud",
-      "tags": [
-        "aws",
-        "cost",
-        "optimization"
-      ],
-      "icon": "\ud83d\udcda",
-      "color": "#2563eb",
-      "publishedAt": "2026-02-17",
-      "pdfUrl": "/resources/pdfs/aws-cost-optimization-guide.pdf"
     }
   ]
 }
