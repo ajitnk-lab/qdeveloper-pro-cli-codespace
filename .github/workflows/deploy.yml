@@ -26,6 +26,32 @@ jobs:
         
     - name: Build website
       run: npm run build
+    
+    - name: Install Pandoc
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-latex-extra
+    
+    - name: Generate PDFs from resources
+      run: |
+        mkdir -p out/resources/pdfs
+        for md_file in content/resources/*.md; do
+          if [ -f "$md_file" ] && [ "$(basename "$md_file")" != "README.md" ]; then
+            slug=$(basename "$md_file" .md)
+            echo "Generating PDF for: $slug"
+            pandoc "$md_file" \
+              -o "out/resources/pdfs/${slug}.pdf" \
+              --pdf-engine=pdflatex \
+              -V geometry:margin=1in \
+              -V fontsize=11pt \
+              -V documentclass=article \
+              --toc \
+              --highlight-style=tango \
+              2>/dev/null || echo "⚠️  Failed to generate PDF for $slug"
+          fi
+        done
+        echo "✅ PDF generation complete"
+        ls -lh out/resources/pdfs/ || echo "No PDFs generated"
         
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v4
@@ -33,12 +59,24 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
+    
+    - name: Upload PDFs to S3
+      run: |
+        if [ -d "out/resources/pdfs" ] && [ "$(ls -A out/resources/pdfs)" ]; then
+          aws s3 sync out/resources/pdfs/ s3://cloudnestle-website-637423202175/resources/pdfs/ \
+            --cache-control max-age=31536000,public \
+            --content-type application/pdf
+          echo "✅ PDFs uploaded to S3"
+        else
+          echo "ℹ️  No PDFs to upload"
+        fi
         
     - name: Deploy to S3
       run: aws s3 sync out/ s3://cloudnestle-website-637423202175 --delete --cache-control max-age=31536000,public
         
     - name: Invalidate CloudFront cache
-      run: aws cloudfront create-invalidation --distribution-id E2GJYMENMRGUZO --paths "/*"
+      run: |
+        aws cloudfront create-invalidation --distribution-id E2GJYMENMRGUZO --paths "/*" "/resources/*" "/resources/pdfs/*"
         
     - name: Verify deployment
       run: |
