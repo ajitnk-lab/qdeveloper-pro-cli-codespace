@@ -5,6 +5,16 @@ import Link from 'next/link';
 
 const posts = [
   {
+    slug: 'amazon-q-developer',
+    title: 'Amazon Q Developer',
+    excerpt: 'Introducing Enhanced Cost Estimation with Amazon Q Developer',
+    publishedAt: '2026-02-17',
+    category: 'AWS',
+    tags: [],
+    author: 'CloudNestle Team',
+    featured: false,
+  },
+  {
     slug: 'ai-trends-in-2026',
     title: 'AI trends in 2026',
     excerpt: 'The Future of AI: Key Trends and AWS Best Practices for 2026',
