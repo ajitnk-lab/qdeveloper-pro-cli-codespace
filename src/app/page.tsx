@@ -60,6 +60,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Marketplace Announcement Banner */}
+      <section style={{
+        background: 'linear-gradient(135deg, #7c3aed 0%, #2563eb 100%)',
+        padding: '24px 0',
+        borderTop: '4px solid #f59e0b',
+        borderBottom: '4px solid #f59e0b'
+      }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <div style={{ display: 'inline-block', background: 'rgba(255, 255, 255, 0.2)', padding: '4px 12px', borderRadius: '20px', marginBottom: '12px' }}>
+            <span style={{ color: '#fef3c7', fontSize: '12px', fontWeight: '700' }}>🎉 NEW LAUNCH</span>
+          </div>
+          <h2 style={{ fontSize: '28px', fontWeight: '800', color: 'white', marginBottom: '12px' }}>
+            Discover Cloud Nestle Marketplace
+          </h2>
+          <p style={{ fontSize: '16px', color: '#e0e7ff', marginBottom: '20px', maxWidth: '700px', margin: '0 auto 20px' }}>
+            Browse, compare, and deploy pre-built cloud solutions, tools, and services from verified providers
+          </p>
+          <a href="https://marketplace.cloudnestle.com" target="_blank" rel="noopener noreferrer">
+            <button style={{
+              background: 'white',
+              color: '#7c3aed',
+              padding: '14px 32px',
+              borderRadius: '12px',
+              fontWeight: '700',
+              fontSize: '16px',
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
+              transition: 'transform 0.2s'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
+              Explore Marketplace →
+            </button>
+          </a>
+        </div>
+      </section>
+
       {/* Services Overview */}
       <section style={{ padding: '40px 0', backgroundColor: '#f8fafc' }}>
         <div className="container">
@@ -204,6 +243,127 @@ export default function Home() {
                 </p>
               </div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Marketplace Feature Section */}
+      <section style={{ padding: '60px 0', background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <div style={{ display: 'inline-block', background: 'linear-gradient(135deg, #7c3aed 0%, #2563eb 100%)', padding: '6px 16px', borderRadius: '20px', marginBottom: '16px' }}>
+              <span style={{ color: 'white', fontSize: '12px', fontWeight: '700' }}>🛒 MARKETPLACE</span>
+            </div>
+            <h2 style={{ fontSize: '42px', fontWeight: '800', color: '#1e293b', marginBottom: '16px' }}>
+              Cloud Nestle Marketplace
+            </h2>
+            <p style={{ fontSize: '18px', color: '#64748b', maxWidth: '700px', margin: '0 auto' }}>
+              Your one-stop shop for cloud solutions, tools, and services. Deploy production-ready solutions in minutes.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8" style={{ marginBottom: '40px' }}>
+            <div style={{
+              background: 'white',
+              borderRadius: '16px',
+              padding: '32px',
+              textAlign: 'center',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #e0e7ff'
+            }}>
+              <div style={{ fontSize: '48px', marginBottom: '16px' }}>🚀</div>
+              <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#1e293b', marginBottom: '12px' }}>
+                Ready-to-Deploy Solutions
+              </h3>
+              <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6' }}>
+                Pre-configured cloud architectures, applications, and infrastructure templates tested and optimized for AWS
+              </p>
+            </div>
+
+            <div style={{
+              background: 'white',
+              borderRadius: '16px',
+              padding: '32px',
+              textAlign: 'center',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #fef3c7'
+            }}>
+              <div style={{ fontSize: '48px', marginBottom: '16px' }}>✅</div>
+              <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#1e293b', marginBottom: '12px' }}>
+                Verified Providers
+              </h3>
+              <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6' }}>
+                All solutions from trusted, vetted providers with proven track records and customer reviews
+              </p>
+            </div>
+
+            <div style={{
+              background: 'white',
+              borderRadius: '16px',
+              padding: '32px',
+              textAlign: 'center',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.05)',
+              border: '2px solid #d1fae5'
+            }}>
+              <div style={{ fontSize: '48px', marginBottom: '16px' }}>💡</div>
+              <h3 style={{ fontSize: '20px', fontWeight: '700', color: '#1e293b', marginBottom: '12px' }}>
+                Flexible Pricing
+              </h3>
+              <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6' }}>
+                Compare pricing, features, and support options. Choose what fits your budget and requirements
+              </p>
+            </div>
+          </div>
+
+          <div style={{
+            background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+            borderRadius: '20px',
+            padding: '40px',
+            textAlign: 'center',
+            color: 'white'
+          }}>
+            <h3 style={{ fontSize: '28px', fontWeight: '700', marginBottom: '16px' }}>
+              Popular Categories in Marketplace
+            </h3>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap', marginBottom: '32px' }}>
+              <span style={{ background: 'rgba(124, 58, 237, 0.3)', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: '600', border: '1px solid rgba(124, 58, 237, 0.5)' }}>
+                🔐 Security & Compliance
+              </span>
+              <span style={{ background: 'rgba(37, 99, 235, 0.3)', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: '600', border: '1px solid rgba(37, 99, 235, 0.5)' }}>
+                📊 Data & Analytics
+              </span>
+              <span style={{ background: 'rgba(245, 158, 11, 0.3)', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: '600', border: '1px solid rgba(245, 158, 11, 0.5)' }}>
+                🤖 AI & Machine Learning
+              </span>
+              <span style={{ background: 'rgba(16, 185, 129, 0.3)', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: '600', border: '1px solid rgba(16, 185, 129, 0.5)' }}>
+                ⚙️ DevOps Tools
+              </span>
+              <span style={{ background: 'rgba(239, 68, 68, 0.3)', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: '600', border: '1px solid rgba(239, 68, 68, 0.5)' }}>
+                🌐 Networking
+              </span>
+              <span style={{ background: 'rgba(168, 85, 247, 0.3)', padding: '8px 16px', borderRadius: '20px', fontSize: '14px', fontWeight: '600', border: '1px solid rgba(168, 85, 247, 0.5)' }}>
+                💾 Storage Solutions
+              </span>
+            </div>
+            <a href="https://marketplace.cloudnestle.com" target="_blank" rel="noopener noreferrer">
+              <button style={{
+                background: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)',
+                color: 'white',
+                padding: '16px 40px',
+                borderRadius: '12px',
+                fontWeight: '700',
+                fontSize: '16px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 10px 25px rgba(245, 158, 11, 0.3)',
+                transition: 'transform 0.2s'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              >
+                Browse All Solutions →
+              </button>
+            </a>
           </div>
         </div>
       </section>
