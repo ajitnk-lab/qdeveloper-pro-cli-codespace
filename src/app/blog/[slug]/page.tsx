@@ -18,7 +18,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     <Layout>
       {/* Hero Banner */}
       <section className="section-hero">
-        <div className="w-full px-[10%] text-center relative z-10">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[10%] text-center relative z-10">
           <div className="animate-fade-in-up">
             <div className="flex justify-center items-center gap-2 mb-4">
               <span className={`px-3 py-1 rounded text-sm font-medium ${
@@ -56,9 +56,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Content */}
       <section className="section-services">
-        <div className="w-full px-[10%]">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[10%]">
           <div className="card-professional max-w-4xl mx-auto animate-fade-in-up">
-            <article className="p-12">
+            <article className="p-6 sm:p-8 md:p-12">
               <div 
                 className="prose prose-lg max-w-none"
                 style={{
@@ -74,8 +74,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* CTA Footer */}
       <section className="section-trust">
-        <div className="w-full px-[10%]">
-          <div className="card-professional max-w-4xl mx-auto p-12 text-center">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[10%]">
+          <div className="card-professional max-w-4xl mx-auto p-6 sm:p-8 md:p-12 text-center">
             <div className="icon-wrapper blue mx-auto mb-6">
               💡
             </div>
