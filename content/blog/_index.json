@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "ai-ide",
+      "title": "AI IDE",
+      "excerpt": "\n# The Future of Coding: AI IDEs vs. AI CLIs in 2026\n\n## Introduction\n\nIn the rapidly evolving world of software development, AI-powered tools are becoming indispensable. By 2026, AI IDEs (Integrated ...",
+      "publishedAt": "2026-02-19",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "ai-trends-in-2026",
       "title": "AI trends in 2026",
       "excerpt": "The Future of AI: Key Trends and AWS Best Practices for 2026",
@@ -141,7 +151,7 @@
     },
     {
       "slug": "2025-09-09-automated-deployment-live",
-      "title": "🚀 Automated Deployment is Now Live!",
+      "title": "\ud83d\ude80 Automated Deployment is Now Live!",
       "excerpt": "Our website now features professional CI/CD automation with GitHub Actions, enabling instant deployments with every code push.",
       "publishedAt": "2025-09-09",
       "category": "Announcements",
