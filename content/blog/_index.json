@@ -53,6 +53,17 @@
       "readTime": "6 min"
     },
     {
+      "slug": "amazon-q-developer",
+      "title": "Amazon Q Developer",
+      "excerpt": "Introducing Enhanced Cost Estimation with Amazon Q Developer",
+      "publishedAt": "2026-02-17",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "5 min"
+    },
+    {
       "slug": "aws-cloud-credits-for-open-source-projects",
       "title": "AWS Cloud Credits for Open Source Projects:",
       "excerpt": "AWS Cloud Credits for Open Source Projects: Affirming Our Commitment",
