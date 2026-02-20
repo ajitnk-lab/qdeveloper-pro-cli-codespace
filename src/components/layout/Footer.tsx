@@ -29,14 +29,12 @@ export default function Footer() {
     
     if (Object.keys(newErrors).length === 0) {
       try {
-        const response = await fetch('https://formspree.io/f/xeolbraj', {
+        const response = await fetch('https://vapoy8mxs6.execute-api.us-east-1.amazonaws.com/prod/subscribe', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             name: newsletterData.name,
             email: newsletterData.email,
-            _subject: 'Newsletter Subscription',
-            formType: 'Newsletter Subscription'
           }),
         });
 

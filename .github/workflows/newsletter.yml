@@ -1,0 +1,65 @@
+name: Send Newsletter on New Content
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'content/blog/*.md'
+      - 'content/resources/*.md'
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+        
+    - name: Detect new content
+      id: detect
+      run: |
+        CHANGED_FILES=$(git diff --name-only HEAD^ HEAD)
+        NEW_BLOG=$(echo "$CHANGED_FILES" | grep '^content/blog/.*\.md$' | grep -v 'README.md' || true)
+        NEW_RESOURCE=$(echo "$CHANGED_FILES" | grep '^content/resources/.*\.md$' | grep -v 'README.md' || true)
+        
+        if [ -n "$NEW_BLOG" ]; then
+          echo "type=blog" >> $GITHUB_OUTPUT
+          echo "file=$NEW_BLOG" >> $GITHUB_OUTPUT
+        elif [ -n "$NEW_RESOURCE" ]; then
+          echo "type=resource" >> $GITHUB_OUTPUT
+          echo "file=$NEW_RESOURCE" >> $GITHUB_OUTPUT
+        else
+          echo "type=none" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Extract content metadata
+      if: steps.detect.outputs.type != 'none'
+      id: metadata
+      run: |
+        FILE="${{ steps.detect.outputs.file }}"
+        TITLE=$(grep -m 1 '^#' "$FILE" | sed 's/^#* *//')
+        echo "title=$TITLE" >> $GITHUB_OUTPUT
+        
+        SLUG=$(basename "$FILE" .md)
+        echo "slug=$SLUG" >> $GITHUB_OUTPUT
+        
+        if [ "${{ steps.detect.outputs.type }}" = "blog" ]; then
+          URL="https://cloudnestle.com/blog/$SLUG/"
+        else
+          URL="https://cloudnestle.com/resources/"
+        fi
+        echo "url=$URL" >> $GITHUB_OUTPUT
+        
+    - name: Send email campaign
+      if: steps.detect.outputs.type != 'none'
+      run: |
+        curl -X POST https://vapoy8mxs6.execute-api.us-east-1.amazonaws.com/prod/campaign \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"title\": \"${{ steps.metadata.outputs.title }}\",
+            \"url\": \"${{ steps.metadata.outputs.url }}\",
+            \"type\": \"${{ steps.detect.outputs.type }}\"
+          }"
+        echo "✅ Newsletter sent for: ${{ steps.metadata.outputs.title }}"
