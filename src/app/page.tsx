@@ -77,7 +77,7 @@ export default function Home() {
           <p style={{ fontSize: '16px', color: '#e0e7ff', marginBottom: '20px', maxWidth: '700px', margin: '0 auto 20px' }}>
             Browse, compare, and deploy pre-built cloud solutions, tools, and services from verified providers
           </p>
-          <a href="https://marketplace.cloudnestle.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://marketplace.cloudnestle.com/register?utm_source=website&utm_medium=referral&utm_campaign=homepage-cta&utm_content=explore-marketplace-button" target="_blank" rel="noopener noreferrer">
             <button style={{
               background: 'white',
               color: '#7c3aed',

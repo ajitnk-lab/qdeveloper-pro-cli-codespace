@@ -10,7 +10,7 @@ export default function Header() {
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Consulting', href: '/consulting' },
-    { name: 'Marketplace', href: 'https://marketplace.cloudnestle.com', external: true, highlight: true },
+    { name: 'Marketplace', href: 'https://marketplace.cloudnestle.com/register?utm_source=website&utm_medium=referral&utm_campaign=main-navigation&utm_content=header-link', external: true, highlight: true },
     { name: 'Resources', href: '/resources' },
     { name: 'Company', href: '/company' },
     { name: 'Blog', href: '/blog' },
