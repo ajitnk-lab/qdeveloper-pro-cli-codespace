@@ -29,6 +29,8 @@ export default function Footer() {
     
     if (Object.keys(newErrors).length === 0) {
       try {
+        console.log('Subscribing to newsletter...', newsletterData);
+        
         // Brevo public API key (safe for client-side use)
         const BREVO_API_KEY = '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';
         const BREVO_LIST_ID = 3;
@@ -50,9 +52,24 @@ export default function Footer() {
           }),
         });
 
+        console.log('Response status:', response.status);
+        const responseText = await response.text();
+        console.log('Response:', responseText);
+
         if (response.ok || response.status === 204) {
           setIsSubscribed(true);
           setNewsletterData({ name: '', email: '' });
+          console.log('✅ Subscribed successfully!');
+        } else {
+          console.error('Subscription failed:', response.status, responseText);
+          alert('Subscription failed. Please try again.');
+        }
+      } catch (error) {
+        console.error('Newsletter subscription error:', error);
+        alert('An error occurred. Please try again.');
+      }
+    }
+  };
         } else {
           console.error('Newsletter subscription error:', await response.text());
         }
