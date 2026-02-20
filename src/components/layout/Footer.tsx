@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { validateName, validateEmail } from '@/lib/validation';
+import { validateName, validateNewsletterEmail } from '@/lib/validation';
 
 export default function Footer() {
   const [newsletterData, setNewsletterData] = useState({ name: '', email: '' });
@@ -22,7 +22,7 @@ export default function Footer() {
     const nameValidation = validateName(newsletterData.name);
     if (!nameValidation.isValid) newErrors.name = nameValidation.error!;
     
-    const emailValidation = validateEmail(newsletterData.email);
+    const emailValidation = validateNewsletterEmail(newsletterData.email);
     if (!emailValidation.isValid) newErrors.email = emailValidation.error!;
     
     setNewsletterErrors(newErrors);

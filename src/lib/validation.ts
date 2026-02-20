@@ -32,6 +32,17 @@ export const validateEmail = (email: string): ValidationResult => {
   return { isValid: true };
 };
 
+export const validateNewsletterEmail = (email: string): ValidationResult => {
+  if (!email.trim()) {
+    return { isValid: false, error: 'Email is required' };
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return { isValid: false, error: 'Please enter a valid email address' };
+  }
+  return { isValid: true };
+};
+
 export const validatePhone = (phone: string): ValidationResult => {
   if (!phone.trim()) {
     return { isValid: false, error: 'Phone number is required' };
