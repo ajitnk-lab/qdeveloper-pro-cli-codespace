@@ -32,7 +32,7 @@ def handler(event, context):
         campaign_data = json.dumps({
             'sender': {
                 'name': 'CloudNestle',
-                'email': 'noreply@cloudnestle.com'
+                'email': 'newsletter@cloudnestle.com'
             },
             'name': f'New {content_type}: {title}',
             'subject': f'New {content_type}: {title}',
