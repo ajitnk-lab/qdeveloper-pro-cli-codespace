@@ -1,0 +1,101 @@
+name: Send Newsletter on New Content
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'content/blog/*.md'
+      - 'content/resources/*.md'
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+        
+    - name: Detect new content
+      id: detect
+      run: |
+        # Get changed files
+        CHANGED_FILES=$(git diff --name-only HEAD^ HEAD)
+        
+        # Check for new blog posts
+        NEW_BLOG=$(echo "$CHANGED_FILES" | grep '^content/blog/.*\.md$' | grep -v 'README.md' || true)
+        
+        # Check for new resources
+        NEW_RESOURCE=$(echo "$CHANGED_FILES" | grep '^content/resources/.*\.md$' | grep -v 'README.md' || true)
+        
+        if [ -n "$NEW_BLOG" ]; then
+          echo "type=blog" >> $GITHUB_OUTPUT
+          echo "file=$NEW_BLOG" >> $GITHUB_OUTPUT
+        elif [ -n "$NEW_RESOURCE" ]; then
+          echo "type=resource" >> $GITHUB_OUTPUT
+          echo "file=$NEW_RESOURCE" >> $GITHUB_OUTPUT
+        else
+          echo "type=none" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Extract content metadata
+      if: steps.detect.outputs.type != 'none'
+      id: metadata
+      run: |
+        FILE="${{ steps.detect.outputs.file }}"
+        
+        # Extract title (first line starting with #)
+        TITLE=$(grep -m 1 '^#' "$FILE" | sed 's/^#* *//')
+        echo "title=$TITLE" >> $GITHUB_OUTPUT
+        
+        # Extract slug from filename
+        SLUG=$(basename "$FILE" .md)
+        echo "slug=$SLUG" >> $GITHUB_OUTPUT
+        
+        # Determine URL based on type
+        if [ "${{ steps.detect.outputs.type }}" = "blog" ]; then
+          URL="https://cloudnestle.com/blog/$SLUG/"
+        else
+          URL="https://cloudnestle.com/resources/"
+        fi
+        echo "url=$URL" >> $GITHUB_OUTPUT
+        
+    - name: Send email campaign
+      if: steps.detect.outputs.type != 'none'
+      run: |
+        TYPE="${{ steps.detect.outputs.type }}"
+        TITLE="${{ steps.metadata.outputs.title }}"
+        URL="${{ steps.metadata.outputs.url }}"
+        
+        # Create email campaign
+        CAMPAIGN_RESPONSE=$(curl -s -X POST "https://api.brevo.com/v3/emailCampaigns" \
+          -H "accept: application/json" \
+          -H "api-key: ${{ secrets.BREVO_API_KEY }}" \
+          -H "content-type: application/json" \
+          -d "{
+            \"sender\": {
+              \"name\": \"CloudNestle\",
+              \"email\": \"noreply@cloudnestle.com\"
+            },
+            \"name\": \"New ${TYPE^}: $TITLE\",
+            \"subject\": \"New ${TYPE^}: $TITLE\",
+            \"htmlContent\": \"<html><body><h2>New ${TYPE^} Published!</h2><h3>$TITLE</h3><p>Check it out: <a href='$URL'>$URL</a></p></body></html>\",
+            \"recipients\": {
+              \"listIds\": [${{ secrets.BREVO_LIST_ID }}]
+            }
+          }")
+        
+        CAMPAIGN_ID=$(echo "$CAMPAIGN_RESPONSE" | jq -r '.id')
+        
+        if [ "$CAMPAIGN_ID" != "null" ]; then
+          # Send the campaign immediately
+          curl -X POST "https://api.brevo.com/v3/emailCampaigns/$CAMPAIGN_ID/sendNow" \
+            -H "accept: application/json" \
+            -H "api-key: ${{ secrets.BREVO_API_KEY }}"
+          
+          echo "✅ Newsletter sent for: $TITLE"
+        else
+          echo "❌ Failed to create campaign"
+          exit 1
+        fi

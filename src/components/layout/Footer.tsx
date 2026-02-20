@@ -29,20 +29,21 @@ export default function Footer() {
     
     if (Object.keys(newErrors).length === 0) {
       try {
-        const response = await fetch('https://formspree.io/f/xeolbraj', {
+        const response = await fetch('/api/newsletter', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             name: newsletterData.name,
             email: newsletterData.email,
-            _subject: 'Newsletter Subscription',
-            formType: 'Newsletter Subscription'
           }),
         });
 
         if (response.ok) {
           setIsSubscribed(true);
           setNewsletterData({ name: '', email: '' });
+        } else {
+          const error = await response.json();
+          console.error('Newsletter subscription error:', error);
         }
       } catch (error) {
         console.error('Newsletter subscription error:', error);
