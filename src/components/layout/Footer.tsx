@@ -29,21 +29,28 @@ export default function Footer() {
     
     if (Object.keys(newErrors).length === 0) {
       try {
-        const response = await fetch('/api/newsletter', {
+        const response = await fetch('https://api.brevo.com/v3/contacts', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'accept': 'application/json',
+            'api-key': process.env.NEXT_PUBLIC_BREVO_API_KEY!,
+            'content-type': 'application/json',
+          },
           body: JSON.stringify({
-            name: newsletterData.name,
             email: newsletterData.email,
+            attributes: {
+              FIRSTNAME: newsletterData.name,
+            },
+            listIds: [parseInt(process.env.NEXT_PUBLIC_BREVO_LIST_ID!)],
+            updateEnabled: true,
           }),
         });
 
-        if (response.ok) {
+        if (response.ok || response.status === 204) {
           setIsSubscribed(true);
           setNewsletterData({ name: '', email: '' });
         } else {
-          const error = await response.json();
-          console.error('Newsletter subscription error:', error);
+          console.error('Newsletter subscription error:', await response.text());
         }
       } catch (error) {
         console.error('Newsletter subscription error:', error);
