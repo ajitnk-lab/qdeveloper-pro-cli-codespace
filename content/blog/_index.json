@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "gen-ai-landscape",
+      "title": "Gen AI landscape",
+      "excerpt": "# The Impact of Generative AI on Startups and SMBs: Driving Innovation and Challenging the Status Quo\n\n## Introduction\nGenerative AI (Gen AI) is revolutionizing the way startups and small to medium-si...",
+      "publishedAt": "2026-02-20",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "about-cloudnestle",
       "title": "About cloudnestle",
       "excerpt": "# Revolutionizing the SaaS Marketplace: How CloudNestle is Leading the Charge\n\n## Introduction\nIn the ever-evolving landscape of Software as a Service (SaaS), cloudnestle.com and marktetplace.cloudnes...",
