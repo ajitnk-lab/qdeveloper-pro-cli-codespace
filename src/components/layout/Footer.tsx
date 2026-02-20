@@ -29,39 +29,21 @@ export default function Footer() {
     
     if (Object.keys(newErrors).length === 0) {
       try {
-        console.log('Subscribing to newsletter...', newsletterData);
-        
-        // Brevo public API key (safe for client-side use)
-        const BREVO_API_KEY = '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';
-        const BREVO_LIST_ID = 3;
-        
-        const response = await fetch('https://api.brevo.com/v3/contacts', {
+        const response = await fetch('https://formspree.io/f/xeolbraj', {
           method: 'POST',
-          headers: {
-            'accept': 'application/json',
-            'api-key': BREVO_API_KEY,
-            'content-type': 'application/json',
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
+            name: newsletterData.name,
             email: newsletterData.email,
-            attributes: {
-              FIRSTNAME: newsletterData.name,
-            },
-            listIds: [BREVO_LIST_ID],
-            updateEnabled: true,
+            _subject: 'Newsletter Subscription',
+            formType: 'Newsletter Subscription'
           }),
         });
 
-        console.log('Response status:', response.status);
-        const responseText = await response.text();
-        console.log('Response:', responseText);
-
-        if (response.ok || response.status === 204) {
+        if (response.ok) {
           setIsSubscribed(true);
           setNewsletterData({ name: '', email: '' });
-          console.log('✅ Subscribed successfully!');
         } else {
-          console.error('Subscription failed:', response.status, responseText);
           alert('Subscription failed. Please try again.');
         }
       } catch (error) {
