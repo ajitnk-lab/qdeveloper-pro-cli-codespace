@@ -29,11 +29,15 @@ export default function Footer() {
     
     if (Object.keys(newErrors).length === 0) {
       try {
+        // Brevo public API key (safe for client-side use)
+        const BREVO_API_KEY = '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';
+        const BREVO_LIST_ID = 3;
+        
         const response = await fetch('https://api.brevo.com/v3/contacts', {
           method: 'POST',
           headers: {
             'accept': 'application/json',
-            'api-key': process.env.NEXT_PUBLIC_BREVO_API_KEY!,
+            'api-key': BREVO_API_KEY,
             'content-type': 'application/json',
           },
           body: JSON.stringify({
@@ -41,7 +45,7 @@ export default function Footer() {
             attributes: {
               FIRSTNAME: newsletterData.name,
             },
-            listIds: [parseInt(process.env.NEXT_PUBLIC_BREVO_LIST_ID!)],
+            listIds: [BREVO_LIST_ID],
             updateEnabled: true,
           }),
         });
