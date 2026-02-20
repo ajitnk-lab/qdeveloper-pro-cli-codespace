@@ -52,14 +52,6 @@ export default function Footer() {
       }
     }
   };
-        } else {
-          console.error('Newsletter subscription error:', await response.text());
-        }
-      } catch (error) {
-        console.error('Newsletter subscription error:', error);
-      }
-    }
-  };
 
   return (
     <footer style={{
