@@ -31,6 +31,16 @@
       "featured": false
     },
     {
+      "slug": "building-scalable-cloud-infrastructure-with-aws-a-complete-guide",
+      "title": "Building Scalable Cloud Infrastructure with AWS: A Complete Guide",
+      "excerpt": "\n# Building Scalable Cloud Infrastructure with AWS: A Comprehensive Guide\n\nIn today's digital age, businesses need to be agile and responsive to changing market demands. Building scalable cloud infras...",
+      "publishedAt": "2026-02-21",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "aws-security-best-practices-protecting-your-cloud-infrastructure",
       "title": "AWS Security Best Practices: Protecting Your Cloud Infrastructure",
       "excerpt": "# AWS Security Best Practices: Safeguarding Your Cloud Infrastructure\n\nIn today's digital age, securing your cloud infrastructure is paramount to protect your data and ensure the integrity and availab...",
