@@ -21,6 +21,16 @@
       "featured": false
     },
     {
+      "slug": "aws-lambda-best-practices-building-serverless-applications-at-scale",
+      "title": "AWS Lambda Best Practices: Building Serverless Applications at Scale",
+      "excerpt": "\n# Mastering AWS Lambda: Best Practices for Building Serverless Applications at Scale\n\nIn the ever-evolving landscape of cloud computing, AWS Lambda stands out as a powerful tool for building serverle...",
+      "publishedAt": "2026-02-22",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "cloud-native-architecture-building-scalable-applications-with-kubernetes-and-aws",
       "title": "Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS",
       "excerpt": "# Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS\n\nIn today's fast-paced digital landscape, businesses are increasingly adopting cloud-native architectures to build s...",
