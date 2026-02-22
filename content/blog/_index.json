@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "test-blog-auto-schedule-verification",
+      "title": "TEST: Blog Auto-Schedule Verification",
+      "excerpt": "# Mastering AWS Auto-Schedule Verification: A Comprehensive Guide\n\nIn today's fast-paced digital landscape, efficient resource management is crucial for businesses to thrive. AWS Auto-Schedule Verific...",
+      "publishedAt": "2026-02-22",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "building-scalable-cloud-infrastructure-with-aws-a-complete-guide",
       "title": "Building Scalable Cloud Infrastructure with AWS: A Complete Guide",
       "excerpt": "\n# Building Scalable Cloud Infrastructure with AWS: A Comprehensive Guide\n\nIn today's digital age, businesses need to be agile and responsive to changing market demands. Building scalable cloud infras...",
