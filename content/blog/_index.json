@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "cloud-native-architecture-building-scalable-applications-with-kubernetes-and-aws",
+      "title": "Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS",
+      "excerpt": "# Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS\n\nIn today's fast-paced digital landscape, businesses are increasingly adopting cloud-native architectures to build s...",
+      "publishedAt": "2026-02-22",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "test-blog-auto-schedule-verification",
       "title": "TEST: Blog Auto-Schedule Verification",
       "excerpt": "# Mastering AWS Auto-Schedule Verification: A Comprehensive Guide\n\nIn today's fast-paced digital landscape, efficient resource management is crucial for businesses to thrive. AWS Auto-Schedule Verific...",
