@@ -15,6 +15,20 @@
       "featured": false
     },
     {
+      "slug": "aws-free-tier-complete-guide-scheduled-test",
+      "title": "AWS Free Tier Complete Guide - Scheduled Test",
+      "excerpt": "AWS Free Tier: A Comprehensive Guide for New Users",
+      "publishedAt": "2026-02-23",
+      "category": "AWS",
+      "tags": [
+        "aws",
+        "free-tier",
+        "cloud"
+      ],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "openclaw-how-ai-is-disrupting-traditional-cloud-infrastructure-management",
       "title": "OpenClaw: How AI is Disrupting Traditional Cloud Infrastructure Management",
       "excerpt": "# AI is Transforming Cloud Infrastructure Management\n\nIn today's rapidly evolving technological landscape, artificial intelligence (AI) is revolutionizing the way we manage cloud infrastructure. Tradi...",
