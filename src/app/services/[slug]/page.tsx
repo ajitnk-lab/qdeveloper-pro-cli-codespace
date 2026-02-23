@@ -17,6 +17,29 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: ServicePageProps) {
+  const service = await getService(params.slug);
+  
+  if (!service) {
+    return {};
+  }
+
+  const description = service.description.length > 160 
+    ? service.description.substring(0, 157) + '...'
+    : service.description;
+
+  return {
+    title: `${service.title} | CloudNestle`,
+    description: description,
+    openGraph: {
+      title: `${service.title} | CloudNestle`,
+      description: description,
+      url: `https://cloudnestle.com/services/${params.slug}`,
+      type: 'website',
+    },
+  };
+}
+
 export default async function ServicePage({ params }: ServicePageProps) {
   const service = await getService(params.slug);
 

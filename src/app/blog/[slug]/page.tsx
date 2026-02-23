@@ -6,6 +6,33 @@ interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateMetadata({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
+  
+  if (!post) {
+    return {};
+  }
+
+  const description = post.excerpt && post.excerpt.length > 160
+    ? post.excerpt.substring(0, 157) + '...'
+    : post.excerpt || post.title;
+
+  return {
+    title: `${post.title} | CloudNestle Blog`,
+    description: description,
+    openGraph: {
+      title: post.title,
+      description: description,
+      url: `https://cloudnestle.com/blog/${slug}`,
+      type: 'article',
+      publishedTime: post.publishedAt,
+      authors: [post.author],
+      tags: post.tags,
+    },
+  };
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
   const post = await getBlogPost(slug);
@@ -56,11 +83,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Content */}
       <section className="section-services">
-        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[10%]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="card-professional max-w-4xl mx-auto animate-fade-in-up">
             <article className="p-6 sm:p-8 md:p-12">
               <div 
-                className="prose prose-lg max-w-none"
+                className="prose prose-lg max-w-prose mx-auto"
                 style={{
                   color: 'var(--text-primary)',
                   lineHeight: '1.7'
@@ -74,7 +101,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* CTA Footer */}
       <section className="section-trust">
-        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[10%]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="card-professional max-w-4xl mx-auto p-6 sm:p-8 md:p-12 text-center">
             <div className="icon-wrapper blue mx-auto mb-6">
               💡

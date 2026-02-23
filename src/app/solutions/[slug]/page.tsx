@@ -16,6 +16,29 @@ export async function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }: SolutionPageProps) {
+  const solution = await getSolution(params.slug);
+  
+  if (!solution) {
+    return {};
+  }
+
+  const description = solution.description.length > 160 
+    ? solution.description.substring(0, 157) + '...'
+    : solution.description;
+
+  return {
+    title: `${solution.title} | CloudNestle Solutions`,
+    description: description,
+    openGraph: {
+      title: `${solution.title} | CloudNestle Solutions`,
+      description: description,
+      url: `https://cloudnestle.com/solutions/${params.slug}`,
+      type: 'website',
+    },
+  };
+}
+
 export default async function SolutionPage({ params }: SolutionPageProps) {
   const solution = await getSolution(params.slug);
 
