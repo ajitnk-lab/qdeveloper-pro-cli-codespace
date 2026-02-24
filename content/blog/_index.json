@@ -3,6 +3,16 @@
     {
       "slug": "jypyter-lab",
       "title": "Jypyter lab",
+      "excerpt": "Deploying JupyterLab in the Cloud with AWS: A Comprehensive Guide",
+      "publishedAt": "2026-02-24",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
+      "slug": "jypyter-lab",
+      "title": "Jypyter lab",
       "excerpt": "Harnessing the Power of JupyterLab with AWS: A Comprehensive Guide to Seamless Collaboration",
       "publishedAt": "2026-02-24",
       "category": "AWS",
