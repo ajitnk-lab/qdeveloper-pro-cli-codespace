@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "jypyter-lab",
+      "title": "Jypyter lab",
+      "excerpt": "Harnessing the Power of JupyterLab with AWS: A Comprehensive Guide to Seamless Collaboration",
+      "publishedAt": "2026-02-24",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "async-agentic-tools2",
       "title": "Async Agentic Tools:2",
       "excerpt": "Revolutionizing AI Agents with Asynchronous Tool Calls on AWS",
