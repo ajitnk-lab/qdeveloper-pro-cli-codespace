@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "async-agentic-tools2",
+      "title": "Async Agentic Tools:2",
+      "excerpt": "Revolutionizing AI Agents with Asynchronous Tool Calls on AWS",
+      "publishedAt": "2026-02-24",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "async-agentic-tools",
       "title": "Async Agentic Tools",
       "excerpt": "Harnessing the Power of Asynchronous Agentic Tools on AWS",
