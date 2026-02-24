@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "automated-ai-agents",
+      "title": "Automated AI Agents",
+      "excerpt": "Mastering AI Agents: From Automation to Multi-Agent Ecosystems",
+      "publishedAt": "2026-02-24",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "introducing-strands-labs",
       "title": "Introducing Strands Labs",
       "excerpt": "Exploring the Frontier of Agentic AI Development with Strands Labs",
