@@ -1,44 +1,15 @@
 {
   "posts": [
     {
-      "slug": "jypyter-lab",
-      "title": "Jypyter lab",
-      "excerpt": "Seamlessly Deploy JupyterLab in the Cloud with Real-Time Collaboration using AWS",
+      "slug": "async-agentic-tools",
+      "title": "Async Agentic Tools",
+      "excerpt": "Harnessing the Power of Asynchronous Agentic Tools on AWS",
       "publishedAt": "2026-02-24",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "jypyter-lab",
-      "title": "Jypyter lab",
-      "excerpt": "Streamlined JupyterLab Deployment on AWS with Real-Time Collaboration",
-      "publishedAt": "2026-02-24",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "jypyter-lab",
-      "title": "Jypyter lab",
-      "excerpt": "Deploying JupyterLab in the Cloud with AWS: A Comprehensive Guide",
-      "publishedAt": "2026-02-24",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "jypyter-lab",
-      "title": "Jypyter lab",
-      "excerpt": "Harnessing the Power of JupyterLab with AWS: A Comprehensive Guide to Seamless Collaboration",
-      "publishedAt": "2026-02-24",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "6 min"
     },
     {
       "slug": "async-agentic-tools2",
@@ -48,17 +19,8 @@
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "async-agentic-tools",
-      "title": "Async Agentic Tools",
-      "excerpt": "Harnessing the Power of Asynchronous Agentic Tools on AWS",
-      "publishedAt": "2026-02-24",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "5 min"
     },
     {
       "slug": "automated-ai-agents",
@@ -68,7 +30,8 @@
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "6 min"
     },
     {
       "slug": "introducing-strands-labs",
@@ -78,7 +41,19 @@
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "6 min"
+    },
+    {
+      "slug": "jypyter-lab",
+      "title": "Jypyter lab",
+      "excerpt": "Seamlessly Deploy JupyterLab in the Cloud with Real-Time Collaboration using AWS",
+      "publishedAt": "2026-02-24",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "6 min"
     },
     {
       "slug": "strands-labs",
@@ -88,7 +63,8 @@
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "6 min"
     },
     {
       "slug": "aws-free-tier-complete-guide-scheduled-test",
@@ -102,329 +78,129 @@
         "cloud"
       ],
       "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "aws-free-tier-complete-guide-scheduled-test",
-      "title": "AWS Free Tier Complete Guide - Scheduled Test",
-      "excerpt": "AWS Free Tier: A Comprehensive Guide for New Users",
-      "publishedAt": "2026-02-23",
-      "category": "AWS",
-      "tags": [
-        "aws",
-        "free-tier",
-        "cloud"
-      ],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "aws-free-tier-complete-guide-scheduled-test",
-      "title": "AWS Free Tier Complete Guide - Scheduled Test",
-      "excerpt": "AWS Free Tier: A Comprehensive Guide for New Users",
-      "publishedAt": "2026-02-23",
-      "category": "AWS",
-      "tags": [
-        "aws",
-        "free-tier",
-        "cloud"
-      ],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "aws-free-tier-complete-guide-scheduled-test",
-      "title": "AWS Free Tier Complete Guide - Scheduled Test",
-      "excerpt": "AWS Free Tier: A Comprehensive Guide for New Users",
-      "publishedAt": "2026-02-23",
-      "category": "AWS",
-      "tags": [
-        "aws",
-        "free-tier",
-        "cloud"
-      ],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "openclaw-how-ai-is-disrupting-traditional-cloud-infrastructure-management",
-      "title": "OpenClaw: How AI is Disrupting Traditional Cloud Infrastructure Management",
-      "excerpt": "# AI is Transforming Cloud Infrastructure Management\n\nIn today's rapidly evolving technological landscape, artificial intelligence (AI) is revolutionizing the way we manage cloud infrastructure. Tradi...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "openclaw-how-ai-is-disrupting-traditional-cloud-infrastructure-management",
-      "title": "OpenClaw: How AI is Disrupting Traditional Cloud Infrastructure Management",
-      "excerpt": "# AI is Transforming Cloud Infrastructure Management\n\nIn today's rapidly evolving technological landscape, artificial intelligence (AI) is revolutionizing the way we manage cloud infrastructure. Tradi...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "openclaw-how-ai-is-disrupting-traditional-cloud-infrastructure-management",
-      "title": "OpenClaw: How AI is Disrupting Traditional Cloud Infrastructure Management",
-      "excerpt": "# AI is Transforming Cloud Infrastructure Management\n\nIn today's rapidly evolving technological landscape, artificial intelligence (AI) is revolutionizing the way we manage cloud infrastructure. Tradi...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "openclaw-how-ai-is-disrupting-traditional-cloud-infrastructure-management",
-      "title": "OpenClaw: How AI is Disrupting Traditional Cloud Infrastructure Management",
-      "excerpt": "# AI is Transforming Cloud Infrastructure Management\n\nIn today's rapidly evolving technological landscape, artificial intelligence (AI) is revolutionizing the way we manage cloud infrastructure. Tradi...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "6 min"
     },
     {
       "slug": "aws-lambda-best-practices-building-serverless-applications-at-scale",
       "title": "AWS Lambda Best Practices: Building Serverless Applications at Scale",
-      "excerpt": "\n# Mastering AWS Lambda: Best Practices for Building Serverless Applications at Scale\n\nIn the ever-evolving landscape of cloud computing, AWS Lambda stands out as a powerful tool for building serverle...",
+      "excerpt": " # Mastering AWS Lambda: Best Practices for Building Serverless Applications at Scale\nIn the ever-evolving landscape of cloud computing, AWS Lambda stands out as a powerful tool for building serverle...",
       "publishedAt": "2026-02-22",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "aws-lambda-best-practices-building-serverless-applications-at-scale",
-      "title": "AWS Lambda Best Practices: Building Serverless Applications at Scale",
-      "excerpt": "\n# Mastering AWS Lambda: Best Practices for Building Serverless Applications at Scale\n\nIn the ever-evolving landscape of cloud computing, AWS Lambda stands out as a powerful tool for building serverle...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "aws-lambda-best-practices-building-serverless-applications-at-scale",
-      "title": "AWS Lambda Best Practices: Building Serverless Applications at Scale",
-      "excerpt": "\n# Mastering AWS Lambda: Best Practices for Building Serverless Applications at Scale\n\nIn the ever-evolving landscape of cloud computing, AWS Lambda stands out as a powerful tool for building serverle...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "aws-lambda-best-practices-building-serverless-applications-at-scale",
-      "title": "AWS Lambda Best Practices: Building Serverless Applications at Scale",
-      "excerpt": "\n# Mastering AWS Lambda: Best Practices for Building Serverless Applications at Scale\n\nIn the ever-evolving landscape of cloud computing, AWS Lambda stands out as a powerful tool for building serverle...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "3 min"
     },
     {
       "slug": "cloud-native-architecture-building-scalable-applications-with-kubernetes-and-aws",
       "title": "Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS",
-      "excerpt": "# Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS\n\nIn today's fast-paced digital landscape, businesses are increasingly adopting cloud-native architectures to build s...",
+      "excerpt": "# Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS\nIn today's fast-paced digital landscape, businesses are increasingly adopting cloud-native architectures to build s...",
       "publishedAt": "2026-02-22",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "3 min"
     },
     {
-      "slug": "cloud-native-architecture-building-scalable-applications-with-kubernetes-and-aws",
-      "title": "Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS",
-      "excerpt": "# Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS\n\nIn today's fast-paced digital landscape, businesses are increasingly adopting cloud-native architectures to build s...",
+      "slug": "openclaw-how-ai-is-disrupting-traditional-cloud-infrastructure-management",
+      "title": "OpenClaw: How AI is Disrupting Traditional Cloud Infrastructure Management",
+      "excerpt": "# AI is Transforming Cloud Infrastructure Management\nIn today's rapidly evolving technological landscape, artificial intelligence (AI) is revolutionizing the way we manage cloud infrastructure. Tradi...",
       "publishedAt": "2026-02-22",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "cloud-native-architecture-building-scalable-applications-with-kubernetes-and-aws",
-      "title": "Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS",
-      "excerpt": "# Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS\n\nIn today's fast-paced digital landscape, businesses are increasingly adopting cloud-native architectures to build s...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "cloud-native-architecture-building-scalable-applications-with-kubernetes-and-aws",
-      "title": "Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS",
-      "excerpt": "# Cloud Native Architecture: Building Scalable Applications with Kubernetes and AWS\n\nIn today's fast-paced digital landscape, businesses are increasingly adopting cloud-native architectures to build s...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "3 min"
     },
     {
       "slug": "test-blog-auto-schedule-verification",
       "title": "TEST: Blog Auto-Schedule Verification",
-      "excerpt": "# Mastering AWS Auto-Schedule Verification: A Comprehensive Guide\n\nIn today's fast-paced digital landscape, efficient resource management is crucial for businesses to thrive. AWS Auto-Schedule Verific...",
+      "excerpt": "# Mastering AWS Auto-Schedule Verification: A Comprehensive Guide\nIn today's fast-paced digital landscape, efficient resource management is crucial for businesses to thrive. AWS Auto-Schedule Verific...",
       "publishedAt": "2026-02-22",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "test-blog-auto-schedule-verification",
-      "title": "TEST: Blog Auto-Schedule Verification",
-      "excerpt": "# Mastering AWS Auto-Schedule Verification: A Comprehensive Guide\n\nIn today's fast-paced digital landscape, efficient resource management is crucial for businesses to thrive. AWS Auto-Schedule Verific...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "test-blog-auto-schedule-verification",
-      "title": "TEST: Blog Auto-Schedule Verification",
-      "excerpt": "# Mastering AWS Auto-Schedule Verification: A Comprehensive Guide\n\nIn today's fast-paced digital landscape, efficient resource management is crucial for businesses to thrive. AWS Auto-Schedule Verific...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "test-blog-auto-schedule-verification",
-      "title": "TEST: Blog Auto-Schedule Verification",
-      "excerpt": "# Mastering AWS Auto-Schedule Verification: A Comprehensive Guide\n\nIn today's fast-paced digital landscape, efficient resource management is crucial for businesses to thrive. AWS Auto-Schedule Verific...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "building-scalable-cloud-infrastructure-with-aws-a-complete-guide",
-      "title": "Building Scalable Cloud Infrastructure with AWS: A Complete Guide",
-      "excerpt": "\n# Building Scalable Cloud Infrastructure with AWS: A Comprehensive Guide\n\nIn today's digital age, businesses need to be agile and responsive to changing market demands. Building scalable cloud infras...",
-      "publishedAt": "2026-02-21",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "building-scalable-cloud-infrastructure-with-aws-a-complete-guide",
-      "title": "Building Scalable Cloud Infrastructure with AWS: A Complete Guide",
-      "excerpt": "\n# Building Scalable Cloud Infrastructure with AWS: A Comprehensive Guide\n\nIn today's digital age, businesses need to be agile and responsive to changing market demands. Building scalable cloud infras...",
-      "publishedAt": "2026-02-21",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "building-scalable-cloud-infrastructure-with-aws-a-complete-guide",
-      "title": "Building Scalable Cloud Infrastructure with AWS: A Complete Guide",
-      "excerpt": "\n# Building Scalable Cloud Infrastructure with AWS: A Comprehensive Guide\n\nIn today's digital age, businesses need to be agile and responsive to changing market demands. Building scalable cloud infras...",
-      "publishedAt": "2026-02-21",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "building-scalable-cloud-infrastructure-with-aws-a-complete-guide",
-      "title": "Building Scalable Cloud Infrastructure with AWS: A Complete Guide",
-      "excerpt": "\n# Building Scalable Cloud Infrastructure with AWS: A Comprehensive Guide\n\nIn today's digital age, businesses need to be agile and responsive to changing market demands. Building scalable cloud infras...",
-      "publishedAt": "2026-02-21",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "3 min"
     },
     {
       "slug": "aws-security-best-practices-protecting-your-cloud-infrastructure",
       "title": "AWS Security Best Practices: Protecting Your Cloud Infrastructure",
-      "excerpt": "# AWS Security Best Practices: Safeguarding Your Cloud Infrastructure\n\nIn today's digital age, securing your cloud infrastructure is paramount to protect your data and ensure the integrity and availab...",
+      "excerpt": "# AWS Security Best Practices: Safeguarding Your Cloud Infrastructure\nIn today's digital age, securing your cloud infrastructure is paramount to protect your data and ensure the integrity and availab...",
       "publishedAt": "2026-02-21",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "4 min"
     },
     {
-      "slug": "aws-security-best-practices-protecting-your-cloud-infrastructure",
-      "title": "AWS Security Best Practices: Protecting Your Cloud Infrastructure",
-      "excerpt": "# AWS Security Best Practices: Safeguarding Your Cloud Infrastructure\n\nIn today's digital age, securing your cloud infrastructure is paramount to protect your data and ensure the integrity and availab...",
+      "slug": "building-scalable-cloud-infrastructure-with-aws-a-complete-guide",
+      "title": "Building Scalable Cloud Infrastructure with AWS: A Complete Guide",
+      "excerpt": " # Building Scalable Cloud Infrastructure with AWS: A Comprehensive Guide\nIn today's digital age, businesses need to be agile and responsive to changing market demands. Building scalable cloud infras...",
       "publishedAt": "2026-02-21",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "aws-security-best-practices-protecting-your-cloud-infrastructure",
-      "title": "AWS Security Best Practices: Protecting Your Cloud Infrastructure",
-      "excerpt": "# AWS Security Best Practices: Safeguarding Your Cloud Infrastructure\n\nIn today's digital age, securing your cloud infrastructure is paramount to protect your data and ensure the integrity and availab...",
-      "publishedAt": "2026-02-21",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "aws-security-best-practices-protecting-your-cloud-infrastructure",
-      "title": "AWS Security Best Practices: Protecting Your Cloud Infrastructure",
-      "excerpt": "# AWS Security Best Practices: Safeguarding Your Cloud Infrastructure\n\nIn today's digital age, securing your cloud infrastructure is paramount to protect your data and ensure the integrity and availab...",
-      "publishedAt": "2026-02-21",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "agent-plugins-for-aws",
-      "title": "Agent Plugins for AWS",
-      "excerpt": "markdown\nRevolutionizing AWS Deployments with Agent Plugins",
-      "publishedAt": "2026-02-20",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
-    },
-    {
-      "slug": "gen-ai-landscape",
-      "title": "Gen AI landscape",
-      "excerpt": "# The Impact of Generative AI on Startups and SMBs: Driving Innovation and Challenging the Status Quo\n\n## Introduction\nGenerative AI (Gen AI) is revolutionizing the way startups and small to medium-si...",
-      "publishedAt": "2026-02-20",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "4 min"
     },
     {
       "slug": "about-cloudnestle",
       "title": "About cloudnestle",
-      "excerpt": "# Revolutionizing the SaaS Marketplace: How CloudNestle is Leading the Charge\n\n## Introduction\nIn the ever-evolving landscape of Software as a Service (SaaS), cloudnestle.com and marktetplace.cloudnes...",
+      "excerpt": "# Revolutionizing the SaaS Marketplace: How CloudNestle is Leading the Charge\n## Introduction In the ever-evolving landscape of Software as a Service (SaaS), cloudnestle.com and marktetplace.cloudnes...",
       "publishedAt": "2026-02-20",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "3 min"
     },
     {
-      "slug": "hero-to-zero-aws-agentcore-runtime",
-      "title": "Hero to Zero - AWS AgentCore Runtime",
-      "excerpt": "\n# Revolutionizing Developer Productivity and Business ROI with AWS AgentCore Runtime\n\n## Introduction\n\nIn today's fast-paced digital landscape, businesses are constantly seeking ways to enhance devel...",
+      "slug": "agent-plugins-for-aws",
+      "title": "Agent Plugins for AWS",
+      "excerpt": "Revolutionizing AWS Deployments with Agent Plugins",
+      "publishedAt": "2026-02-20",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "6 min"
+    },
+    {
+      "slug": "gen-ai-landscape",
+      "title": "Gen AI landscape",
+      "excerpt": "# The Impact of Generative AI on Startups and SMBs: Driving Innovation and Challenging the Status Quo\n## Introduction Generative AI (Gen AI) is revolutionizing the way startups and small to medium-si...",
+      "publishedAt": "2026-02-20",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "3 min"
+    },
+    {
+      "slug": "None",
+      "title": "None",
+      "excerpt": "None",
+      "publishedAt": "2026-02-19",
+      "category": "None",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "4 min"
+    },
+    {
+      "slug": "ai-ide",
+      "title": "AI IDE",
+      "excerpt": " # The Future of Coding: AI IDEs vs. AI CLIs in 2026\n## Introduction\nIn the rapidly evolving world of software development, AI-powered tools are becoming indispensable. By 2026, AI IDEs (Integrated ...",
       "publishedAt": "2026-02-19",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "3 min"
     },
     {
       "slug": "amazon-bedrock-agents",
@@ -434,17 +210,41 @@
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "8 min"
     },
     {
-      "slug": "ai-ide",
-      "title": "AI IDE",
-      "excerpt": "\n# The Future of Coding: AI IDEs vs. AI CLIs in 2026\n\n## Introduction\n\nIn the rapidly evolving world of software development, AI-powered tools are becoming indispensable. By 2026, AI IDEs (Integrated ...",
+      "slug": "hero-to-zero-aws-agentcore-runtime",
+      "title": "Hero to Zero - AWS AgentCore Runtime",
+      "excerpt": " # Revolutionizing Developer Productivity and Business ROI with AWS AgentCore Runtime\n## Introduction\nIn today's fast-paced digital landscape, businesses are constantly seeking ways to enhance devel...",
       "publishedAt": "2026-02-19",
       "category": "AWS",
       "tags": [],
       "author": "CloudNestle Team",
-      "featured": false
+      "featured": false,
+      "readTime": "4 min"
+    },
+    {
+      "slug": "iac-generator",
+      "title": "Iac Generator",
+      "excerpt": "Leveraging Generative AI and Amazon Bedrock for Enhanced IaC Compliance in AWS",
+      "publishedAt": "2026-02-19",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "6 min"
+    },
+    {
+      "slug": "agentcore-evaluations-whats-new",
+      "title": "AgentCore Evaluations - Whats new",
+      "excerpt": "Unlocking the Full Potential of AI Agents with Amazon Bedrock AgentCore",
+      "publishedAt": "2026-02-17",
+      "category": "AI/ML",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "5 min"
     },
     {
       "slug": "ai-trends-in-2026",
@@ -478,6 +278,17 @@
       "author": "CloudNestle Team",
       "featured": false,
       "readTime": "5 min"
+    },
+    {
+      "slug": "aws-security-agent-secures-applications",
+      "title": "AWS Security Agent secures applications",
+      "excerpt": "Elevating Application Security with AWS Security Agent",
+      "publishedAt": "2026-02-17",
+      "category": "AI/ML",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false,
+      "readTime": "7 min"
     },
     {
       "slug": "aws-cloud-credits-for-open-source-projects",
@@ -598,7 +409,7 @@
     },
     {
       "slug": "2025-09-09-automated-deployment-live",
-      "title": "\ud83d\ude80 Automated Deployment is Now Live!",
+      "title": "🚀 Automated Deployment is Now Live!",
       "excerpt": "Our website now features professional CI/CD automation with GitHub Actions, enabling instant deployments with every code push.",
       "publishedAt": "2025-09-09",
       "category": "Announcements",
