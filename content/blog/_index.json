@@ -12,17 +12,6 @@
       "readTime": "6 min"
     },
     {
-      "slug": "async-agentic-tools2",
-      "title": "Async Agentic Tools:2",
-      "excerpt": "Revolutionizing AI Agents with Asynchronous Tool Calls on AWS",
-      "publishedAt": "2026-02-24",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false,
-      "readTime": "5 min"
-    },
-    {
       "slug": "automated-ai-agents",
       "title": "Automated AI Agents",
       "excerpt": "Mastering AI Agents: From Automation to Multi-Agent Ecosystems",
@@ -115,17 +104,6 @@
       "readTime": "3 min"
     },
     {
-      "slug": "test-blog-auto-schedule-verification",
-      "title": "TEST: Blog Auto-Schedule Verification",
-      "excerpt": "# Mastering AWS Auto-Schedule Verification: A Comprehensive Guide\nIn today's fast-paced digital landscape, efficient resource management is crucial for businesses to thrive. AWS Auto-Schedule Verific...",
-      "publishedAt": "2026-02-22",
-      "category": "AWS",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false,
-      "readTime": "3 min"
-    },
-    {
       "slug": "aws-security-best-practices-protecting-your-cloud-infrastructure",
       "title": "AWS Security Best Practices: Protecting Your Cloud Infrastructure",
       "excerpt": "# AWS Security Best Practices: Safeguarding Your Cloud Infrastructure\nIn today's digital age, securing your cloud infrastructure is paramount to protect your data and ensure the integrity and availab...",
@@ -179,17 +157,6 @@
       "author": "CloudNestle Team",
       "featured": false,
       "readTime": "3 min"
-    },
-    {
-      "slug": "None",
-      "title": "None",
-      "excerpt": "None",
-      "publishedAt": "2026-02-19",
-      "category": "None",
-      "tags": [],
-      "author": "CloudNestle Team",
-      "featured": false,
-      "readTime": "4 min"
     },
     {
       "slug": "ai-ide",
