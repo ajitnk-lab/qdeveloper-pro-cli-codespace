@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "introducing-strands-labs",
+      "title": "Introducing Strands Labs",
+      "excerpt": "Exploring the Frontier of Agentic AI Development with Strands Labs",
+      "publishedAt": "2026-02-24",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "strands-labs",
       "title": "Strands Labs",
       "excerpt": "Exploring the Cutting Edge of Agentic Development with Strands Labs",
