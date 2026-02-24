@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "strands-labs",
+      "title": "Strands Labs",
+      "excerpt": "Exploring the Cutting Edge of Agentic Development with Strands Labs",
+      "publishedAt": "2026-02-24",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "aws-free-tier-complete-guide-scheduled-test",
       "title": "AWS Free Tier Complete Guide - Scheduled Test",
       "excerpt": "AWS Free Tier: A Comprehensive Guide for New Users",
