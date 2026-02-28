@@ -305,9 +305,7 @@ export default function AboutPage() {
                 href="https://linkedin.com/company/cloudnestle" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                style={{ transition: 'opacity 0.2s' }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                style={{ transition: 'opacity 0.2s', opacity: 1 }}
               >
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
                   <rect width="24" height="24" rx="4" fill="#0077B5"/>
@@ -319,9 +317,7 @@ export default function AboutPage() {
                 href="https://www.facebook.com/cloudnestleconsultingandservices" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                style={{ transition: 'opacity 0.2s' }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                style={{ transition: 'opacity 0.2s', opacity: 1 }}
               >
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
                   <rect width="24" height="24" rx="4" fill="#1877F2"/>
@@ -333,9 +329,7 @@ export default function AboutPage() {
                 href="https://www.instagram.com/cloudnestle/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                style={{ transition: 'opacity 0.2s' }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                style={{ transition: 'opacity 0.2s', opacity: 1 }}
               >
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
                   <rect width="24" height="24" rx="6" fill="url(#instagram-gradient-about)"/>
@@ -356,9 +350,7 @@ export default function AboutPage() {
                 href="https://www.youtube.com/@cloudnestle" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                style={{ transition: 'opacity 0.2s' }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.7'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+                style={{ transition: 'opacity 0.2s', opacity: 1 }}
               >
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
                   <rect width="24" height="24" rx="4" fill="#FF0000"/>
