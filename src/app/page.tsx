@@ -415,7 +415,7 @@ export default function Home() {
                   style={{ width: '80px', height: 'auto', borderRadius: '6px', border: '2px solid #f59e0b' }}
                 />
                 <img 
-                  src="/aws reg partnet.png" 
+                  src="/aws cloudnestle apn.jpg" 
                   alt="AWS Registered Partner" 
                   style={{ width: '80px', height: 'auto', borderRadius: '6px', border: '2px solid #f59e0b' }}
                 />
@@ -468,7 +468,7 @@ export default function Home() {
                 20+ Years Experience
               </h3>
               <p style={{ fontSize: '14px', color: '#64748b', lineHeight: '1.6', marginBottom: '24px' }}>
-                Two decades of enterprise IT experience across industries, from startups to Fortune 500 companies
+                Enterprise background at Quest Global, Oracle, and SAP. Now building SaaS products and delivering AWS cloud solutions with proven expertise
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap' }}>
                 <img 
