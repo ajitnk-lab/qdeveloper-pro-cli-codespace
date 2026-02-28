@@ -53,12 +53,52 @@ export default function ContactPage() {
             <h1 style={{ fontSize: '48px', fontWeight: '700', color: '#1e293b', marginBottom: '16px' }}>
               Contact CloudNestle
             </h1>
-            <p style={{ fontSize: '20px', color: '#64748b', maxWidth: '768px', margin: '0 auto' }}>
+            <p style={{ fontSize: '20px', color: '#64748b', maxWidth: '768px', margin: '0 auto 32px' }}>
               Choose the form that best fits your needs. We&apos;re here to help with all your cloud transformation requirements.
             </p>
+            
+            {/* Direct Contact Info */}
+            <div style={{ 
+              display: 'flex', 
+              justifyContent: 'center', 
+              gap: '48px', 
+              flexWrap: 'wrap',
+              padding: '32px',
+              background: '#f8fafc',
+              borderRadius: '12px',
+              maxWidth: '800px',
+              margin: '0 auto'
+            }}>
+              <div>
+                <div style={{ fontSize: '14px', fontWeight: '600', color: '#64748b', marginBottom: '12px' }}>
+                  🇺🇸 US Sales & Support
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <a href="tel:+13465765655" style={{ color: '#2563eb', textDecoration: 'none', fontSize: '16px', fontWeight: '500' }}>
+                    📞 +1 (346) 576-5655
+                  </a>
+                  <a href="mailto:sales@cloudnestle.com" style={{ color: '#2563eb', textDecoration: 'none', fontSize: '16px', fontWeight: '500' }}>
+                    📧 sales@cloudnestle.com
+                  </a>
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: '14px', fontWeight: '600', color: '#64748b', marginBottom: '12px' }}>
+                  📍 Global Headquarters
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <a href="tel:+919591040061" style={{ color: '#2563eb', textDecoration: 'none', fontSize: '16px', fontWeight: '500' }}>
+                    📱 +91 95910 40061
+                  </a>
+                  <a href="mailto:sales@cloudnestle.com" style={{ color: '#2563eb', textDecoration: 'none', fontSize: '16px', fontWeight: '500' }}>
+                    📧 sales@cloudnestle.com
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" style={{ maxWidth: '1400px', margin: '0 auto' }}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" style={{ maxWidth: '1200px', margin: '0 auto' }}>
             {formTypes.map((form) => (
                 <div
                   key={form.id}
