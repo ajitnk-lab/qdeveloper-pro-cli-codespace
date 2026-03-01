@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "strategic-investment-in-ai-infrastructure-and-services",
+      "title": "Strategic investment in AI infrastructure and services",
+      "excerpt": "markdown\nElevating AI Innovation with AWS: A Deep Dive into Our Strategic Investments",
+      "publishedAt": "2026-03-01",
+      "category": "AWS",
+      "tags": [],
+      "author": "CloudNestle Team",
+      "featured": false
+    },
+    {
       "slug": "agent-orchestrator",
       "title": "Agent Orchestrator",
       "excerpt": "Enhancing Developer Productivity with CLI Agent Orchestrator",
